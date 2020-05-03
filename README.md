@@ -23,18 +23,8 @@
 - created github repo
 
 ### Performance vs Processing 3
-Running the same intensive code, Gprocessing gets and average of 24 FPS, while processing gets and average of 6 FPS
-```
-void setup() {
-    size(1920, 1500);
-}
-
-void draw() {
-    background(0, 0, 0);
-    test();
-    println(round(frameCount / (millis() / 1000 + 1)) + " FPS");
-}
-
+Running the same intensive code at a resolution of 1920x1500, Gprocessing gets an average of 24 FPS, while processing gets an average of 6 FPS
+```java
 int size = 2;
 float pos = 0;
 void test() {
