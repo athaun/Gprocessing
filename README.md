@@ -1,14 +1,15 @@
-##Gprocessing is a simple java graphics library built on top of LWJGL, modeled after the processing library, but with an emphasis on performance.
+## Gprocessing is a simple java graphics library built on top of LWJGL, modeled after the processing library, but with an emphasis on performance.
 
-###Changelog:
-5.1.2020
+### Changelog:
+
++ 5.1.2020
 - setup glfw and lwjgl
 - Created window class
 - setup game loop
 - setup basic graphics
 - created rect() method
-- created pressure test program
-5.2.2020
+- created pressure test program<br>
++ 5.2.2020
 - created engine class
 - added FPS counter
 - added static class imports to better resemble processing method calls
@@ -52,4 +53,4 @@ void test() {
 }
 ```
 Gprocessing (Left), Processing 3 (Right)
-![screenshot](./performance.png)
+![screenshot](Performance.png)
