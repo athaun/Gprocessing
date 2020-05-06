@@ -21,7 +21,7 @@ void test() {
 }
 ```
 Gprocessing (Left), Processing 3 (Right)
-![screenshot](Performance.png)
+![screenshot](unknown.png)
 
 ### Changelog:
 
