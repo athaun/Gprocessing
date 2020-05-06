@@ -1,24 +1,10 @@
-## Gprocessing is a simple java graphics library built on top of LWJGL, modeled after the processing library, but with an emphasis on performance.
+## Gprocessing is a java graphics library built on top of LWJGL, modeled after the processing library, but with an emphasis on performance and 2D game development (3D support may come later).
+
+In addition to the helpful wrapper functions around the Java implementation of OpenGL (LWJGL), providing easy creation of primitives like rectangles, ellipses, triangles and lines, Gprocessing will support sound, images, fonts, input, and basic networking.
+Unlike the origional processing 3 language, Gprocessing doesn't limit you to the PDE (processing development enviroment), you can use whatever IDE or editor you like; in addition Gprocessing is just regular java, so you can still use all the normal java libraries.
 
 ### Performance vs Processing 3
-Running the same intensive code at a resolution of 1920x1500, Gprocessing gets an average of 24 FPS, while processing gets an average of 6 FPS
-```java
-int size = 2;
-float pos = 0;
-void test() {
-    for (int i = 0; i < width / size; i += 2) {
-        for (int j = 0; j < height / size; j += 2) {
-            fill(random(0, 255));
-            rect(i * size, j * size + 1, size, size);
-        }
-    }
-    pos += 5;
-    if (pos > height) {
-        pos = 0;
-    }
-    fill(0, 0, 0);
-    rect(0, pos, width, 100);
-}
+Running the same intensive code at a resolution of 1920x2160, Gprocessing gets a steady 60 FPS, while processing gets an average of 20 FPS
 ```
 Gprocessing (Left), Processing 3 (Right)
 ![screenshot](unknown.png)
@@ -44,3 +30,7 @@ Gprocessing (Left), Processing 3 (Right)
 - added static methods: fill(), fillAlpha(), and background()
 - cleaned up window class
 - created github repo
++ 5.3.2020
+- added open simplex noise method
++ 5.3.2020-5.5.2020
+- implemented ThreadMaster class, allowing the programmer to pass code into a Runnable object that is executed on a seperate thread.
