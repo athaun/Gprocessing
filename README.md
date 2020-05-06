@@ -5,12 +5,11 @@ Unlike the origional processing 3 language, Gprocessing doesn't limit you to the
 
 ### Performance vs Processing 3
 Running the same intensive code at a resolution of 1920x2160, Gprocessing gets a steady 60 FPS, while processing gets an average of 20 FPS
-```
 Gprocessing (Left), Processing 3 (Right)
 ![screenshot](unknown.png)
-
+<br>
 ### Changelog:
-
+```
 + 5.1.2020
 - setup glfw and lwjgl
 - Created window class
@@ -34,3 +33,4 @@ Gprocessing (Left), Processing 3 (Right)
 - added open simplex noise method
 + 5.3.2020-5.5.2020
 - implemented ThreadMaster class, allowing the programmer to pass code into a Runnable object that is executed on a seperate thread.
+```
