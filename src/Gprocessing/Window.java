@@ -36,7 +36,8 @@ public class Window {
 	}
 
 	void getFPS() {
-		Engine.println(Math.round((frameCount / (Engine.millis() / 1000))) + " FPS");
+		glfwSetWindowTitle(window,"GProcessing @ " + Math.round((frameCount / (Engine.millis() / 1000))) + " FPS");
+//		Engine.println(Math.round((frameCount / (Engine.millis() / 1000))) + " FPS");
 	}
 
 	void showWindow() {
@@ -46,6 +47,7 @@ public class Window {
 
 		glOrtho(0, width, height, 0, -1, 1);
 		glColor4f(0, 120, 176, 0);
+
 		while (!glfwWindowShouldClose(window)) {
 			glfwPollEvents();
 			glClear(GL_COLOR_BUFFER_BIT);
