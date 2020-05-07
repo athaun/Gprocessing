@@ -33,4 +33,11 @@ Gprocessing (Left), Processing 3 (Right)
 - added open simplex noise method
 + 5.3.2020-5.5.2020
 - implemented ThreadMaster class, allowing the programmer to pass code into a Runnable object that is executed on a seperate thread.
+5.6.2020
+- added primitive shapes line, circle, and triangle
+5.7.2020
+- added input class, currently only mouseX and mouseY work
+- added color class
+- cleaned up file hierarchy
+- added inRect and inCircle engine methods.
 ```
