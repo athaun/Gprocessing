@@ -4,8 +4,7 @@ import static org.lwjgl.glfw.GLFW.*;
 import static org.lwjgl.opengl.GL11.*;
 import org.lwjgl.opengl.*;
 import org.lwjgl.glfw.GLFWVidMode;
-
-import static org.lwjgl.glfw.GLFW.glfwGetTime;
+import Gprocessing.input.*;
 
 public class Window {
 
@@ -15,8 +14,8 @@ public class Window {
 	long window;
 	private GLFWVidMode videoMode = glfwGetVideoMode(glfwGetPrimaryMonitor());
 
-	int width;
-	int height;
+	static int width;
+	static int height;
 
 	Window(int pwidth, int pheight, String ptitle) {
 
@@ -28,16 +27,20 @@ public class Window {
 
 		window = glfwCreateWindow(width, height, title, 0, 0);
 
-		if (window == 0) {
+		if (window == 0)
 			throw new IllegalStateException("[FATAL] Failed to create window.");
-		}
 
 		glfwSetWindowPos(window, (videoMode.width() - width) / 2, (videoMode.height() - height) / 2);
 	}
 
 	void getFPS() {
-		glfwSetWindowTitle(window,"GProcessing @ " + Math.round((frameCount / (Engine.millis() / 1000))) + " FPS");
+		frameCount++;
+		glfwSetWindowTitle(window, "GProcessing @ " + Math.round((frameCount / (Engine.millis() / 1000))) + " FPS");
 //		Engine.println(Math.round((frameCount / (Engine.millis() / 1000))) + " FPS");
+	}
+	
+	public void setTitle (String title) {
+		glfwSetWindowTitle(window, title);
 	}
 
 	void showWindow() {
@@ -46,17 +49,21 @@ public class Window {
 		GL.createCapabilities();
 
 		glOrtho(0, width, height, 0, -1, 1);
-		glColor4f(0, 120, 176, 0);
+		
+		Graphics.background(0);
+		Graphics.fill(255);
 
 		while (!glfwWindowShouldClose(window)) {
+			
+			Mouse.update(window);
+			
 			glfwPollEvents();
 			glClear(GL_COLOR_BUFFER_BIT);
 
-			Main.draw();
-			getFPS();
+			Main.update();
 
 			glfwSwapBuffers(window);
-			frameCount++;
+			getFPS();
 		}
 
 		glfwTerminate();

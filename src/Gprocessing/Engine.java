@@ -42,8 +42,27 @@ public class Engine {
 		// This is people who are too lazy to even import Math (like me).
 		return Math.round(x);
 	}
+	
+	static float dist (float x1, float y1, float x2, float y2) {
+		return (float) Math.hypot(x1 - x2, y1 - y2);
+	}
+	
+	static boolean inCircle (float inX, float inY, float circleX, float circleY, float radius) {
+		return dist(inX, inY, circleX, circleY) < radius*2;
+	}
+	
+	static boolean inRect (float inX, float inY, float rectX, float rectY, float rectWidth, float rectHeight) {
+		return inX >= rectX &&
+			   inX <= (rectY + rectWidth) && 
+			   inY >= rectY &&
+			   inY <= (rectY + rectHeight);
+	}
+	
+	
+	
+	// 
 
-	static void println(String s) {
+	public static void println(String s) {
 		System.out.println(s);
 	}
 
