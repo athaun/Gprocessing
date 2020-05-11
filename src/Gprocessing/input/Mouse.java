@@ -3,9 +3,11 @@ package Gprocessing.input;
 import static org.lwjgl.glfw.GLFW.*;
 import java.nio.DoubleBuffer;
 import org.lwjgl.BufferUtils;
+import Gprocessing.physics.Vector2;
 
 public class Mouse {
 
+	public static Vector2 mouse;
 	public static long mouseX = 0;
 	public static long mouseY = 0;
 
@@ -24,6 +26,8 @@ public class Mouse {
 
 		mouseX = (long) x.get();
 		mouseY = (long) y.get();
+		
+		mouse = new Vector2(mouseX, mouseY);
 
 		return new double[] { mouseX - tempX, mouseY - tempY };
 	}

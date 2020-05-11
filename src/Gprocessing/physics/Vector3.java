@@ -6,10 +6,14 @@ public class Vector3 {
 	public float y;
 	public float z;
 	
-	Vector3 (float px, float py, float pz) {
+	public Vector3 (float px, float py, float pz) {
 		x = px;
 		y = py;
 		z = pz;
+	}
+	
+	public Vector3 Vector3 () {
+		return this;		
 	}
 	
 	public void add (float x2, float y2, float z2) {

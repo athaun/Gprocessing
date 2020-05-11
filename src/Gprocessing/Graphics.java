@@ -3,6 +3,7 @@ package Gprocessing;
 import static org.lwjgl.opengl.GL11.*;
 import static Gprocessing.Engine.*;
 import Gprocessing.graphics.Color;
+import Gprocessing.physics.Rectangle;
 
 public class Graphics {
 	// Background
@@ -51,6 +52,14 @@ public class Graphics {
 		glVertex2f(x + w, y);
 		glVertex2f(x + w, y + h);
 		glVertex2f(x, y + h);
+		glEnd();
+	}
+	public static void rect(Rectangle r) {
+		glBegin(GL_POLYGON);
+		glVertex2f(r.x, r.y);
+		glVertex2f(r.x + r.width, r.y);
+		glVertex2f(r.x + r.width, r.y + r.height);
+		glVertex2f(r.x, r.y + r.height);
 		glEnd();
 	}
 	public static void line(float x1, float y1, float x2, float y2) {

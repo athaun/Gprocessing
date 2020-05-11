@@ -5,9 +5,13 @@ public class Vector2 {
 	public float x;
 	public float y;
 	
-	Vector2 (float px, float py) {
+	public Vector2 (float px, float py) {
 		x = px;
 		y = py;
+	}
+	
+	public Vector2 Vector2 () {
+		return this;		
 	}
 	
 	public void add (float x2, float y2) {

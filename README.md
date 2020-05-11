@@ -40,4 +40,10 @@ Gprocessing (Left), Processing 3 (Right)
 - added color class
 - cleaned up file hierarchy
 - added inRect and inCircle engine methods.
+5.11.2020
+- added mouse Vector2
+- added Rectangle class
+- added inRect and inCircle support for passing Vector2
+- added inRect support for passing Rectangle
+- added rect support for passing Rectangle
 ```

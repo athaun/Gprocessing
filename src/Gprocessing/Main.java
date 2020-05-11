@@ -1,9 +1,19 @@
+/** 
+ * 
+ * Copyright (C) 2020, Asher Haun
+ * Released under the MIT license.
+ * 
+ */
+
 package Gprocessing;
 
 import static Gprocessing.Graphics.*;
 import static Gprocessing.Engine.*;
-import Gprocessing.noise.*;
-import Gprocessing.threads.*;
+import static Gprocessing.input.Mouse.*;
+
+import Gprocessing.physics.Rectangle;
+
+import static Gprocessing.graphics.Color.*;
 
 
 public class Main {
@@ -11,42 +21,23 @@ public class Main {
 	public static void main(String[] args) {
 		init(1600, 900, "Gprocessing");
 	}
+	
+	static void awake() {}	
 
-	static int chunkWidth = 1600; // chunkSize * blockSize should fill the entire screen
-	static int chunkHeight = 900;
-	static OpenSimplexNoise noise = new OpenSimplexNoise();
-	static double increment = 0.013; // the fineness of the noise map
-	static float[][] terrain = new float[chunkWidth][chunkHeight]; // create an empty 2D array with the dimensions of
-																	// chunkSize
-	static float moveBegin = 0;
-
-	static ThreadMaster t;
-
-	static void awake() {
-		t = new ThreadMaster(new Runnable() {
-			public void run() {
-				while (true) {
-					moveBegin += 0.01;
-					float yoff = 0;
-					for (int x = 0; x < chunkWidth / 2; x++) {
-						float xoff = moveBegin;
-						for (int y = 0; y < chunkHeight / 2; y++) {
-							terrain[x][y] = map((float) noise.eval(xoff, yoff), -1, 1, 0, 255);
-							xoff += increment;
-						}
-						yoff += increment;
-					}
-				}
-			}
-		});
-	}
-
+	static Rectangle r = new Rectangle(30, 250, 150, 50);
+	
 	static void update() {
-		for (int x = 0; x < chunkWidth / 2; x += 2) {
-			for (int y = 0; y < chunkHeight / 2; y += 2) {
-				fill(terrain[x][y], terrain[x][y], terrain[x][y]);
-				rect(x * 4, y * 4, 20, 20);
-			}
+		background(WHITE);
+		fill(BLUE);
+		if (inCircle(mouse, 100, 100, 35)) {
+			fill(BLACK);
 		}
+		circle(100, 100, 70, 50);
+		
+		fill(BLUE);
+		if (inRect(mouse, r)) {
+			fill(BLACK);
+		}
+		rect(r);
 	}
 }
