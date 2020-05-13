@@ -82,10 +82,6 @@ public class Engine {
 			   in.y >= r.y &&
 			   in.y <= (r.y + r.height);
 	}
-	
-	
-	
-	// 
 
 	public static void println(String s) {
 		System.out.println(s);

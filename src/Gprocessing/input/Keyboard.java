@@ -17,6 +17,8 @@ public class Keyboard {
 	public static int LEFT_ARROW = 37;
 	public static int DOWN_ARROW = 40;
 	public static int RIGHT_ARROW = 39;
+	
+	private static GLFWKeyCallback keyCallback;
 
 	public static boolean keyIsPressed(int keyName) {
 		glfwPollEvents();
