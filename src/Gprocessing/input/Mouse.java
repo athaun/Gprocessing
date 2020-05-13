@@ -3,6 +3,8 @@ package Gprocessing.input;
 import static org.lwjgl.glfw.GLFW.*;
 import java.nio.DoubleBuffer;
 import org.lwjgl.BufferUtils;
+
+import Gprocessing.Window;
 import Gprocessing.physics.Vector2;
 
 public class Mouse {
@@ -11,13 +13,13 @@ public class Mouse {
 	public static long mouseX = 0;
 	public static long mouseY = 0;
 
-	public static double[] update(long window) {
+	public static double[] update() {
 		glfwPollEvents();
 
 		DoubleBuffer x = BufferUtils.createDoubleBuffer(1);
 		DoubleBuffer y = BufferUtils.createDoubleBuffer(1);
 
-		glfwGetCursorPos(window, x, y);
+		glfwGetCursorPos(Window.window, x, y);
 		x.rewind();
 		y.rewind();
 

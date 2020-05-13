@@ -9,7 +9,7 @@ public class Engine {
 
 	private static long startMillis = System.currentTimeMillis();
 
-	static Window w;
+	public static Window w;
 
 	public static boolean running = true;
 

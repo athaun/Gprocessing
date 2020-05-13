@@ -11,7 +11,7 @@ public class Window {
 	public long frameCount = 0;
 
 	String title;
-	long window;
+	public static long window;
 	private GLFWVidMode videoMode = glfwGetVideoMode(glfwGetPrimaryMonitor());
 
 	static int width;
@@ -55,7 +55,7 @@ public class Window {
 
 		while (!glfwWindowShouldClose(window)) {
 			
-			Mouse.update(window);
+			Mouse.update();
 			
 			glfwPollEvents();
 			glClear(GL_COLOR_BUFFER_BIT);

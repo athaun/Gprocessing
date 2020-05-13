@@ -46,4 +46,6 @@ Gprocessing (Left), Processing 3 (Right)
 - added inRect and inCircle support for passing Vector2
 - added inRect support for passing Rectangle
 - added rect support for passing Rectangle
+5.13.2020
+- implemented callbacks for keyboard events, keyIsPressed, keyPressed, and keyReleased 
 ```

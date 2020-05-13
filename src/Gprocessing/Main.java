@@ -10,22 +10,21 @@ package Gprocessing;
 import static Gprocessing.Graphics.*;
 import static Gprocessing.Engine.*;
 import static Gprocessing.input.Mouse.*;
-
-import Gprocessing.physics.Rectangle;
-
+import static Gprocessing.input.Keyboard.*;
 import static Gprocessing.graphics.Color.*;
-
+import Gprocessing.physics.Rectangle;
 
 public class Main {
 
 	public static void main(String[] args) {
 		init(1600, 900, "Gprocessing");
 	}
-	
-	static void awake() {}	
+
+	static void awake() {
+	}
 
 	static Rectangle r = new Rectangle(30, 250, 150, 50);
-	
+
 	static void update() {
 		background(WHITE);
 		fill(BLUE);
@@ -33,11 +32,24 @@ public class Main {
 			fill(BLACK);
 		}
 		circle(100, 100, 70, 50);
-		
+
 		fill(BLUE);
 		if (inRect(mouse, r)) {
 			fill(BLACK);
 		}
 		rect(r);
+		
+		if (keyIsPressed(W_KEY) || keyIsPressed(71)) {
+			r.y -= 3;
+		}
+		if (keyIsPressed(S_KEY)) {
+			r.y += 3;
+		}
+		if (keyIsPressed(A_KEY)) {
+			r.x -= 3;
+		}
+		if (keyIsPressed(D_KEY)) {
+			r.x += 3;
+		}
 	}
 }
