@@ -14,8 +14,8 @@ public class Window {
 	public static long window;
 	private GLFWVidMode videoMode = glfwGetVideoMode(glfwGetPrimaryMonitor());
 
-	static int width;
-	static int height;
+	int width;
+	int height;
 
 	Window(int pwidth, int pheight, String ptitle) {
 

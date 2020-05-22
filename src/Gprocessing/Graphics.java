@@ -4,6 +4,7 @@ import static org.lwjgl.opengl.GL11.*;
 import static Gprocessing.Engine.*;
 import Gprocessing.graphics.Color;
 import Gprocessing.physics.Rectangle;
+import Gprocessing.physics.Vector2;
 
 public class Graphics {
 	// Background
@@ -68,6 +69,13 @@ public class Graphics {
 		glVertex2f(x2, y2);
 		glEnd();
 	}
+	public static void line(Vector2 pos1, Vector2 pos2) {
+		glBegin(GL_LINES);
+		glVertex2f(pos1.x, pos1.y);
+		glVertex2f(pos2.x, pos2.y);
+		glEnd();
+	}
+	
 	public static void triangle(float x1, float y1, float x2, float y2, float x3, float y3) {
 		glBegin(GL_TRIANGLE_STRIP);
 		glVertex2f(x1, y1);

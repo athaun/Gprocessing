@@ -27,46 +27,34 @@ package Gprocessing;
 import static Gprocessing.Graphics.*;
 import static Gprocessing.Engine.*;
 import static Gprocessing.input.Mouse.*;
+
+import Gprocessing.pathfinding.Pathfinder;
+
 import static Gprocessing.input.Keyboard.*;
 import static Gprocessing.graphics.Color.*;
 import Gprocessing.physics.Rectangle;
+import Gprocessing.physics.Vector2;
 
 public class Main {
 
 	public static void main(String[] args) {
-		init(1600, 900, "Gprocessing");
+		init(1920, 1080, "Pathfinding Test");
 	}
+
+	static Pathfinder f;
+	static Vector2[] nodeVectors = new Vector2[25];
 
 	static void awake() {
+		for (int i = 0 ; i < nodeVectors.length; i ++) {
+			nodeVectors[i] = new Vector2(randomInt(0, w.width), randomInt(0, w.height));
+		}
+		f = new Pathfinder(nodeVectors);
 	}
-
-	static Rectangle r = new Rectangle(30, 250, 150, 50);
-
+	
 	static void update() {
 		background(WHITE);
 		fill(BLUE);
-		if (inCircle(mouse, 100, 100, 35)) {
-			fill(BLACK);
-		}
-		circle(100, 100, 70, 50);
-
-		fill(BLUE);
-		if (inRect(mouse, r)) {
-			fill(BLACK);
-		}
-		rect(r);
-		
-		if (keyIsPressed(W_KEY) || keyIsPressed(71)) {
-			r.y -= 3;
-		}
-		if (keyIsPressed(S_KEY)) {
-			r.y += 3;
-		}
-		if (keyIsPressed(A_KEY)) {
-			r.x -= 3;
-		}
-		if (keyIsPressed(D_KEY)) {
-			r.x += 3;
-		}
+		f.findPath(Pathfinder.nodes[0], Pathfinder.nodes[Pathfinder.nodes.length - 1], 0);
+		f.updateNodes();
 	}
 }
