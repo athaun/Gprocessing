@@ -47,5 +47,8 @@ Gprocessing (Left), Processing 3 (Right)
 - added inRect support for passing Rectangle
 - added rect support for passing Rectangle
 5.13.2020
-- implemented callbacks for keyboard events, keyIsPressed, keyPressed, and keyReleased 
+- implemented callbacks for keyboard events, keyIsPressed, keyPressed, and keyReleased
+6.2.2020
+- begin change to modern OpenGL
+- added mouse input callbacks
 ```
