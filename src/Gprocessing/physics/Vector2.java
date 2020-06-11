@@ -5,9 +5,9 @@ public class Vector2 {
 	public float x;
 	public float y;
 	
-	public Vector2 (float px, float py) {
-		x = px;
-		y = py;
+	public Vector2 (double px, double py) {
+		x = (float) px;
+		y = (float) py;
 	}
 	
 	public Vector2 Vector2 () {

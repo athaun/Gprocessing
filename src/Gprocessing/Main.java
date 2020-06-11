@@ -24,37 +24,15 @@
 
 package Gprocessing;
 
-import static Gprocessing.Graphics.*;
-import static Gprocessing.Engine.*;
-import static Gprocessing.input.Mouse.*;
-
-import Gprocessing.pathfinding.Pathfinder;
-
-import static Gprocessing.input.Keyboard.*;
 import static Gprocessing.graphics.Color.*;
-import Gprocessing.physics.Rectangle;
-import Gprocessing.physics.Vector2;
+import static Gprocessing.graphics.Graphics.*;
 
-public class Main {
+import Gprocessing.graphics.Window;
+import Gprocessing.util.Scene;
 
-	public static void main(String[] args) {
-		init(1920, 1080, "Pathfinding Test");
-	}
-
-	static Pathfinder f;
-	static Vector2[] nodeVectors = new Vector2[25];
-
-	static void awake() {
-		for (int i = 0 ; i < nodeVectors.length; i ++) {
-			nodeVectors[i] = new Vector2(randomInt(0, w.width), randomInt(0, w.height));
-		}
-		f = new Pathfinder(nodeVectors);
-	}
-	
-	static void update() {
-		background(WHITE);
-		fill(BLUE);
-		f.findPath(Pathfinder.nodes[0], Pathfinder.nodes[Pathfinder.nodes.length - 1], 0);
-		f.updateNodes();
+public class Main extends Scene {
+	public static void update() {
+		background(255, 255, 255, 255);
+		Window.drawShape();
 	}
 }
