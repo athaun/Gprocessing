@@ -51,4 +51,10 @@ Gprocessing (Left), Processing 3 (Right)
 6.2.2020
 - begin change to modern OpenGL
 - added mouse input callbacks
+6.23.2020
+- added batch renderer
+- added Entity Component System
 ```
+
+NOTE: Absolutely massive shoutout to Game With Gabe on Youtube for his amazing tutorial series on building a java game engine! 
+https://www.youtube.com/channel/UCQP4qSCj1eHMHisDDR4iPzw/videos
