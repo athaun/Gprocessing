@@ -31,9 +31,7 @@ public class Engine {
 		if (!glfwInit())
 			throw new IllegalStateException("[FATAL] Failed to initialize GLFW.");
 
-		w = new Window(windowWidth, windowHeight, windowTitle); // 1920, 1500
-
-		Window.main.awake();
+		w = new Window(windowWidth, windowHeight, windowTitle); // 1920, 1500		
 
 		w.showWindow();
 

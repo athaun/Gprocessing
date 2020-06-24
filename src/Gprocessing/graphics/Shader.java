@@ -24,6 +24,7 @@ import static org.lwjgl.opengl.GL20.glUniform4f;
 import static org.lwjgl.opengl.GL20.glUniformMatrix3fv;
 import static org.lwjgl.opengl.GL20.glUniformMatrix4fv;
 import static org.lwjgl.opengl.GL20.glUseProgram;
+import static org.lwjgl.opengl.GL20.glUniform1iv;
 
 import java.io.IOException;
 import java.nio.FloatBuffer;
@@ -196,5 +197,11 @@ public class Shader {
 		use(); // make sure the shader is being used
 		glUniform1i(varLocation, slot);
 	}
+	
+	public void uploadIntArray(String varName, int[] array) {
+        int varLocation = glGetUniformLocation(shaderProgramID, varName);
+        use();
+        glUniform1iv(varLocation, array);
+    }
 	
 }

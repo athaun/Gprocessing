@@ -77,6 +77,10 @@ public class Window {
 		double frameBeginTime = millis();
 		double frameEndTime = millis();
 		
+		currentScene.loadResources();
+		
+		currentScene.awake();
+		
 		currentScene.startGameObjects();
 		
 		while (!glfwWindowShouldClose(window)) {

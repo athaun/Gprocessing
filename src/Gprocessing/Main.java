@@ -25,20 +25,27 @@
 package Gprocessing;
 
 import static Gprocessing.graphics.Graphics.*;
-import Gprocessing.graphics.primitives.Rectangle;
+import org.joml.Vector2f;
+import Gprocessing.ecs.GameObject;
+import Gprocessing.ecs.SpriteRenderer;
+import Gprocessing.graphics.Camera;
+import Gprocessing.physics.Transform;
 import static Gprocessing.graphics.Color.*;
+import Gprocessing.util.Assets;
 import Gprocessing.util.Scene;
 
 public class Main extends Scene {
 
-	int x = 0;
+	GameObject obj1 = new GameObject("obj1", new Transform(new Vector2f(100, 100), new Vector2f(256, 256)));
 
-	Rectangle r = new Rectangle();
+	public void awake() {
+		camera = new Camera(new Vector2f());
+
+		obj1.addComponent(new SpriteRenderer(Assets.getTexture("src/assets/images/pepper.png")));
+		this.addGameObjectToScene(obj1);
+	}
 
 	public void update() {
 		background(WHITE);
-		r.setPosition(1000, 100, 100, 20);
 	}
-
-	// TODO: get setter working for ECS!
 }

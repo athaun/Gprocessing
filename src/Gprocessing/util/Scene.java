@@ -62,4 +62,8 @@ public abstract class Scene {
 		
 		this.renderer.render();
 	}
+	
+	public void loadResources () {
+		Assets.getShader("src/assets/shaders/default.glsl");
+	}
 }

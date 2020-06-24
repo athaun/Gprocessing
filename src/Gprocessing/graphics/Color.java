@@ -16,7 +16,7 @@ public class Color {
 	public float b;
 	public float a;
 	
-	Color (float pr, float pg, float pb, float pa) {
+	public Color (float pr, float pg, float pb, float pa) {
 		r = pr;
 		g = pg;
 		b = pb;

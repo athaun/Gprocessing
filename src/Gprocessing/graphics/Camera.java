@@ -23,10 +23,10 @@ public class Camera {
 		projectionMatrix.identity();
 		if (Engine.projectionMode.equals("Gprocessing")) { // bottom left origin
 			projectionMatrix.ortho(0, 32 * 40, 0, 32 * 21, 0, 100);
-			Engine.println("[INFO] Set camera projection mode to \"Gprocessing\".");
+//			Engine.println("[INFO] Set camera projection mode to \"Gprocessing\".");
 		} else if (Engine.projectionMode.equals("processing")) { // Top Left origin
 			projectionMatrix.ortho(0, Engine.w.width, Engine.w.height, 0, 0, 100);
-			Engine.println("[INFO] Set camera projection mode to \"processing\".");
+//			Engine.println("[INFO] Set camera projection mode to \"processing\".");
 		} else {
 			Engine.println("[WARNING] Specify a projectionMode of either \"Gprocessing\" or \"processing\".");
 		}
