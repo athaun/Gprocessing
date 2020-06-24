@@ -52,3 +52,6 @@ Gprocessing (Left), Processing 3 (Right)
 - begin change to modern OpenGL
 - added mouse input callbacks
 ```
+
+NOTE: Absolutely massive shoutout to Game With Gabe on Youtube for his amazing tutorial series! 
+https://www.youtube.com/channel/UCQP4qSCj1eHMHisDDR4iPzw/videos
