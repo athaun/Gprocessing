@@ -24,15 +24,21 @@
 
 package Gprocessing;
 
-import static Gprocessing.graphics.Color.*;
 import static Gprocessing.graphics.Graphics.*;
-
-import Gprocessing.graphics.Window;
+import Gprocessing.graphics.primitives.Rectangle;
+import static Gprocessing.graphics.Color.*;
 import Gprocessing.util.Scene;
 
 public class Main extends Scene {
-	public static void update() {
-		background(255, 255, 255, 255);
-		Window.drawShape();
+
+	int x = 0;
+
+	Rectangle r = new Rectangle();
+
+	public void update() {
+		background(WHITE);
+		r.setPosition(1000, 100, 100, 20);
 	}
+
+	// TODO: get setter working for ECS!
 }

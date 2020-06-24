@@ -84,9 +84,8 @@ public class Mouse {
 	public static boolean mouseButtonDown (int button) {
 		if (button < mouseButton.length) {
 			return mouseButton[button];
-		} else {
-			return false;
 		}
+		return false;
 	}
 	
 	public static void clearMouseInput () {

@@ -2,18 +2,27 @@ package Gprocessing.util;
 
 import static org.lwjgl.glfw.GLFW.glfwInit;
 import org.lwjgl.glfw.GLFWErrorCallback;
-import Gprocessing.Main;
 import Gprocessing.graphics.Window;
-import Gprocessing.physics.Rectangle;
+import Gprocessing.physics.RectangleBounds;
 import Gprocessing.physics.Vector2;
 
 public class Engine {
+	
+	/** 
+	 * Engine
+	 * contains static core methods that Gprocessing projects may access
+	 * also initializes the window and game loop
+	 */
 
 	private static long startMillis = System.currentTimeMillis();
 
 	public static Window w;
+	
+	public static String projectionMode = "Gprocessing"; // "processing" or "Gprocessing"
 
 	public static boolean running = true;
+	
+	public static double deltaTime = 0;
 
 	public static void init(int windowWidth, int windowHeight, String windowTitle) {
 
@@ -24,7 +33,7 @@ public class Engine {
 
 		w = new Window(windowWidth, windowHeight, windowTitle); // 1920, 1500
 
-		Main.awake();
+		Window.main.awake();
 
 		w.showWindow();
 
@@ -42,7 +51,7 @@ public class Engine {
 		return map((float) Math.random(), 0, 1, min, max);
 	}
 
-	public static int randomInt(float min, float max) {
+	public static int randomInt(int min, int max) {
 		return (int) map((float) Math.random(), 0, 1, min, max);
 	}
 
@@ -75,7 +84,7 @@ public class Engine {
 		return inX >= rectX && inX <= (rectY + rectWidth) && inY >= rectY && inY <= (rectY + rectHeight);
 	}
 
-	public static boolean inRect(float inX, float inY, Rectangle r) {
+	public static boolean inRect(float inX, float inY, RectangleBounds r) {
 		return inX >= r.x && inX <= (r.y + r.width) && inY >= r.y && inY <= (r.y + r.height);
 	}
 
@@ -83,7 +92,7 @@ public class Engine {
 		return in.x >= rectX && in.x <= (rectY + rectWidth) && in.y >= rectY && in.y <= (rectY + rectHeight);
 	}
 
-	public static boolean inRect(Vector2 in, Rectangle r) {
+	public static boolean inRect(Vector2 in, RectangleBounds r) {
 		return in.x >= r.x && in.x <= (r.y + r.width) && in.y >= r.y && in.y <= (r.y + r.height);
 	}
 

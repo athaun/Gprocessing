@@ -3,11 +3,14 @@
 layout (location=0) in vec3 positionAttribute;
 layout (location=1) in vec4 colorAttribute;
 
+uniform mat4 uProjection;
+uniform mat4 uView;
+
 out vec4 colorFragment;
 
 void main() {
 	colorFragment = colorAttribute;
-	gl_Position = vec4(positionAttribute, 1.0);
+	gl_Position = uProjection * uView * vec4(positionAttribute, 1.0);
 }
 
 #type fragment

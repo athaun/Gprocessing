@@ -35,9 +35,8 @@ public class Keyboard {
 		if (returnBoolPressed) {
 			returnBoolPressed = false;
 			return true;
-		} else {
-			return false;
 		}
+		return false;
 	}
 
 	private static boolean returnBoolReleased;
@@ -52,9 +51,8 @@ public class Keyboard {
 		if (returnBoolReleased) {
 			returnBoolReleased = false;
 			return true;
-		} else {
-			return false;
 		}
+		return false;
 	}
 
 }
