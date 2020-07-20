@@ -29,6 +29,7 @@ import org.joml.Vector2f;
 import Gprocessing.ecs.GameObject;
 import Gprocessing.ecs.SpriteRenderer;
 import Gprocessing.graphics.Camera;
+import Gprocessing.graphics.primitives.Rectangle;
 import Gprocessing.physics.Transform;
 import static Gprocessing.graphics.Color.*;
 import Gprocessing.util.Assets;
@@ -37,7 +38,7 @@ import Gprocessing.util.Scene;
 public class Main extends Scene {
 
 	GameObject obj1 = new GameObject("obj1", new Transform(new Vector2f(100, 100), new Vector2f(256, 256)));
-
+	Rectangle r = new Rectangle();
 	public void awake() {
 		camera = new Camera(new Vector2f());
 

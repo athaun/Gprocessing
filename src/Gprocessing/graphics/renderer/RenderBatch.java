@@ -207,7 +207,7 @@ public class RenderBatch {
 			vertices[offset + 7] = textureCoordinates[i].y;
 
 			// Load texture ID
-			vertices[offset + 7] = textureID;
+			vertices[offset + 8] = textureID;
 
 			offset += VERTEX_SIZE;
 		}
