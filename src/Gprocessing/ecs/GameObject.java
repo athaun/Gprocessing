@@ -2,8 +2,9 @@ package Gprocessing.ecs;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import Gprocessing.Main;
 import Gprocessing.physics.Transform;
-import Gprocessing.util.Engine;
 
 public class GameObject {
 	
@@ -13,10 +14,12 @@ public class GameObject {
 	
 	public GameObject(String name) {
 		init(name, new ArrayList<>(), new Transform());
+		Main.addGameObjectToScene(this);
 	}
 	
 	public GameObject(String name, Transform transform) {
 		init(name, new ArrayList<>(), transform);
+		Main.addGameObjectToScene(this);
 	}
 	
 	private void init (String name, List<Component> components, Transform transform) {

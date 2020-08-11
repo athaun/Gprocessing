@@ -25,28 +25,29 @@
 package Gprocessing;
 
 import static Gprocessing.graphics.Graphics.*;
-import org.joml.Vector2f;
 import Gprocessing.ecs.GameObject;
 import Gprocessing.ecs.SpriteRenderer;
+import Gprocessing.ecs.Spritesheet;
 import Gprocessing.graphics.Camera;
-import Gprocessing.graphics.primitives.Rectangle;
 import Gprocessing.physics.Transform;
-import static Gprocessing.graphics.Color.*;
 import Gprocessing.util.Assets;
 import Gprocessing.util.Scene;
 
 public class Main extends Scene {
 
-	GameObject obj1 = new GameObject("obj1", new Transform(new Vector2f(100, 100), new Vector2f(256, 256)));
-	Rectangle r = new Rectangle();
-	public void awake() {
-		camera = new Camera(new Vector2f());
+	GameObject mario = new GameObject("obj1", new Transform(100, 100, 256, 256));
 
-		obj1.addComponent(new SpriteRenderer(Assets.getTexture("src/assets/images/pepper.png")));
-		this.addGameObjectToScene(obj1);
+	Spritesheet sprites;
+	
+	public void awake() {
+		camera = new Camera();
+
+		sprites = Assets.loadSpritesheet("src/assets/images/spritesheet.png", 16, 16, 25, 0);
+		
+		mario.addComponent(new SpriteRenderer(sprites.getSprite(5)));	
 	}
 
 	public void update() {
-		background(WHITE);
+		background(0);
 	}
 }

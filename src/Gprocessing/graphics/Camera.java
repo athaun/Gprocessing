@@ -19,6 +19,13 @@ public class Camera {
 		adjustProjection();
 	}
 	
+	public Camera () {
+		this.position = new Vector2f();
+		this.projectionMatrix = new Matrix4f();
+		this.viewMatrix = new Matrix4f();
+		adjustProjection();
+	}
+	
 	public void adjustProjection () {
 		projectionMatrix.identity();
 		if (Engine.projectionMode.equals("Gprocessing")) { // bottom left origin

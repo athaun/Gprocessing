@@ -1,6 +1,5 @@
 package Gprocessing.graphics;
 import org.joml.Vector4f;
-
 import Gprocessing.util.Engine;
 
 public class Color {
@@ -29,5 +28,14 @@ public class Color {
 
 	public Vector4f toVec4f() {
 		return new Vector4f(r, g, b, a);
+	}
+	
+	private float m (float p) {
+		// I am too lazy to type this three times...
+		return Engine.map(p, 0, 255, 0, 1);
+	}
+	
+	public Vector4f toNormalizedVec4f () {
+		return new Vector4f(m(r), m(g), m(b), m(a));
 	}
 }

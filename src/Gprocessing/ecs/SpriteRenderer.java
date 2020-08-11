@@ -2,55 +2,46 @@ package Gprocessing.ecs;
 
 import org.joml.Vector2f;
 import org.joml.Vector4f;
-import Gprocessing.ecs.Component;
 import Gprocessing.graphics.Color;
+import static Gprocessing.graphics.Color.*;
 import Gprocessing.graphics.Texture;
 
 public class SpriteRenderer extends Component {
 
 	private Vector4f color;
-	private Vector2f[] textureCoordinates = {
-		new Vector2f(1, 1),
-		new Vector2f(0, 1),
-		new Vector2f(0, 0),
-		new Vector2f(1, 0)
-	};
-	private Texture texture;
+	private Sprite sprite;
 
 	public SpriteRenderer(Vector4f color) {
 		this.setColor(color);
-		this.texture = null;
+		this.sprite = new Sprite(null);
 	}
 
 	public SpriteRenderer(Color color) {
 		this.setColor(color.toVec4f());
-		this.texture = null;
+		this.sprite = new Sprite(null);
 	}
 
-	public SpriteRenderer(Texture texture) {
-		this.texture = texture;
-		this.setColor(new Vector4f(1, 1, 1, 1));
+	public SpriteRenderer(Sprite sprite) {
+		this.sprite = sprite;
+		this.color = WHITE.toNormalizedVec4f();
 	}
-
+	
 	public void useGlobalFill() {
 
 	}
 
 	@Override
-	public void start() {
-	}
+	public void start() {}
 
 	@Override
-	public void update(float dt) {
-
-	}
+	public void update(float dt) {}
 	
 	public Texture getTexture () {
-		return this.texture;
+		return sprite.getTexture();
 	}
 	
 	public Vector2f[] getTexCoords() {
-		return textureCoordinates;
+		return sprite.getTextureCoordinates();
 	}
 
 	public Vector4f getColor() {

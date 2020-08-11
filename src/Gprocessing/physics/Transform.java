@@ -18,6 +18,10 @@ public class Transform {
 		init(position, scale);
 	}
 	
+	public Transform (float x, float y, float w, float h) {
+		init(new Vector2f(x, y), new Vector2f(w, h));
+	}
+	
 	private void init (Vector2f position, Vector2f scale) {
 		this.position = position;
 		this.scale = scale;

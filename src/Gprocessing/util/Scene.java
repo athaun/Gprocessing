@@ -4,9 +4,6 @@ import static Gprocessing.util.Engine.deltaTime;
 import static Gprocessing.util.Engine.init;
 import java.util.ArrayList;
 import java.util.List;
-
-import org.joml.Vector2f;
-
 import Gprocessing.graphics.Camera;
 import Gprocessing.graphics.primitives.Rectangle;
 import Gprocessing.graphics.renderer.Renderer;
@@ -17,21 +14,21 @@ public abstract class Scene {
 	private Renderer renderer = new Renderer();
 	public Camera camera;
 	private boolean isRunning = false;
-	protected List<GameObject> gameObjects = new ArrayList<>();
+	static protected List<GameObject> gameObjects = new ArrayList<>();
 	
 	public static void main(String[] args) {
 		init(1600, 900, "Gprocessing");		
 	}
 	
 	public void awake () {
-		camera = new Camera(new Vector2f());
+		camera = new Camera();
 	}
 	
 	public void update() {
 
 	}
 	
-	// Should not be overridden 
+	// These methods shouldn't be overridden
 	public void startGameObjects () {
 		Rectangle.addRectangleGameObjects();
 		for (GameObject gameObject : gameObjects) {
@@ -41,14 +38,16 @@ public abstract class Scene {
 		isRunning = true;
 	}
 	
-	public void addGameObjectToScene (GameObject gameObject) {
-		if (!isRunning) {
-			gameObjects.add(gameObject);
-		} else {
-			gameObjects.add(gameObject);
-			gameObject.start();
-			this.renderer.add(gameObject);
-		}
+	public static void addGameObjectToScene (GameObject gameObject) {
+//		if (!isRunning) {
+//			gameObjects.add(gameObject);
+//		} else {
+//			gameObjects.add(gameObject);
+//			gameObject.start();
+//			this.renderer.add(gameObject);
+//		}
+		gameObjects.add(gameObject);
+		gameObject.start();
 	}
 	
 	public Camera camera () {
@@ -63,7 +62,7 @@ public abstract class Scene {
 		this.renderer.render();
 	}
 	
-	public void loadResources () {
+	public void loadEngineResources () {
 		Assets.getShader("src/assets/shaders/default.glsl");
 	}
 }

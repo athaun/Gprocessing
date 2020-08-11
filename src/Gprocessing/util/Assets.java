@@ -2,12 +2,15 @@ package Gprocessing.util;
 
 import java.io.File;
 import java.util.HashMap;
+
+import Gprocessing.ecs.Spritesheet;
 import Gprocessing.graphics.Shader;
 import Gprocessing.graphics.Texture;
 
 public class Assets {
 	private static HashMap<String, Shader> shaders = new HashMap<>();
 	private static HashMap<String, Texture> textures = new HashMap<>();
+	private static HashMap<String, Spritesheet> spritesheets = new HashMap<>();
 
 	public static Shader getShader(String path) {
 		File file = new File(path);
@@ -29,4 +32,25 @@ public class Assets {
 		textures.put(file.getAbsolutePath(), texture);
 		return texture;
 	}
+	
+	private static void addSpritesheet (String path, Spritesheet spritesheet) {
+		File file = new File(path);
+		if (!Assets.spritesheets.containsKey(file.getAbsolutePath())) {
+			Assets.spritesheets.put(file.getAbsolutePath(), spritesheet);
+		}
+	}
+	
+	private static Spritesheet getSpritesheet (String path) {
+		File file = new File(path);
+		if (!Assets.spritesheets.containsKey(file.getAbsolutePath())) {
+			assert false : "[ERROR] Tried to access spritesheet \"" + path + "\", but it does not exist.";
+		}
+		return Assets.spritesheets.getOrDefault(file.getAbsolutePath(), null);
+	}
+	
+	public static Spritesheet loadSpritesheet (String path, int spriteWidth, int spriteHeight, int numSprites, int spacing) {
+		addSpritesheet(path, new Spritesheet(getTexture(path), spriteWidth, spriteHeight, numSprites, spacing));
+		return getSpritesheet(path);
+	}
+	
 }

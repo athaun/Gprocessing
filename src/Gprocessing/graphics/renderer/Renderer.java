@@ -5,6 +5,7 @@ import java.util.List;
 
 import Gprocessing.ecs.GameObject;
 import Gprocessing.ecs.SpriteRenderer;
+import Gprocessing.graphics.Texture;
 
 public class Renderer {
 	private final int MAX_BATCH_SIZE = 1000;
@@ -31,9 +32,12 @@ public class Renderer {
 		boolean added = false;
 		for (RenderBatch batch : batches) {
 			if (batch.hasRoomLeft()) {
-				batch.addSprite(sprite);
-				added = true;
-				break;
+				Texture tex = sprite.getTexture();
+				if (tex == null || (batch.hasTexture(tex) || batch.hasTextureRoom())) {
+					batch.addSprite(sprite);
+					added = true;
+					break;
+				}
 			}
 		}
 		

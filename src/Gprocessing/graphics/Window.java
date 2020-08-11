@@ -77,7 +77,7 @@ public class Window {
 		double frameBeginTime = millis();
 		double frameEndTime = millis();
 		
-		currentScene.loadResources();
+		currentScene.loadEngineResources();
 		
 		currentScene.awake();
 		
