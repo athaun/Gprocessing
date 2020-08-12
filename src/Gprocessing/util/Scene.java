@@ -5,7 +5,6 @@ import static Gprocessing.util.Engine.init;
 import java.util.ArrayList;
 import java.util.List;
 import Gprocessing.graphics.Camera;
-import Gprocessing.graphics.primitives.Rectangle;
 import Gprocessing.graphics.renderer.Renderer;
 import Gprocessing.ecs.GameObject;
 
@@ -30,7 +29,6 @@ public abstract class Scene {
 	
 	// These methods shouldn't be overridden
 	public void startGameObjects () {
-		Rectangle.addRectangleGameObjects();
 		for (GameObject gameObject : gameObjects) {
 			gameObject.start();
 			this.renderer.add(gameObject);

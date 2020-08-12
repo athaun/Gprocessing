@@ -6,8 +6,6 @@ import java.util.ArrayList;
 import java.util.List;
 import org.joml.Vector4f;
 import Gprocessing.ecs.GameObject;
-import Gprocessing.graphics.primitives.Rectangle;
-
 import static Gprocessing.util.Engine.*;
 import Gprocessing.physics.RectangleBounds;
 //import Gprocessing.physics.Vector2;

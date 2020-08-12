@@ -19,8 +19,8 @@ public class Window {
 	public static long window;
 	private GLFWVidMode videoMode = glfwGetVideoMode(glfwGetPrimaryMonitor());
 
-	int width;
-	int height;
+	public static int width;
+	public static int height;
 
 	public double dt = 0; // deltaTime
 	
@@ -31,7 +31,7 @@ public class Window {
 	public static Scene currentScene = main;
 
 	public Window(int pwidth, int pheight, String ptitle) {
-
+		
 		width = pwidth;
 		height = pheight;
 		title = ptitle;
@@ -74,8 +74,8 @@ public class Window {
 		glfwShowWindow(window);
 		GL.createCapabilities();
 
-		double frameBeginTime = millis();
-		double frameEndTime = millis();
+		double frameBeginTime = millis()/1000;
+		double frameEndTime = millis()/1000;
 		
 		currentScene.loadEngineResources();
 		
@@ -97,7 +97,7 @@ public class Window {
 			glfwSwapBuffers(window);
 			getFPS();
 
-			frameEndTime = millis();
+			frameEndTime = millis()/1000;
 			dt = frameEndTime - frameBeginTime;
 			Engine.deltaTime = dt;
 			frameBeginTime = frameEndTime;

@@ -20,34 +20,42 @@
  * - constrain
  * - lerp
  * - animation?
+ * 
+ * 	
  */
 
 package Gprocessing;
 
-import static Gprocessing.graphics.Graphics.*;
 import Gprocessing.ecs.GameObject;
+import Gprocessing.graphics.Camera;
+import Gprocessing.graphics.Color;
+import Gprocessing.ecs.Rectangle;
+import Gprocessing.ecs.Sprite;
 import Gprocessing.ecs.SpriteRenderer;
 import Gprocessing.ecs.Spritesheet;
-import Gprocessing.graphics.Camera;
 import Gprocessing.physics.Transform;
 import Gprocessing.util.Assets;
 import Gprocessing.util.Scene;
+import static Gprocessing.graphics.Graphics.*;
 
 public class Main extends Scene {
-
-	GameObject mario = new GameObject("obj1", new Transform(100, 100, 256, 256));
-
-	Spritesheet sprites;
 	
-	public void awake() {
+	Spritesheet sprites;
+	GameObject rectangle = new GameObject(new Transform(0, 0, 1600, 100));
+	GameObject mario = new GameObject(new Transform(400, 100, 100, 100));
+	GameObject pepper = new GameObject(new Transform(600, 200, 50, 50));
+	
+	public void awake() {		
 		camera = new Camera();
-
+		
 		sprites = Assets.loadSpritesheet("src/assets/images/spritesheet.png", 16, 16, 25, 0);
 		
-		mario.addComponent(new SpriteRenderer(sprites.getSprite(5)));	
+		pepper.addComponent(new SpriteRenderer(new Sprite(Assets.getTexture("src/assets/images/pepper.png"))));
+		mario.addComponent(new SpriteRenderer(sprites.getSprite(5)));
+		rectangle.addComponent(new Rectangle(50, 200, 100));
 	}
 
 	public void update() {
-		background(0);
+		background(Color.BLACK);
 	}
 }

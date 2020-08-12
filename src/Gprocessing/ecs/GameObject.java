@@ -12,13 +12,18 @@ public class GameObject {
 	private List<Component> components;
 	public Transform transform;
 	
-	public GameObject(String name) {
-		init(name, new ArrayList<>(), new Transform());
+	public GameObject (String name, Transform transform) {
+		init(name, new ArrayList<>(), transform);
 		Main.addGameObjectToScene(this);
 	}
 	
-	public GameObject(String name, Transform transform) {
-		init(name, new ArrayList<>(), transform);
+	public GameObject (String name) {
+		init(name, new ArrayList<>(), new Transform());
+		Main.addGameObjectToScene(this);
+	}	
+	
+	public GameObject (Transform transform) {
+		init("I really don't remember why I added names, they don't do anything useful", new ArrayList<>(), transform);
 		Main.addGameObjectToScene(this);
 	}
 	
@@ -50,10 +55,6 @@ public class GameObject {
 				return;
 			}
 		}
-	}
-	
-	public void setTransform (Transform t) {
-		transform = t;
 	}
 	
 	public void addComponent (Component c) {
