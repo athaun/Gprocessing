@@ -22,7 +22,7 @@ import org.joml.Vector4f;
 import Gprocessing.physics.Transform;
 import Gprocessing.util.Assets;
 
-public class RenderBatch {
+public class RenderBatch implements Comparable<RenderBatch>{
 	/**
 	 * Vertex layout
 	 * 
@@ -54,8 +54,10 @@ public class RenderBatch {
 	private int vaoID, vboID;
 	private int maxBatchSize;
 	private Shader shader;
+	
+	private int zIndex;
 
-	RenderBatch(int maxBatchSize) {
+	RenderBatch(int maxBatchSize, int zIndex) {
 		shader = Assets.getShader("src/assets/shaders/default.glsl");
 
 		this.sprites = new SpriteRenderer[maxBatchSize];
@@ -66,6 +68,7 @@ public class RenderBatch {
 		this.numberOfSprites = 0;
 		this.hasRoomLeft = true;
 		this.textures = new ArrayList<>();
+		this.zIndex = zIndex;
 	}
 
 	public void start() {
@@ -261,5 +264,14 @@ public class RenderBatch {
 	
 	public boolean hasTexture (Texture tex) {
 		return this.textures.contains(tex);
+	}
+	
+	public int zIndex () {
+		return zIndex;
+	}
+
+	@Override
+	public int compareTo(RenderBatch a) {
+		return Integer.compare(this.zIndex, a.zIndex);
 	}
 }

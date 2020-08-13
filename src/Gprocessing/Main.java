@@ -40,22 +40,18 @@ import static Gprocessing.graphics.Graphics.*;
 
 public class Main extends Scene {
 	
-	Spritesheet sprites;
-	GameObject rectangle = new GameObject(new Transform(0, 0, 1600, 100));
-	GameObject mario = new GameObject(new Transform(400, 100, 100, 100));
-	GameObject pepper = new GameObject(new Transform(600, 200, 50, 50));
+	GameObject greenBox = new GameObject(new Transform(600, 230, 50, 50), 1);
+	GameObject redBox = new GameObject(new Transform(600, 200, 50, 50), -1);
+	
 	
 	public void awake() {		
 		camera = new Camera();
 		
-		sprites = Assets.loadSpritesheet("src/assets/images/spritesheet.png", 16, 16, 25, 0);
-		
-		pepper.addComponent(new SpriteRenderer(new Sprite(Assets.getTexture("src/assets/images/pepper.png"))));
-		mario.addComponent(new SpriteRenderer(sprites.getSprite(5)));
-		rectangle.addComponent(new Rectangle(50, 200, 100));
+		redBox.addComponent(new SpriteRenderer(new Sprite(Assets.getTexture("src/assets/images/blendImage1.png"))));
+		greenBox.addComponent(new SpriteRenderer(new Sprite(Assets.getTexture("src/assets/images/blendImage2.png"))));
 	}
 
 	public void update() {
-		background(Color.BLACK);
+		background(Color.WHITE);
 	}
 }

@@ -11,20 +11,30 @@ public class GameObject {
 	private String name;
 	private List<Component> components;
 	public Transform transform;
+	private int zIndex;
 	
-	public GameObject (String name, Transform transform) {
+	public GameObject (String name, Transform transform, int zIndex) {
 		init(name, new ArrayList<>(), transform);
 		Main.addGameObjectToScene(this);
+		this.zIndex = zIndex;
 	}
 	
-	public GameObject (String name) {
+	public GameObject (String name, int zIndex) {
 		init(name, new ArrayList<>(), new Transform());
 		Main.addGameObjectToScene(this);
+		this.zIndex = zIndex;
 	}	
+	
+	public GameObject (Transform transform, int zIndex) {
+		init("I really don't remember why I added names, they don't do anything useful", new ArrayList<>(), transform);
+		Main.addGameObjectToScene(this);
+		this.zIndex = zIndex;
+	}
 	
 	public GameObject (Transform transform) {
 		init("I really don't remember why I added names, they don't do anything useful", new ArrayList<>(), transform);
 		Main.addGameObjectToScene(this);
+		this.zIndex = 0;
 	}
 	
 	private void init (String name, List<Component> components, Transform transform) {
@@ -72,5 +82,9 @@ public class GameObject {
 		for (int i = 0; i < components.size(); i ++) {
 			components.get(i).start();
 		}
+	}
+	
+	public int zIndex () {
+		return zIndex;
 	}
 }

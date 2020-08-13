@@ -73,6 +73,9 @@ public class Window {
 		 */
 		glfwShowWindow(window);
 		GL.createCapabilities();
+		
+		glEnable(GL_BLEND);
+		glBlendFunc(GL_ONE, GL_ONE_MINUS_SRC_ALPHA);
 
 		double frameBeginTime = millis()/1000;
 		double frameEndTime = millis()/1000;

@@ -18,16 +18,19 @@ public class SpriteRenderer extends Component {
 	public SpriteRenderer(Vector4f color) {
 		this.setColor(color);
 		this.sprite = new Sprite(null);
+		this.isDirty = true;
 	}
 
 	public SpriteRenderer(Color color) {
 		this.setColor(color.toVec4f());
 		this.sprite = new Sprite(null);
+		this.isDirty = true;
 	}
 
 	public SpriteRenderer(Sprite sprite) {
 		this.sprite = sprite;
 		this.color = WHITE.toNormalizedVec4f();
+		this.isDirty = true;
 	}
 	
 	public void useGlobalFill() {
