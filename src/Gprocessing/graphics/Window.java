@@ -135,7 +135,7 @@ public class Window {
 			currentScene.update();
 			currentScene.updateGameObjects();
 
-			imguiLayer.update((float) dt);
+			imguiLayer.update((float) dt, currentScene);
 			
 			glfwSwapBuffers(window);
 			getFPS();

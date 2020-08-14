@@ -8,6 +8,8 @@ import org.joml.Vector4f;
 import Gprocessing.graphics.Color;
 import Gprocessing.graphics.Texture;
 import Gprocessing.physics.Transform;
+import Gprocessing.util.Engine;
+import imgui.ImGui;
 
 public class SpriteRenderer extends Component {
 
@@ -33,6 +35,21 @@ public class SpriteRenderer extends Component {
 		this.sprite = sprite;
 		this.color = WHITE.toNormalizedVec4f();
 		this.isDirty = true;
+	}
+	
+	// Override the imgui component method used in the inspector for scene's activeGameObject
+	@Override
+	public void imgui () {
+		float[] imColor = {
+				color.x, 
+				color.y,
+				color.z,
+				color.w
+		};
+		if (ImGui.colorPicker4("Color Picker", imColor)) {
+			this.color.set(imColor[0], imColor[1], imColor[2], imColor[3]);
+			this.isDirty = true;
+		}
 	}
 	
 	public void useGlobalFill() {

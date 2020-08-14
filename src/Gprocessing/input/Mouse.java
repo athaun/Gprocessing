@@ -14,6 +14,8 @@ import org.lwjgl.glfw.GLFWScrollCallback;
 
 import Gprocessing.graphics.Window;
 import Gprocessing.physics.Vector2;
+import imgui.ImGui;
+import imgui.ImGuiIO;
 
 public class Mouse {
 
@@ -31,6 +33,8 @@ public class Mouse {
 
 	private static int _button;
 	private static int _action;
+	
+	
 
 	public static void pollMouseButtons() {
 //		glfwSetMouseButtonCallback(Window.window, new GLFWMouseButtonCallback() {
@@ -53,14 +57,14 @@ public class Mouse {
 	}
 
 	public static void pollMouseScroll() {
-		glfwSetScrollCallback(Window.window, new GLFWScrollCallback() {
-			@Override
-			public void invoke(long window, double xOffset, double yOffset) {
-				scrollX = xOffset;
-				scrollY = yOffset;
-				mouseScroll = new Vector2(scrollX, scrollY);
-			}
-		});
+//		glfwSetScrollCallback(Window.window, new GLFWScrollCallback() {
+//			@Override
+//			public void invoke(long window, double xOffset, double yOffset) {
+//				scrollX = xOffset;
+//				scrollY = yOffset;
+//				mouseScroll = new Vector2(scrollX, scrollY);
+//			}
+//		});
 	}
 	
 	public static void update() {

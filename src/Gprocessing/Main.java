@@ -37,6 +37,7 @@ import Gprocessing.physics.Transform;
 import Gprocessing.util.Assets;
 import Gprocessing.util.Engine;
 import Gprocessing.util.Scene;
+import imgui.ImGui;
 
 
 
@@ -48,11 +49,20 @@ public class Main extends Scene {
 	public void awake() {		
 		camera = new Camera();
 		
-		redBox.addComponent(new SpriteRenderer(new Sprite(Assets.getTexture("src/assets/images/blendImage1.png"))));
+		redBox.addComponent(new SpriteRenderer(new Color(255, 0, 0, 255)));
 		greenBox.addComponent(new SpriteRenderer(new Sprite(Assets.getTexture("src/assets/images/blendImage2.png"))));	
+	
+		this.activeGameObject = redBox;
 	}
 
 	public void update() {
-		background(Color.WHITE);
+		background(50, 50, 50);
+	}
+	
+//	@Override
+	public void imgui () {
+		ImGui.begin("Test Window");
+		ImGui.text("Hello World");
+		ImGui.end();
 	}
 }

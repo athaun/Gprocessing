@@ -9,6 +9,7 @@ import java.util.List;
 import Gprocessing.ecs.GameObject;
 import Gprocessing.graphics.Camera;
 import Gprocessing.graphics.renderer.Renderer;
+import imgui.ImGui;
 
 public abstract class Scene {
 	
@@ -16,6 +17,7 @@ public abstract class Scene {
 	public Camera camera;
 	private boolean isRunning = false;
 	static protected List<GameObject> gameObjects = new ArrayList<>();
+	protected GameObject activeGameObject = null;
 	
 	public static void main(String[] args) {
 		init(1600, 900, "Gprocessing");		
@@ -64,5 +66,19 @@ public abstract class Scene {
 	
 	public void loadEngineResources () {
 		Assets.getShader("src/assets/shaders/default.glsl");
+	}
+	
+	public void sceneImgui () {
+		if (activeGameObject != null) {
+			ImGui.begin("Inspector");
+			activeGameObject.imgui();
+			ImGui.end();
+		}
+		
+		imgui();
+	}
+	
+	public void imgui () {
+		
 	}
 }
