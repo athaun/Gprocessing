@@ -1,10 +1,17 @@
 package Gprocessing.input;
 
-import static org.lwjgl.glfw.GLFW.*;
+import static org.lwjgl.glfw.GLFW.GLFW_PRESS;
+import static org.lwjgl.glfw.GLFW.GLFW_RELEASE;
+import static org.lwjgl.glfw.GLFW.glfwGetCursorPos;
+import static org.lwjgl.glfw.GLFW.glfwSetMouseButtonCallback;
+import static org.lwjgl.glfw.GLFW.glfwSetScrollCallback;
+
 import java.nio.DoubleBuffer;
+
 import org.lwjgl.BufferUtils;
 import org.lwjgl.glfw.GLFWMouseButtonCallback;
 import org.lwjgl.glfw.GLFWScrollCallback;
+
 import Gprocessing.graphics.Window;
 import Gprocessing.physics.Vector2;
 
@@ -26,23 +33,23 @@ public class Mouse {
 	private static int _action;
 
 	public static void pollMouseButtons() {
-		glfwSetMouseButtonCallback(Window.window, new GLFWMouseButtonCallback() {
-			@Override
-			public void invoke(long window, int button, int action, int mods) {
-				_button = button;
-				_action = action;
-			}
-		});
-
-		if (_action == GLFW_PRESS) {
-			if (_button < mouseButton.length)
-				mouseButton[_button] = true;
-		} else if (_action == GLFW_RELEASE) {
-			if (_button < mouseButton.length) {
-				mouseButton[_button] = false;
-				mouseDragged = false;
-			}
-		}
+//		glfwSetMouseButtonCallback(Window.window, new GLFWMouseButtonCallback() {
+//			@Override
+//			public void invoke(long window, int button, int action, int mods) {
+//				_button = button;
+//				_action = action;
+//			}
+//		});
+//
+//		if (_action == GLFW_PRESS) {
+//			if (_button < mouseButton.length)
+//				mouseButton[_button] = true;
+//		} else if (_action == GLFW_RELEASE) {
+//			if (_button < mouseButton.length) {
+//				mouseButton[_button] = false;
+//				mouseDragged = false;
+//			}
+//		}
 	}
 
 	public static void pollMouseScroll() {

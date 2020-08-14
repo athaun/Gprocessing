@@ -1,7 +1,9 @@
 package Gprocessing.util;
 
 import static org.lwjgl.glfw.GLFW.glfwInit;
+
 import org.lwjgl.glfw.GLFWErrorCallback;
+
 import Gprocessing.graphics.Window;
 import Gprocessing.physics.RectangleBounds;
 import Gprocessing.physics.Vector2;

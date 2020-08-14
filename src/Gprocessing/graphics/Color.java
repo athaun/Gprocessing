@@ -1,5 +1,6 @@
 package Gprocessing.graphics;
 import org.joml.Vector4f;
+
 import Gprocessing.util.Engine;
 
 public class Color {

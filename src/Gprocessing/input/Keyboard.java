@@ -1,8 +1,13 @@
 package Gprocessing.input;
 
-import Gprocessing.graphics.Window;
-import static org.lwjgl.glfw.GLFW.*;
+import static org.lwjgl.glfw.GLFW.GLFW_PRESS;
+import static org.lwjgl.glfw.GLFW.GLFW_RELEASE;
+import static org.lwjgl.glfw.GLFW.glfwGetKey;
+import static org.lwjgl.glfw.GLFW.glfwSetKeyCallback;
+
 import org.lwjgl.glfw.GLFWKeyCallback;
+
+import Gprocessing.graphics.Window;
 
 public class Keyboard {
 

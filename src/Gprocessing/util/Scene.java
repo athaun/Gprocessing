@@ -2,11 +2,13 @@ package Gprocessing.util;
 
 import static Gprocessing.util.Engine.deltaTime;
 import static Gprocessing.util.Engine.init;
+
 import java.util.ArrayList;
 import java.util.List;
+
+import Gprocessing.ecs.GameObject;
 import Gprocessing.graphics.Camera;
 import Gprocessing.graphics.renderer.Renderer;
-import Gprocessing.ecs.GameObject;
 
 public abstract class Scene {
 	

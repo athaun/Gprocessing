@@ -1,9 +1,11 @@
 package Gprocessing.ecs;
 
+import static Gprocessing.graphics.Color.WHITE;
+
 import org.joml.Vector2f;
 import org.joml.Vector4f;
+
 import Gprocessing.graphics.Color;
-import static Gprocessing.graphics.Color.*;
 import Gprocessing.graphics.Texture;
 import Gprocessing.physics.Transform;
 

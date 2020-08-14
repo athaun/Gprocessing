@@ -1,9 +1,11 @@
 package Gprocessing.ecs;
 
-import org.joml.Vector2f;
-import Gprocessing.graphics.Texture;
 import java.util.ArrayList;
 import java.util.List;
+
+import org.joml.Vector2f;
+
+import Gprocessing.graphics.Texture;
 
 public class Spritesheet {
 

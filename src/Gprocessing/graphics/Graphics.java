@@ -1,14 +1,14 @@
 package Gprocessing.graphics;
 
-import static org.lwjgl.opengl.GL11.*;
+import static Gprocessing.util.Engine.map;
+import static org.lwjgl.opengl.GL11.glClearColor;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import org.joml.Vector4f;
+
 import Gprocessing.ecs.GameObject;
-import static Gprocessing.util.Engine.*;
-import Gprocessing.physics.RectangleBounds;
-//import Gprocessing.physics.Vector2;
 
 public class Graphics {
 	

@@ -42,11 +42,11 @@ public class Node {
 		if (nodeType.equals("path")) fill(Color.BLUE);
 		if (nodeType.equals("end") || nodeType.equals("pathEnd")) fill(Color.GREEN);
 		
-		circle(position.x, position.y, 10, 20);
+//		circle(position.x, position.y, 10, 20);
 		fill(Color.BLUE);		
 
 		for (int i = 1; i < Pathfinder.path.size(); i++) {
-			line(Pathfinder.path.get(i - 1).position, Pathfinder.path.get(i).position);
+//			line(Pathfinder.path.get(i - 1).position, Pathfinder.path.get(i).position);
 		}
 	}
 }
