@@ -1,60 +1,93 @@
-## Gprocessing is a java graphics library built on top of LWJGL, modeled after the processing library, but with an emphasis on performance and 2D game development (3D support may come later).
+## Gprocessing is a lightweight 2D java game engine
+Originally inspired by the Processing 3 graphics library, Gprocessing is easy to use, but also fast.
+* Modern OpenGL through the LWJGL 3 library for fast GPU rendering.
+* Entity Component System
+* Dear ImGui bindings created by [SpaiR/imgui-java](https://github.com/SpaiR/imgui-java)
 
-In addition to the helpful wrapper functions around the Java implementation of OpenGL (LWJGL), providing easy creation of primitives like rectangles, ellipses, triangles and lines, Gprocessing will support sound, images, fonts, input, and basic networking.
-Unlike the origional processing 3 language, Gprocessing doesn't limit you to the PDE (processing development enviroment), you can use whatever IDE or editor you like; in addition Gprocessing is just regular java, so you can still use all the normal java libraries.
+## Code Examples
+### BoilerPlate Code:
+```java
+public class Main extends Scene {
+	
+	public void awake() {		
+		camera = new Camera();
+	}
 
-### Performance vs Processing 3
+	public void update() {
+		background(255, 255, 255); // Sets the clear color
+	}
+}
+```
+
+### Simple example with sprites
+```java
+public class Main extends Scene {
+	
+	GameObject greenRectangle = new GameObject(new Transform(600, 230, 50, 50), 1);
+	GameObject mario = new GameObject(new Transform(600, 200, 50, 50), 2);
+	
+	public void awake() {		
+		camera = new Camera();
+		
+		greenRectangle.addComponent(new SpriteRenderer(new Color(0, 255, 0, 255))); // Creates a new green sprite component
+		mario.addComponent(new SpriteRenderer(new Sprite(Assets.getTexture("src/assets/images/marioSprite.png"))));	// Loads the image from the filesystem into a sprite component
+	}
+
+	public void update() {
+		background(50, 50, 50); // Sets the clear color
+	}
+}
+```
+### Simple example with Dear ImGui
+```java
+public class Main extends Scene {
+	public void awake() {		
+		camera = new Camera();
+	}
+
+	public void update() {
+		background(50, 50, 50);
+	}
+
+	public void imgui () {
+		ImGui.begin("Demo Window");
+		ImGui.text("Hello World");
+		ImGui.end();
+	}
+}
+```
+  
+## Installation
+Clone:
+`git clone https://github.com/athaun/Gprocessing.git`
+open Eclipse, and select import project.
+* Eclipse:
+  Select the run icon > Run As > 1 java application
+  
+* Intellj:
+  you will have to provide a VM option in the build configuration
+  `-Dimgui.library.path=libary/LibImGuiBinaries`
+
+## Documentation
+Not yet created.
+
+## Credits
+
+Massive shoutout to Game With Gabe on Youtube for his [amazing tutorial series](https://www.youtube.com/channel/UCQP4qSCj1eHMHisDDR4iPzw/videos) on building a java game engine! 
+
+## License
+Copyright (c) 2020 Asher Haun MIT License
+See [LICENSE](https://github.com/athaun/Gprocessing/blob/master/LICENSE.md) for more information.
+
+## Performance vs Processing 3
 Running the same intensive code at a resolution of 1920x2160, Gprocessing gets a steady 60 FPS, while processing gets an average of 20 FPS
 Gprocessing (Left), Processing 3 (Right)
 ![screenshot](unknown.png)
 <br>
-### Changelog:
+### Milestones:
 ```
-+ 5.1.2020
-- setup glfw and lwjgl
-- Created window class
-- setup game loop
-- setup basic graphics
-- created rect() method
-- created pressure test program<br>
-+ 5.2.2020
-- created engine class
-- added FPS counter
-- added static class imports to better resemble processing method calls
-- added static misc methods: init, map, random, round, println
-- cleaned up initialization
-- added FPS counter
-- created Vector 2D and 3D classes
-- added graphics class
-- added static methods: fill(), fillAlpha(), and background()
-- cleaned up window class
-- created github repo
-+ 5.3.2020
-- added open simplex noise method
-+ 5.3.2020-5.5.2020
-- implemented ThreadMaster class, allowing the programmer to pass code into a Runnable object that is executed on a seperate thread.
-5.6.2020
-- added primitive shapes line, circle, and triangle
-5.7.2020
-- added input class, currently only mouseX and mouseY work
-- added color class
-- cleaned up file hierarchy
-- added inRect and inCircle engine methods.
-5.11.2020
-- added mouse Vector2
-- added Rectangle class
-- added inRect and inCircle support for passing Vector2
-- added inRect support for passing Rectangle
-- added rect support for passing Rectangle
-5.13.2020
-- implemented callbacks for keyboard events, keyIsPressed, keyPressed, and keyReleased
-6.2.2020
-- begin change to modern OpenGL
-- added mouse input callbacks
-6.23.2020
-- added batch renderer
-- added Entity Component System
++ 5.1.2020 Started the project
++ 6.2.2020 begin convert to modern OpenGL
++ 6.23.2020 Entity Component System
++ 8.14.2020 Added ImGui
 ```
-
-NOTE: Absolutely massive shoutout to Game With Gabe on Youtube for his amazing tutorial series on building a java game engine! 
-https://www.youtube.com/channel/UCQP4qSCj1eHMHisDDR4iPzw/videos
