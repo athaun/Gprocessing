@@ -3,15 +3,10 @@ package Gprocessing.ImGui;
 import imgui.*;
 import imgui.flag.*;
 import imgui.gl3.ImGuiImplGl3;
-
-import imgui.ImGui.*;
 import imgui.callback.ImStrConsumer;
 import imgui.callback.ImStrSupplier;
-
 import static org.lwjgl.glfw.GLFW.*;
-
 import Gprocessing.graphics.Window;
-import Gprocessing.util.Engine;
 import Gprocessing.util.Scene;
 
 public class ImGuiLayer {
@@ -153,10 +148,6 @@ public class ImGuiLayer {
 
         // Glyphs could be added per-font as well as per config used globally like here
         fontConfig.setGlyphRanges(fontAtlas.getGlyphRangesDefault());
-
-
-
-        // Fonts merge example
         fontConfig.setPixelSnapH(true);
         fontAtlas.addFontFromFileTTF("src/assets/fonts/roboto.ttf", 15, fontConfig);
 
@@ -165,6 +156,76 @@ public class ImGuiLayer {
         // ------------------------------------------------------------
         // Use freetype instead of stb_truetype to build a fonts texture
         ImGuiFreeType.buildFontAtlas(fontAtlas, ImGuiFreeType.RasterizerFlags.LightHinting);
+        
+        
+        // Theme Test --------------------------------------------
+        ImGuiStyle style = ImGui.getStyle();        
+        
+        style.setFrameRounding(4);
+        style.setGrabRounding(4);
+       
+        style.setPopupRounding(3);
+
+        style.setWindowPadding(4, 4);
+        style.setFramePadding(6, 4);
+        style.setItemSpacing(6, 2);
+
+        style.setScrollbarSize(18);
+
+        style.setChildBorderSize(0);
+        style.setPopupBorderSize(0);
+        style.setFrameBorderSize(0); 
+
+        style.setWindowRounding(3);
+        style.setChildRounding(3);
+        style.setScrollbarRounding(2);
+
+        style.setColor(ImGuiCol.Text, 255, 255, 255, 255);
+        style.setColor(ImGuiCol.TextDisabled, 255, 255, 255, 255);
+		
+        style.setColor(ImGuiCol.Text, 1.00f, 1.00f, 1.00f, 1.00f);
+        style.setColor(ImGuiCol.TextDisabled, 0.40f, 0.40f, 0.40f, 1.00f);
+        style.setColor(ImGuiCol.ChildBg, 0.25f, 0.25f, 0.25f, 1.00f);
+        style.setColor(ImGuiCol.WindowBg, 0.25f, 0.25f, 0.25f, 1.00f);
+        style.setColor(ImGuiCol.PopupBg, 0.25f, 0.25f, 0.25f, 1.00f);
+        style.setColor(ImGuiCol.Border, 0.12f, 0.12f, 0.12f, 0.71f);
+        style.setColor(ImGuiCol.BorderShadow, 1.00f, 1.00f, 1.00f, 0.06f);
+        style.setColor(ImGuiCol.FrameBg, 0.42f, 0.42f, 0.42f, 0.54f);
+        style.setColor(ImGuiCol.FrameBgHovered, 0.42f, 0.42f, 0.42f, 0.40f);
+        style.setColor(ImGuiCol.FrameBgActive, 0.56f, 0.56f, 0.56f, 0.67f);
+        style.setColor(ImGuiCol.TitleBg, 0.19f, 0.19f, 0.19f, 1.00f);
+        style.setColor(ImGuiCol.TitleBgActive, 0.22f, 0.22f, 0.22f, 1.00f);
+        style.setColor(ImGuiCol.TitleBgCollapsed, 0.17f, 0.17f, 0.17f, 0.90f);
+        style.setColor(ImGuiCol.MenuBarBg, 0.335f, 0.335f, 0.335f, 1.000f);
+        style.setColor(ImGuiCol.ScrollbarBg, 0.24f, 0.24f, 0.24f, 0.53f);
+        style.setColor(ImGuiCol.ScrollbarGrab, 0.41f, 0.41f, 0.41f, 1.00f);
+        style.setColor(ImGuiCol.ScrollbarGrabHovered, 0.52f, 0.52f, 0.52f, 1.00f);
+        style.setColor(ImGuiCol.ScrollbarGrabActive, 0.76f, 0.76f, 0.76f, 1.00f);
+        style.setColor(ImGuiCol.CheckMark, 0.65f, 0.65f, 0.65f, 1.00f);
+        style.setColor(ImGuiCol.SliderGrab, 0.52f, 0.52f, 0.52f, 1.00f);
+        style.setColor(ImGuiCol.SliderGrabActive, 0.64f, 0.64f, 0.64f, 1.00f);
+        style.setColor(ImGuiCol.Button, 0.54f, 0.54f, 0.54f, 0.35f);
+        style.setColor(ImGuiCol.ButtonHovered, 0.52f, 0.52f, 0.52f, 0.59f);
+        style.setColor(ImGuiCol.ButtonActive, 0.76f, 0.76f, 0.76f, 1.00f);
+        style.setColor(ImGuiCol.Header, 0.38f, 0.38f, 0.38f, 1.00f);
+        style.setColor(ImGuiCol.HeaderHovered, 0.47f, 0.47f, 0.47f, 1.00f);
+        style.setColor(ImGuiCol.HeaderActive, 0.76f, 0.76f, 0.76f, 0.77f);
+        style.setColor(ImGuiCol.Separator, 0.000f, 0.000f, 0.000f, 0.137f);
+        style.setColor(ImGuiCol.SeparatorHovered, 0.700f, 0.671f, 0.600f, 0.290f);
+        style.setColor(ImGuiCol.SeparatorActive, 0.702f, 0.671f, 0.600f, 0.674f);
+        style.setColor(ImGuiCol.ResizeGrip, 0.26f, 0.59f, 0.98f, 0.25f);
+        style.setColor(ImGuiCol.ResizeGripHovered, 0.26f, 0.59f, 0.98f, 0.67f);
+        style.setColor(ImGuiCol.ResizeGripActive, 0.26f, 0.59f, 0.98f, 0.95f);
+        style.setColor(ImGuiCol.PlotLines, 0.61f, 0.61f, 0.61f, 1.00f);
+        style.setColor(ImGuiCol.PlotLinesHovered, 1.00f, 0.43f, 0.35f, 1.00f);
+        style.setColor(ImGuiCol.PlotHistogram, 0.90f, 0.70f, 0.00f, 1.00f);
+        style.setColor(ImGuiCol.PlotHistogramHovered, 1.00f, 0.60f, 0.00f, 1.00f);
+        style.setColor(ImGuiCol.TextSelectedBg, 0.73f, 0.73f, 0.73f, 0.35f);
+        style.setColor(ImGuiCol.ModalWindowDimBg, 0.80f, 0.80f, 0.80f, 0.35f);
+        style.setColor(ImGuiCol.DragDropTarget, 1.00f, 1.00f, 0.00f, 0.90f);
+        style.setColor(ImGuiCol.NavHighlight, 0.26f, 0.59f, 0.98f, 1.00f);
+        style.setColor(ImGuiCol.NavWindowingHighlight, 1.00f, 1.00f, 1.00f, 0.70f);
+        style.setColor(ImGuiCol.NavWindowingDimBg, 0.80f, 0.80f, 0.80f, 0.20f);
 
 		// Method initializes LWJGL3 renderer.
 		// This method SHOULD be called after you've initialized your ImGui
