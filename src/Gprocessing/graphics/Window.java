@@ -1,6 +1,5 @@
 package Gprocessing.graphics;
 
-import static Gprocessing.util.Engine.millis;
 import static org.lwjgl.glfw.GLFW.GLFW_FALSE;
 import static org.lwjgl.glfw.GLFW.GLFW_RESIZABLE;
 import static org.lwjgl.glfw.GLFW.GLFW_TRUE;
@@ -34,6 +33,7 @@ import static org.lwjgl.opengl.GL11.glEnable;
 import org.lwjgl.glfw.GLFWVidMode;
 import org.lwjgl.opengl.GL;
 
+import Gprocessing.Editor;
 import Gprocessing.Main;
 import Gprocessing.ImGui.ImGuiLayer;
 import Gprocessing.input.Mouse;
@@ -42,7 +42,7 @@ import Gprocessing.util.Scene;
 
 public class Window {
 
-	public long frameCount = 0;
+	public static long frameCount = 0;
 
 	String title;
 	public static long window;
@@ -57,9 +57,10 @@ public class Window {
 	
 	static Shader defaultShader;
 	
-	public static Main main = new Main();
+	public static Scene main = new Main();
+	public static Scene editor = new Editor();
 	
-	public static Scene currentScene = main;
+	public static Scene currentScene = editor;
 
 	public Window(int pwidth, int pheight, String ptitle) {
 		
@@ -95,7 +96,7 @@ public class Window {
 
 	void getFPS() {
 		frameCount++;
-		glfwSetWindowTitle(window, "GProcessing @ " + Math.round((frameCount / (Engine.millis() / 1000))) + " FPS, " + Engine.deltaTime + " DeltaTime");
+//		glfwSetWindowTitle(window, "GProcessing @ " + Math.round((frameCount / (Engine.millis() / 1000))) + " FPS, " + Engine.deltaTime + " DeltaTime");
 	}
 
 	public void setTitle(String title) {
@@ -121,6 +122,8 @@ public class Window {
 		
 		currentScene.loadEngineResources();
 		
+		currentScene.loadJson();
+		
 		currentScene.awake();
 		
 		currentScene.startGameObjects();
@@ -145,6 +148,8 @@ public class Window {
 			Engine.deltaTime = dt;
 			frameBeginTime = frameEndTime;
 		}
+		
+		currentScene.saveExit();
 
 		glfwDestroyWindow(window);
 		glfwTerminate();

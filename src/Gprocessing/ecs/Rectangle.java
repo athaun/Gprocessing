@@ -12,7 +12,8 @@ public class Rectangle extends Component  {
 	private Transform lastTransform;
 	
 	public Rectangle (Vector4f c) {
-		rectangleSprite = new SpriteRenderer(c);		
+		rectangleSprite = new SpriteRenderer();
+		rectangleSprite.setColor(c);
 		this.color = c;
 	}
 	

@@ -9,7 +9,7 @@ import Gprocessing.physics.Transform;
 public class GameObject {
 	
 	private String name;
-	private List<Component> components;
+	public List<Component> components;
 	public Transform transform;
 	private int zIndex;
 	

@@ -217,5 +217,7 @@
 	<classpathentry kind="lib" path="library/lwjgl-zstd-natives-windows.jar"/>
 	<classpathentry kind="lib" path="library/lwjgl-zstd-sources.jar"/>
 	<classpathentry kind="lib" path="library/joml-1.9.25.jar"/>
+	<classpathentry kind="lib" path="library/gson-2.8.6.jar"/>
+	<classpathentry kind="lib" path="library/gson-2.8.6-sources.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

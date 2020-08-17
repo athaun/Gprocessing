@@ -1,0 +1,85 @@
+[
+  {
+    "name": "I really don\u0027t remember why I added names, they don\u0027t do anything useful",
+    "components": [],
+    "transform": {
+      "position": {
+        "x": 600.0,
+        "y": 230.0
+      },
+      "scale": {
+        "x": 50.0,
+        "y": 50.0
+      }
+    },
+    "zIndex": 1
+  },
+  {
+    "name": "I really don\u0027t remember why I added names, they don\u0027t do anything useful",
+    "components": [],
+    "transform": {
+      "position": {
+        "x": 600.0,
+        "y": 200.0
+      },
+      "scale": {
+        "x": 50.0,
+        "y": 50.0
+      }
+    },
+    "zIndex": -1
+  },
+  {
+    "name": "I really don\u0027t remember why I added names, they don\u0027t do anything useful",
+    "components": [
+      {
+        "type": "Gprocessing.ecs.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 0.11904764,
+            "y": 1.0,
+            "z": 0.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "texture": {
+              "filepath": "src/assets/images/pepper.png",
+              "textureID": 2,
+              "width": 512,
+              "height": 512
+            },
+            "textureCoordinates": [
+              {
+                "x": 1.0,
+                "y": 1.0
+              },
+              {
+                "x": 1.0,
+                "y": 0.0
+              },
+              {
+                "x": 0.0,
+                "y": 0.0
+              },
+              {
+                "x": 0.0,
+                "y": 1.0
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "transform": {
+      "position": {
+        "x": 600.0,
+        "y": 200.0
+      },
+      "scale": {
+        "x": 50.0,
+        "y": 50.0
+      }
+    },
+    "zIndex": 1
+  }
+]

@@ -1,41 +1,40 @@
 package Gprocessing.ecs;
 
-import static Gprocessing.graphics.Color.WHITE;
-
 import org.joml.Vector2f;
 import org.joml.Vector4f;
 
 import Gprocessing.graphics.Color;
 import Gprocessing.graphics.Texture;
 import Gprocessing.physics.Transform;
-import Gprocessing.util.Engine;
 import imgui.ImGui;
 
 public class SpriteRenderer extends Component {
 
 	private Vector4f color = new Color(255, 100, 100, 255).toNormalizedVec4f();
-	private Sprite sprite;
+	private Sprite sprite = new Sprite();
 	
-	private Transform lastTransform;
-	private boolean isDirty = false; // Dirty flag, tells renderer to redraw if object components have changed
+	private transient Transform lastTransform;
+	private transient boolean isDirty = false; // Dirty flag, tells renderer to redraw if object components have changed
 
-	public SpriteRenderer(Vector4f color) {
-		this.setColor(color);
-		this.sprite = new Sprite(null);
-		this.isDirty = true;
-	}
-
-	public SpriteRenderer(Color color) {
-		this.setColor(color.toVec4f());
-		this.sprite = new Sprite(null);
-		this.isDirty = true;
-	}
-
-	public SpriteRenderer(Sprite sprite) {
-		this.sprite = sprite;
-		this.color = WHITE.toNormalizedVec4f();
-		this.isDirty = true;
-	}
+	
+	
+//	public SpriteRenderer(Vector4f color) {
+//		this.setColor(color);
+//		this.sprite = new Sprite(null);
+//		this.isDirty = true;
+//	}
+//
+//	public SpriteRenderer(Color color) {
+//		this.setColor(color.toVec4f());
+//		this.sprite = new Sprite(null);
+//		this.isDirty = true;
+//	}
+//
+//	public SpriteRenderer(Sprite sprite) {
+//		this.sprite = sprite;
+//		this.color = WHITE.toNormalizedVec4f();
+//		this.isDirty = true;
+//	}
 	
 	// Override the imgui component method used in the inspector for scene's activeGameObject
 	@Override

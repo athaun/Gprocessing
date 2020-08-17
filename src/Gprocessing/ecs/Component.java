@@ -3,7 +3,7 @@ package Gprocessing.ecs;
 public abstract class Component {
 
 	// Parent GameObject
-	public GameObject gameObject = null;
+	public transient GameObject gameObject = null;
 	
 	public void start () {}
 	

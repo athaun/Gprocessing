@@ -28,7 +28,8 @@ public class Assets {
 		if (textures.containsKey(file.getAbsolutePath())) {
 			return textures.get(file.getAbsolutePath());
 		}
-		Texture texture = new Texture(path);
+		Texture texture = new Texture();
+		texture.init(path);
 		textures.put(file.getAbsolutePath(), texture);
 		return texture;
 	}
