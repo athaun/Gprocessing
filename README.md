@@ -4,6 +4,8 @@ Originally inspired by the Processing 3 graphics library, Gprocessing is easy to
 * Entity Component System
 * Dear ImGui bindings created by [SpaiR/imgui-java](https://github.com/SpaiR/imgui-java)
 
+This project is temporarily on hold during school, because I have alot of it.
+
 ## Code Examples
 ### BoilerPlate Code:
 ```java
