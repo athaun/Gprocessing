@@ -23,6 +23,8 @@ public class ImGuiLayer {
 		this.glfwWindow = glfwWindow;
 	}
 
+	public static ImGuiIO io;
+	
 	// Initialize Dear ImGui.
 	public void initImGui() {
 		// IMPORTANT!!
@@ -31,7 +33,7 @@ public class ImGuiLayer {
 
 		// ------------------------------------------------------------
 		// Initialize ImGuiIO config
-		final ImGuiIO io = ImGui.getIO();
+		io = ImGui.getIO();
 
 		io.setIniFilename("imgui.ini"); // We don't want to save .ini file
 		io.setConfigFlags(ImGuiConfigFlags.NavEnableKeyboard); // Navigation with keyboard
@@ -81,18 +83,18 @@ public class ImGuiLayer {
 		// ------------------------------------------------------------
 		// GLFW callbacks to handle user input
 
-		glfwSetKeyCallback(glfwWindow, (w, key, scancode, action, mods) -> {
-			if (action == GLFW_PRESS) {
-				io.setKeysDown(key, true);
-			} else if (action == GLFW_RELEASE) {
-				io.setKeysDown(key, false);
-			}
-
-			io.setKeyCtrl(io.getKeysDown(GLFW_KEY_LEFT_CONTROL) || io.getKeysDown(GLFW_KEY_RIGHT_CONTROL));
-			io.setKeyShift(io.getKeysDown(GLFW_KEY_LEFT_SHIFT) || io.getKeysDown(GLFW_KEY_RIGHT_SHIFT));
-			io.setKeyAlt(io.getKeysDown(GLFW_KEY_LEFT_ALT) || io.getKeysDown(GLFW_KEY_RIGHT_ALT));
-			io.setKeySuper(io.getKeysDown(GLFW_KEY_LEFT_SUPER) || io.getKeysDown(GLFW_KEY_RIGHT_SUPER));
-		});
+//		glfwSetKeyCallback(glfwWindow, (w, key, scancode, action, mods) -> {
+//			if (action == GLFW_PRESS) {
+//				io.setKeysDown(key, true);
+//			} else if (action == GLFW_RELEASE) {
+//				io.setKeysDown(key, false);
+//			}
+//
+//			io.setKeyCtrl(io.getKeysDown(GLFW_KEY_LEFT_CONTROL) || io.getKeysDown(GLFW_KEY_RIGHT_CONTROL));
+//			io.setKeyShift(io.getKeysDown(GLFW_KEY_LEFT_SHIFT) || io.getKeysDown(GLFW_KEY_RIGHT_SHIFT));
+//			io.setKeyAlt(io.getKeysDown(GLFW_KEY_LEFT_ALT) || io.getKeysDown(GLFW_KEY_RIGHT_ALT));
+//			io.setKeySuper(io.getKeysDown(GLFW_KEY_LEFT_SUPER) || io.getKeysDown(GLFW_KEY_RIGHT_SUPER));
+//		});
 
 		glfwSetCharCallback(glfwWindow, (w, c) -> {
 			if (c != GLFW_KEY_DELETE) {
@@ -100,26 +102,26 @@ public class ImGuiLayer {
 			}
 		});
 
-		glfwSetMouseButtonCallback(glfwWindow, (w, button, action, mods) -> {
-			final boolean[] mouseDown = new boolean[5];
+//		glfwSetMouseButtonCallback(glfwWindow, (w, button, action, mods) -> {
+//			final boolean[] mouseDown = new boolean[5];
+//
+//			mouseDown[0] = button == GLFW_MOUSE_BUTTON_1 && action != GLFW_RELEASE;
+//			mouseDown[1] = button == GLFW_MOUSE_BUTTON_2 && action != GLFW_RELEASE;
+//			mouseDown[2] = button == GLFW_MOUSE_BUTTON_3 && action != GLFW_RELEASE;
+//			mouseDown[3] = button == GLFW_MOUSE_BUTTON_4 && action != GLFW_RELEASE;
+//			mouseDown[4] = button == GLFW_MOUSE_BUTTON_5 && action != GLFW_RELEASE;
+//
+//			io.setMouseDown(mouseDown);
+//
+//			if (!io.getWantCaptureMouse() && mouseDown[1]) {
+//				ImGui.setWindowFocus(null);
+//			}
+//		});
 
-			mouseDown[0] = button == GLFW_MOUSE_BUTTON_1 && action != GLFW_RELEASE;
-			mouseDown[1] = button == GLFW_MOUSE_BUTTON_2 && action != GLFW_RELEASE;
-			mouseDown[2] = button == GLFW_MOUSE_BUTTON_3 && action != GLFW_RELEASE;
-			mouseDown[3] = button == GLFW_MOUSE_BUTTON_4 && action != GLFW_RELEASE;
-			mouseDown[4] = button == GLFW_MOUSE_BUTTON_5 && action != GLFW_RELEASE;
-
-			io.setMouseDown(mouseDown);
-
-			if (!io.getWantCaptureMouse() && mouseDown[1]) {
-				ImGui.setWindowFocus(null);
-			}
-		});
-
-		glfwSetScrollCallback(glfwWindow, (w, xOffset, yOffset) -> {
-			io.setMouseWheelH(io.getMouseWheelH() + (float) xOffset);
-			io.setMouseWheel(io.getMouseWheel() + (float) yOffset);
-		});
+//		glfwSetScrollCallback(glfwWindow, (w, xOffset, yOffset) -> {
+//			io.setMouseWheelH(io.getMouseWheelH() + (float) xOffset);
+//			io.setMouseWheel(io.getMouseWheel() + (float) yOffset);
+//		});
 
 		io.setSetClipboardTextFn(new ImStrConsumer() {
 			@Override
@@ -241,7 +243,7 @@ public class ImGuiLayer {
 		ImGui.newFrame();
 		currentScene.sceneImgui();
 		currentScene.imgui();
-		ImGui.showDemoWindow();
+//		ImGui.showDemoWindow();
 		ImGui.render();
 
 		endFrame();

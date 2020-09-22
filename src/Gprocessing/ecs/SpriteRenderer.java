@@ -15,7 +15,7 @@ public class SpriteRenderer extends Component {
 
 	private Vector4f color = new Color(255, 100, 100, 255).toNormalizedVec4f();
 	private Sprite sprite;
-	
+
 	private Transform lastTransform;
 	private boolean isDirty = false; // Dirty flag, tells renderer to redraw if object components have changed
 
@@ -36,49 +36,49 @@ public class SpriteRenderer extends Component {
 		this.color = WHITE.toNormalizedVec4f();
 		this.isDirty = true;
 	}
-	
-	// Override the imgui component method used in the inspector for scene's activeGameObject
+
+	// Override the imgui component method used in the inspector for scene's
+	// activeGameObject
 	@Override
-	public void imgui () {
-		float[] imColor = {
-				color.x, 
-				color.y,
-				color.z,
-				color.w
-		};
+	public void imgui() {
+		float[] imColor = { color.x, color.y, color.z, color.w };
 		if (ImGui.colorPicker4("Color Picker", imColor)) {
 			this.color.set(imColor[0], imColor[1], imColor[2], imColor[3]);
 			this.isDirty = true;
 		}
 	}
-	
+
 	public void useGlobalFill() {
 
 	}
 
 	@Override
 	public void start() {
-		this.lastTransform = gameObject.transform.copy();
+		this.lastTransform = gameObject.getTransform().copy();
 	}
 
 	@Override
 	public void update(float dt) {
-		if (!this.lastTransform.equals(this.gameObject.transform)) {
-			this.gameObject.transform.copy(this.lastTransform);
+		if (!this.lastTransform.equals(this.gameObject.getTransform())) {
+			this.gameObject.getTransform().copy(this.lastTransform);
 			isDirty = true;
 		}
 	}
-	
-	public Texture getTexture () {
+
+	public Texture getTexture() {
 		return sprite.getTexture();
 	}
-	
+
 	public Vector2f[] getTexCoords() {
 		return sprite.getTextureCoordinates();
 	}
 
-	public Vector4f getColor() {
+	public Vector4f getColorVector() {
 		return color;
+	}
+
+	public Color getColor() {
+		return new Color(color.x, color.y, color.z, color.w);
 	}
 
 	public void setColor(Vector4f c) {
@@ -87,24 +87,24 @@ public class SpriteRenderer extends Component {
 			isDirty = true;
 		}
 	}
-	
-	public void setColor (Color color) {
+
+	public void setColor(Color color) {
 		if (!this.color.equals(color.toNormalizedVec4f())) {
 			this.color = color.toNormalizedVec4f();
 			isDirty = true;
 		}
 	}
-	
-	public void setSprite (Sprite sprite) {
+
+	public void setSprite(Sprite sprite) {
 		this.sprite = sprite;
 		isDirty = true;
 	}
 
-	public boolean isDirty () {
+	public boolean isDirty() {
 		return isDirty;
 	}
-	
-	public void setClean () {
+
+	public void setClean() {
 		isDirty = false;
 	}
 }

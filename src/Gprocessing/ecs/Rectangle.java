@@ -4,6 +4,7 @@ import org.joml.Vector4f;
 
 import Gprocessing.graphics.Color;
 import Gprocessing.physics.Transform;
+import Gprocessing.util.Engine;
 
 public class Rectangle extends Component  {
 
@@ -11,7 +12,7 @@ public class Rectangle extends Component  {
 	private Vector4f color;
 	private Transform lastTransform;
 	
-	public Rectangle (Vector4f c) {
+	private Rectangle (Vector4f c) {
 		rectangleSprite = new SpriteRenderer(c);		
 		this.color = c;
 	}
@@ -36,7 +37,11 @@ public class Rectangle extends Component  {
 	}
 	
 	public void setColor(Color c) {
-		gameObject.getComponent(SpriteRenderer.class).setColor(c.toNormalizedVec4f());
+		gameObject.getComponent(SpriteRenderer.class).setColor(c);
+	}
+	
+	public Color getColor () {
+		return gameObject.getComponent(SpriteRenderer.class).getColor();
 	}
 
 }

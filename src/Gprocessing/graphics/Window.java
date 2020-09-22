@@ -36,6 +36,7 @@ import org.lwjgl.opengl.GL;
 
 import Gprocessing.Main;
 import Gprocessing.ImGui.ImGuiLayer;
+import Gprocessing.breakout.Breakout;
 import Gprocessing.input.Mouse;
 import Gprocessing.util.Engine;
 import Gprocessing.util.Scene;
@@ -58,8 +59,9 @@ public class Window {
 	static Shader defaultShader;
 	
 	public static Main main = new Main();
+	public static Breakout bScene = new Breakout();
 	
-	public static Scene currentScene = main;
+	public static Scene currentScene = bScene;
 
 	public Window(int pwidth, int pheight, String ptitle) {
 		
@@ -81,6 +83,7 @@ public class Window {
 		glfwSetWindowSizeCallback(window, (w, newWidth, newHeight) -> {
 			Window.setWidth(newWidth);
 			Window.setHeight(newHeight);
+			currentScene.camera.adjustProjection();
 		});
 		
 		// Make the OpenGL context current
@@ -138,7 +141,7 @@ public class Window {
 			imguiLayer.update((float) dt, currentScene);
 			
 			glfwSwapBuffers(window);
-			getFPS();
+//			getFPS();
 
 			frameEndTime = (float)glfwGetTime();
 			dt = frameEndTime - frameBeginTime;

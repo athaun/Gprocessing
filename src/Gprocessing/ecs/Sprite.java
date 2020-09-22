@@ -11,10 +11,10 @@ public class Sprite {
 	
 	// This contains the default coordinates for an entire image UV
 	private Vector2f[] defaultTextureCoordinates = {
-		new Vector2f(1, 1),
-		new Vector2f(1, 0),
 		new Vector2f(0, 0),
-		new Vector2f(0, 1)
+		new Vector2f(0, 1),
+		new Vector2f(1, 1),
+		new Vector2f(1, 0)
 	};
 	
 	public Sprite (Texture texture, Vector2f[] uv) {

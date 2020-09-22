@@ -10,7 +10,7 @@ public class GameObject {
 	
 	private String name;
 	private List<Component> components;
-	public Transform transform;
+	private Transform transform;
 	private int zIndex;
 	
 	public GameObject (String name, Transform transform, int zIndex) {
@@ -41,6 +41,14 @@ public class GameObject {
 		this.name = name;
 		this.components = components;
 		this.transform = transform;
+	}
+	
+	public Transform getTransform () {
+		return this.transform;
+	}
+	
+	public void setTransform (Transform t) {
+		this.transform = t;
 	}
 
 	public <T extends Component> T getComponent(Class<T> componentClass) {

@@ -6,24 +6,24 @@ import org.lwjgl.glfw.GLFWErrorCallback;
 
 import Gprocessing.graphics.Window;
 import Gprocessing.physics.RectangleBounds;
+import Gprocessing.physics.Transform;
 import Gprocessing.physics.Vector2;
 
 public class Engine {
-	
-	/** 
-	 * Engine
-	 * contains static core methods that Gprocessing projects may access
-	 * also initializes the window and game loop
+
+	/**
+	 * Engine contains static core methods that Gprocessing projects may access also
+	 * initializes the window and game loop
 	 */
 
 	private static long startMillis = System.currentTimeMillis();
 
 	public static Window w;
-	
-	public static String projectionMode = "Gprocessing"; // "processing" or "Gprocessing"
+
+	public static String projectionMode = "processing"; // "processing" or "Gprocessing"
 
 	public static boolean running = true;
-	
+
 	public static double deltaTime = 0;
 
 	public static void init(int windowWidth, int windowHeight, String windowTitle) {
@@ -33,7 +33,7 @@ public class Engine {
 		if (!glfwInit())
 			throw new IllegalStateException("[FATAL] Failed to initialize GLFW.");
 
-		w = new Window(windowWidth, windowHeight, windowTitle);		
+		w = new Window(windowWidth, windowHeight, windowTitle);
 
 		w.showWindow();
 
@@ -94,6 +94,19 @@ public class Engine {
 
 	public static boolean inRect(Vector2 in, RectangleBounds r) {
 		return in.x >= r.x && in.x <= (r.y + r.width) && in.y >= r.y && in.y <= (r.y + r.height);
+	}
+
+	public static boolean rectInRect(Transform t1, Transform t2) {
+		return t1.position.x < t2.scale.x && t1.scale.x > t2.position.x && t1.position.y < t2.scale.y
+				&& t1.scale.y > t2.position.y;
+	}
+
+	public static int constrain (int value, int min, int max) {
+		return Math.min(Math.max(value, min), max);
+	}
+
+	public static float constrain (float value, float min, float max) {
+		return (value > max) ? max : (value < min ? min: value);
 	}
 
 	public static void println(String s) {

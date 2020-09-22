@@ -28,12 +28,13 @@ public class Camera {
 	
 	public void adjustProjection () {
 		projectionMatrix.identity();
-		if (Engine.projectionMode.equals("Gprocessing")) { // bottom left origin
+		if (Engine.projectionMode.equals("Gprocessing")) { 
+			// bottom left origin
 			projectionMatrix.ortho(0, 32 * 40, 0, 32 * 21, 0, 100);
-//			Engine.println("[INFO] Set camera projection mode to \"Gprocessing\".");
-		} else if (Engine.projectionMode.equals("processing")) { // Top Left origin
-			projectionMatrix.ortho(0, Engine.w.width, Engine.w.height, 0, 0, 100);
-//			Engine.println("[INFO] Set camera projection mode to \"processing\".");
+		} else if (Engine.projectionMode.equals("processing")) { 
+			// Top Left origin
+			projectionMatrix.ortho(0, 32 * 40, 32 * 21, 0, 0, 100);
+//			projectionMatrix.ortho(left, right, bottom, top, zNear, zFar)
 		} else {
 			Engine.println("[WARNING] Specify a projectionMode of either \"Gprocessing\" or \"processing\".");
 		}

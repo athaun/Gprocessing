@@ -1,5 +1,10 @@
 package Gprocessing.input;
 
+import static org.lwjgl.glfw.GLFW.GLFW_MOUSE_BUTTON_1;
+import static org.lwjgl.glfw.GLFW.GLFW_MOUSE_BUTTON_2;
+import static org.lwjgl.glfw.GLFW.GLFW_MOUSE_BUTTON_3;
+import static org.lwjgl.glfw.GLFW.GLFW_MOUSE_BUTTON_4;
+import static org.lwjgl.glfw.GLFW.GLFW_MOUSE_BUTTON_5;
 import static org.lwjgl.glfw.GLFW.GLFW_PRESS;
 import static org.lwjgl.glfw.GLFW.GLFW_RELEASE;
 import static org.lwjgl.glfw.GLFW.glfwGetCursorPos;
@@ -9,8 +14,8 @@ import static org.lwjgl.glfw.GLFW.glfwSetScrollCallback;
 import java.nio.DoubleBuffer;
 
 import org.lwjgl.BufferUtils;
-import org.lwjgl.glfw.GLFWMouseButtonCallback;
-import org.lwjgl.glfw.GLFWScrollCallback;
+//import org.lwjgl.glfw.GLFWMouseButtonCallback;
+//import org.lwjgl.glfw.GLFWScrollCallback;
 
 import Gprocessing.graphics.Window;
 import Gprocessing.physics.Vector2;
@@ -33,38 +38,52 @@ public class Mouse {
 
 	private static int _button;
 	private static int _action;
-	
-	
 
+	static ImGuiIO io = Gprocessing.ImGui.ImGuiLayer.io;
+	
 	public static void pollMouseButtons() {
-//		glfwSetMouseButtonCallback(Window.window, new GLFWMouseButtonCallback() {
-//			@Override
-//			public void invoke(long window, int button, int action, int mods) {
-//				_button = button;
-//				_action = action;
-//			}
-//		});
-//
-//		if (_action == GLFW_PRESS) {
-//			if (_button < mouseButton.length)
-//				mouseButton[_button] = true;
-//		} else if (_action == GLFW_RELEASE) {
-//			if (_button < mouseButton.length) {
-//				mouseButton[_button] = false;
-//				mouseDragged = false;
-//			}
-//		}
-	}
+		glfwSetMouseButtonCallback(Window.window, (w, button, action, mods) -> {
+			
+			// ImGui Input
+			final boolean[] mouseDown = new boolean[5];
+
+			mouseDown[0] = button == GLFW_MOUSE_BUTTON_1 && action != GLFW_RELEASE;
+			mouseDown[1] = button == GLFW_MOUSE_BUTTON_2 && action != GLFW_RELEASE;
+			mouseDown[2] = button == GLFW_MOUSE_BUTTON_3 && action != GLFW_RELEASE;
+			mouseDown[3] = button == GLFW_MOUSE_BUTTON_4 && action != GLFW_RELEASE;
+			mouseDown[4] = button == GLFW_MOUSE_BUTTON_5 && action != GLFW_RELEASE;
+
+			io.setMouseDown(mouseDown);
+
+			if (!io.getWantCaptureMouse() && mouseDown[1]) {
+				ImGui.setWindowFocus(null);
+			}
+			
+			// Gprocessing input
+			_button = button;
+			_action = action;
+		});
+
+		if (_action == GLFW_PRESS) {
+			if (_button < mouseButton.length)
+				mouseButton[_button] = true;
+		} else if (_action == GLFW_RELEASE) {
+			if (_button < mouseButton.length) {
+				mouseButton[_button] = false;
+				mouseDragged = false;
+			}
+		}
+	}	
 
 	public static void pollMouseScroll() {
-//		glfwSetScrollCallback(Window.window, new GLFWScrollCallback() {
-//			@Override
-//			public void invoke(long window, double xOffset, double yOffset) {
-//				scrollX = xOffset;
-//				scrollY = yOffset;
-//				mouseScroll = new Vector2(scrollX, scrollY);
-//			}
-//		});
+		glfwSetScrollCallback(Window.window, (w, xOffset, yOffset) -> {
+			io.setMouseWheelH(io.getMouseWheelH() + (float) xOffset);
+			io.setMouseWheel(io.getMouseWheel() + (float) yOffset);
+			
+			scrollX = xOffset;
+			scrollY = yOffset;
+			mouseScroll = new Vector2(scrollX, scrollY);
+		});
 	}
 	
 	public static void update() {

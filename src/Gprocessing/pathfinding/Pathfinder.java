@@ -56,10 +56,9 @@ public class Pathfinder {
 						println("PATH FOUND");
 						pathFound = true;
 						break;
-					} else {
-						// change the nodeType to path so that it displays as blue
-						theChosenOne.nodeType = "path";
 					}
+					// Else, change the nodeType to path so that it displays as blue
+					theChosenOne.nodeType = "path";
 				}
 			}
 		}

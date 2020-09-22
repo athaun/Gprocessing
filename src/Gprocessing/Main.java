@@ -21,48 +21,160 @@
  * - lerp
  * - animation?
  * 
- * 	
+ * 	Note when adding a new scene, remember to set it in Window.java
  */
 
 package Gprocessing;
 
 import static Gprocessing.graphics.Graphics.background;
 
-import Gprocessing.ecs.GameObject;
-import Gprocessing.ecs.Sprite;
-import Gprocessing.ecs.SpriteRenderer;
 import Gprocessing.graphics.Camera;
-import Gprocessing.graphics.Color;
-import Gprocessing.physics.Transform;
-import Gprocessing.util.Assets;
 import Gprocessing.util.Engine;
 import Gprocessing.util.Scene;
-import imgui.ImGui;
-
 
 
 public class Main extends Scene {
 	
-	GameObject greenBox = new GameObject(new Transform(600, 230, 50, 50), 1);
-	GameObject redBox = new GameObject(new Transform(600, 200, 50, 50), -1);
+		
+	public static void main (String[] args) {
+		Engine.init(1600, 900, "Hello World!");
+	}
 	
 	public void awake() {		
 		camera = new Camera();
 		
-		redBox.addComponent(new SpriteRenderer(new Color(255, 0, 0, 255)));
-		greenBox.addComponent(new SpriteRenderer(new Sprite(Assets.getTexture("src/assets/images/blendImage2.png"))));	
-	
-		this.activeGameObject = redBox;
 	}
 
 	public void update() {
 		background(50, 50, 50);
-	}
-	
-//	@Override
-	public void imgui () {
-		ImGui.begin("Test Window");
-		ImGui.text("Hello World");
-		ImGui.end();
+
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//public class Main extends Scene {
+//	
+//	static int chunkWidth = 3840; // chunkSize * blockSize should fill the entire screen
+//	static int chunkHeight = 2160;
+//	static OpenSimplexNoise noise = new OpenSimplexNoise();
+//	static double increment = 0.033; // the fineness of the noise map
+//	static float[][] terrain = new float[chunkWidth][chunkHeight]; // create an empty 2D array with the dimensions of
+//	static GameObject[][] rects = new GameObject[chunkWidth][chunkHeight];
+//	
+//	
+//	public static void main (String[] args) {
+//		Engine.init(3840, 2160, "Hello World!");
+//	}
+//	
+//	public void awake() {		
+//		camera = new Camera();
+//		
+//		float yoff = 0;
+//		for (int x = 0; x < chunkWidth/4; x++) {
+//			float xoff = 0;
+//			for (int y = 0; y < chunkHeight/4; y++) {
+//				terrain[x][y] = Engine.map((float) noise.eval(xoff, yoff), -1, 1, 0, 255);
+//				xoff += increment;
+//			}
+//			yoff += increment;
+//		}
+//		
+//		for (int x = 0; x < chunkWidth/4; x += 4) {
+//			for (int y = 0; y < chunkHeight/4; y += 4) {
+//				rects[x][y] = new GameObject(new Transform(x * 2, y * 2, 10, 10));
+//				rects[x][y].addComponent(new Rectangle(new Color(terrain[x][y], terrain[x][y], terrain[x][y], 255)));
+//			}
+//		}
+//	}
+//	static float moveBegin = 0;
+//	public void update() {
+//		background(50, 50, 50);
+//		
+//		moveBegin += 0.01;
+//		float yoff = 0;
+//		for (int x = 0; x < chunkWidth/4; x+= 4) {
+//			float xoff = moveBegin;
+//			for (int y = 0; y < chunkHeight/4; y+= 4) {
+//				terrain[x][y] = Engine.map((float) noise.eval(xoff, yoff), -1, 1, 0, 255);
+//				rects[x][y].getComponent(Rectangle.class).setColor(new Color(terrain[x][y], terrain[x][y], terrain[x][y], 255));
+//
+//				xoff += increment;
+//			}
+//			yoff += increment;
+//		}		
+//	}
+//}

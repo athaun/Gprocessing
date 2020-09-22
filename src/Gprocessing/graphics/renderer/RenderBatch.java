@@ -186,7 +186,7 @@ public class RenderBatch implements Comparable<RenderBatch>{
 		// FInd offset within array (4 vertices per sprite)
 		int offset = index * 4 * VERTEX_SIZE;
 
-		Vector4f color = sprite.getColor();
+		Vector4f color = sprite.getColorVector();
 		Vector2f[] textureCoordinates = sprite.getTexCoords();
 		int textureID = 0;
 		if (sprite.getTexture() != null) {
@@ -215,7 +215,7 @@ public class RenderBatch implements Comparable<RenderBatch>{
 			}
 
 			// Load position
-			Transform spr = sprite.gameObject.transform;
+			Transform spr = sprite.gameObject.getTransform();
 			vertices[offset] = spr.position.x + (xAdd * spr.scale.x);
 			vertices[offset + 1] = spr.position.y + (yAdd * spr.scale.y);
 

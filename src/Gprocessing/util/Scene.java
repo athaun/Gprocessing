@@ -11,6 +11,7 @@ import Gprocessing.graphics.Camera;
 import Gprocessing.graphics.renderer.Renderer;
 import imgui.ImGui;
 
+
 public abstract class Scene {
 	
 	private Renderer renderer = new Renderer();
@@ -41,13 +42,6 @@ public abstract class Scene {
 	}
 	
 	public static void addGameObjectToScene (GameObject gameObject) {
-//		if (!isRunning) {
-//			gameObjects.add(gameObject);
-//		} else {
-//			gameObjects.add(gameObject);
-//			gameObject.start();
-//			this.renderer.add(gameObject);
-//		}
 		gameObjects.add(gameObject);
 		gameObject.start();
 	}
@@ -74,8 +68,6 @@ public abstract class Scene {
 			activeGameObject.imgui();
 			ImGui.end();
 		}
-		
-		imgui();
 	}
 	
 	public void imgui () {
