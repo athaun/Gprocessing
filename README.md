@@ -6,6 +6,11 @@ Originally inspired by the Processing 3 graphics library, Gprocessing is easy to
 
 This project is temporarily on hold during school, because I have alot of it.
 
+## Breakout clone
+This is the first game built using Gprocessing, it is a fully functional breakout clone, which I wrote in only three hours.
+![screenshot](breakout.png)
+<br>
+
 ## Code Examples
 ### BoilerPlate Code:
 ```java
@@ -81,15 +86,12 @@ Massive shoutout to Game With Gabe on Youtube for his [amazing tutorial series](
 Copyright (c) 2020 Asher Haun MIT License
 See [LICENSE](https://github.com/athaun/Gprocessing/blob/master/LICENSE.md) for more information.
 
-## Performance vs Processing 3
-Running the same intensive code at a resolution of 1920x2160, Gprocessing gets a steady 60 FPS, while processing gets an average of 20 FPS
-Gprocessing (Left), Processing 3 (Right)
-![screenshot](unknown.png)
-<br>
 ### Milestones:
 ```
 + 5.1.2020 Started the project
 + 6.2.2020 begin convert to modern OpenGL
 + 6.23.2020 Entity Component System
 + 8.14.2020 Added ImGui
++ 9.21.2020 Fixed imGui input callbacks
+! 9.21.2020 Created First game using the Engine!
 ```
