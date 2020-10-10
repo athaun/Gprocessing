@@ -8,6 +8,7 @@ import org.joml.Vector4f;
 import Gprocessing.graphics.Color;
 import Gprocessing.graphics.Texture;
 import Gprocessing.physics.Transform;
+import Gprocessing.util.Assets;
 import Gprocessing.util.Engine;
 import imgui.ImGui;
 
@@ -33,6 +34,12 @@ public class SpriteRenderer extends Component {
 
 	public SpriteRenderer(Sprite sprite) {
 		this.sprite = sprite;
+		this.color = WHITE.toNormalizedVec4f();
+		this.isDirty = true;
+	}
+	
+	public SpriteRenderer(String path) {
+		this.sprite = new Sprite(Assets.getTexture(path));
 		this.color = WHITE.toNormalizedVec4f();
 		this.isDirty = true;
 	}

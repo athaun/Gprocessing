@@ -46,4 +46,77 @@ public class Transform {
 		Transform t = (Transform)o;
 		return t.position.equals(this.position) && t.scale.equals(this.scale);
 	}
+	
+	// Getters and Setters
+	
+	public float getX () {
+		return this.position.x;
+	}
+	
+	public void setX (float x) {
+		this.position.x = x;
+	}
+	
+	public void addX (float x) {
+		this.position.x += x;
+	}
+	
+	public float getY () {
+		return this.position.y;
+	}
+	
+	public void setY (float y) {
+		this.position.y = y;
+	}
+	
+	public void addY (float y) {
+		this.position.y += y;
+	}
+	
+	public float getWidth () {
+		return this.scale.x;
+	}
+	
+	public void setWidth (float w) {
+		this.scale.x = w;
+	}
+	
+	public void addWidth (float w) {
+		this.scale.x += w;
+	}
+	
+	public float getHeight () {
+		return this.scale.y;
+	}
+	
+	public void setHeight (float h) {
+		this.scale.y = h;
+	}
+	
+	public void addHeight (float h) {
+		this.scale.y += h;
+	}
+
+	public Vector2f getPosition() {
+		return position;
+	}
+
+	public void setPosition(Vector2f position) {
+		this.position = position;
+	}
+
+	public Vector2f getScale() {
+		return scale;
+	}
+
+	public void setScale(Vector2f scale) {
+		this.scale = scale;
+	}
+	
+	
+	
+	
+	
+	
+	
 }

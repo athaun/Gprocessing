@@ -50,6 +50,22 @@ public class GameObject {
 	public void setTransform (Transform t) {
 		this.transform = t;
 	}
+	
+	public void setTransformX (float x) {
+		this.transform.setX(x);
+	}
+	
+	public void setTransformY (float y) {
+		this.transform.setY(y);
+	}
+	
+	public void setTransformWidth (float w) {
+		this.transform.setWidth(w);
+	}
+	
+	public void setTransformHeight (float h) {
+		this.transform.setHeight(h);
+	}
 
 	public <T extends Component> T getComponent(Class<T> componentClass) {
 		for (Component c : components) {

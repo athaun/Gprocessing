@@ -12,7 +12,8 @@ import Gprocessing.util.Engine;
 import static Gprocessing.breakout.Breakout.paddle;
 
 public class Ball {
-private GameObject ballGo;
+	
+	private GameObject ballGo;
 	
 	boolean isAlive = true;
 	private Vector2 velocity = new Vector2(Engine.random(-3, 3), -3);
@@ -20,7 +21,7 @@ private GameObject ballGo;
 	
 	public Ball (Transform t, Color c) {
 		this.ballGo = new GameObject(t);
-		ballGo.addComponent(new SpriteRenderer(new Sprite(Assets.getTexture("src/assets/images/ball.png"))));
+		ballGo.addComponent(new SpriteRenderer("src/assets/images/ball.png"));
 		ballGo.getComponent(SpriteRenderer.class).setColor(c);
 	}
 	
@@ -42,25 +43,18 @@ private GameObject ballGo;
 	
 	public void update () {
 		if (firstLoop) {
-			setTransform(new Transform(
-					paddle.getTransform().position.x + paddle.getTransform().scale.x/2,
-					paddle.getTransform().position.y - 30,
-					getTransform().scale.x,
-					getTransform().scale.y));
+			paddle.getTransform().addX(paddle.getTransform().scale.x/2);
+			paddle.getTransform().addX(-30);
 			firstLoop = false;
 		}
 		
-		setTransform(new Transform(
-					 	 getTransform().position.x + velocity.x,
-					 	 getTransform().position.y + velocity.y,
-					 	 getTransform().scale.x,
-					 	 getTransform().scale.y));
+		getTransform().addX(velocity.x);
+		getTransform().addY(velocity.y);
 		
 		if (circleRectCollision(new Transform(-10, 0, 1280, 10))) {
 			flipVelocityY(); // Ceiling Collision	
 		}
 		if (circleRectCollision(new Transform(0, 674, 1280, 10))) {
-//			flipVelocityY(); // Floor Collision	
 			isAlive = false;
 		}
 		if (circleRectCollision(new Transform(-10, 0, 10, 674))) {

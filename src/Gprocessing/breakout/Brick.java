@@ -21,8 +21,8 @@ public class Brick {
 	
 	public void update () {
 		if (!isAlive) {
-			setColor(new Color(Engine.map(getColor().r, 0, 1, 0, 255), Engine.map(getColor().g, 0, 1, 0, 255), Engine.map(getColor().b, 0, 1, 0, 255), alpha));
-			alpha -= 14;
+			setColor(new Color(Engine.map(getColor().r, 0, 1, 0, 255), Engine.map(getColor().g, 0, 1, 0, 255), Engine.map(getColor().b, 0, 1, 0, 255), alpha));			
+			alpha = Engine.constrain(alpha -= 14, 0, 255);
 		} else {
 			
 		}

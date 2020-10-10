@@ -37,6 +37,7 @@ import org.lwjgl.opengl.GL;
 import Gprocessing.Main;
 import Gprocessing.ImGui.ImGuiLayer;
 import Gprocessing.breakout.Breakout;
+import Gprocessing.civSim.Cells;
 import Gprocessing.input.Mouse;
 import Gprocessing.util.Engine;
 import Gprocessing.util.Scene;
@@ -60,8 +61,9 @@ public class Window {
 	
 	public static Main main = new Main();
 	public static Breakout bScene = new Breakout();
+	public static Cells cellsScene = new Cells();
 	
-	public static Scene currentScene = bScene;
+	public static Scene currentScene = cellsScene;
 
 	public Window(int pwidth, int pheight, String ptitle) {
 		

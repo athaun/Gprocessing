@@ -27,8 +27,7 @@ public class Breakout extends Scene {
 		camera = new Camera();
 		for (int x = 0; x < bricks.length; x++) {
 			for (int y = 0; y < bricks[0].length; y++) {
-				bricks[x][y] = new Brick(new Transform((x * brickWidth) + 1, 40 + ((y * brickHeight) + 1),
-						brickWidth - 2, brickHeight - 2), new Color(x * 6, y * 5, 100, 255));
+				bricks[x][y] = new Brick(new Transform((x * brickWidth) + 1, 40 + ((y * brickHeight) + 1), brickWidth - 2, brickHeight - 2), new Color(x * 6, y * 5, 100, 255));
 				bricksLeft++;
 			}
 		}
@@ -45,8 +44,8 @@ public class Breakout extends Scene {
 			for (int x = 0; x < bricks.length; x++) {
 				for (int y = 0; y < bricks[0].length; y++) {
 					if (ball.circleRectCollision(bricks[x][y].getTransform()) && bricks[x][y].isAlive) {
-						if (ball.getTransform().position.x < bricks[x][y].getTransform().position.x ||
-							ball.getTransform().position.x > bricks[x][y].getTransform().position.x + bricks[x][y].getTransform().position.x) {
+						if (ball.getTransform().getX() < bricks[x][y].getTransform().getX() || ball.getTransform()
+								.getX() > bricks[x][y].getTransform().getX() + bricks[x][y].getTransform().getWidth()) {
 							// Top or bottom
 							ball.flipVelocityX();
 						} else {
@@ -93,10 +92,10 @@ public class Breakout extends Scene {
 						bricks[x][y].setColor(new Color(x * 6, y * 5, 100, 255));
 						ball.isAlive = true;
 						wonGame = false;
-						ball.setTransform(
-								new Transform(paddle.getTransform().position.x + paddle.getTransform().scale.x / 2,
-										paddle.getTransform().position.y - 30, ball.getTransform().scale.x,
-										ball.getTransform().scale.y));
+						ball.setTransform(new Transform(paddle.getTransform().position.x + paddle.getTransform().scale.x / 2,
+										  paddle.getTransform().position.y - 30, 
+										  ball.getTransform().scale.x,
+										  ball.getTransform().scale.y));
 					}
 				}
 			}
