@@ -5,23 +5,17 @@
  * 
  * 
  * TODO:
- * - mouse input
- * - textures/images
  * - basic physics (gravity collisions)
  * - fonts
- * - native scene management
  * - networking library
  * - headless mode
- * - GUI library
  * - primitives
  * - vertex shapes
  * - push/pop matrices
- * - primitives
- * - constrain
  * - lerp
  * - animation?
  * 
- * 	Note when adding a new scene, remember to set it in Window.java
+ *  ! Note when adding/setting a default scene, remember to set it in Window.java !
  */
 
 package Gprocessing;
