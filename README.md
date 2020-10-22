@@ -4,7 +4,7 @@ Originally inspired by the Processing 3 graphics library, Gprocessing is easy to
 * Entity Component System
 * Dear ImGui bindings created by [SpaiR/imgui-java](https://github.com/SpaiR/imgui-java)
 
-This project is temporarily on hold during school, because I have alot of it.
+This project's development is slower during school, because I have alot of it.
 
 ## Breakout clone
 This is the first game built using Gprocessing, it is a fully functional breakout clone, which I wrote in only three hours.
