@@ -78,11 +78,10 @@ open Eclipse, and select import project.
 ## Documentation
 Not yet created.
 
-## Credits
-
+### Credits
 Massive shoutout to Game With Gabe on Youtube for his [amazing tutorial series](https://www.youtube.com/channel/UCQP4qSCj1eHMHisDDR4iPzw/videos) on building a java game engine! 
 
-## License
+### License
 Copyright (c) 2020 Asher Haun MIT License
 See [LICENSE](https://github.com/athaun/Gprocessing/blob/master/LICENSE.md) for more information.
 
@@ -94,4 +93,11 @@ See [LICENSE](https://github.com/athaun/Gprocessing/blob/master/LICENSE.md) for 
 + 8.14.2020 Added ImGui
 + 9.21.2020 Fixed imGui input callbacks
 ! 9.21.2020 Created First game using the Engine!
+```
+
+### Known Issues
+```
++ Viewport width and height not in pixels
++ Dynamic window resizing doesn't work correctly
++ Transperancy issues on windows
 ```
