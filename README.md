@@ -106,7 +106,6 @@ See [LICENSE](https://github.com/athaun/Gprocessing/blob/master/LICENSE.md) for 
 
 ### Known Issues
 ```
-+ Viewport width and height not in pixels
 + Dynamic window resizing doesn't work correctly
 + Transperancy issues on windows
 ```
