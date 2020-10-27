@@ -64,7 +64,8 @@ public class Main extends Scene {
 }
 ```
   
-## Installation
+## Installation ([Wiki](https://github.com/athaun/Gprocessing/wiki/Setting-up-a-new-project.))
+
 Clone:
 `git clone https://github.com/athaun/Gprocessing.git`
 open Eclipse, and select import project.
