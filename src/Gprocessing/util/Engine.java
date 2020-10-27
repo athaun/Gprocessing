@@ -12,15 +12,13 @@ import Gprocessing.physics.Vector2;
 public class Engine {
 
 	/**
-	 * Engine contains static core methods that Gprocessing projects may access also
-	 * initializes the window and game loop
+	 * Engine contains static core methods that Gprocessing projects may access
+	 * also initializes the window and game loop
 	 */
 
 	private static long startMillis = System.currentTimeMillis();
 
 	public static Window w;
-
-	public static String projectionMode = "processing"; // "processing" or "Gprocessing"
 
 	public static boolean running = true;
 

@@ -28,21 +28,9 @@ public class Camera {
 	
 	public void adjustProjection () {
 		projectionMatrix.identity();
-		if (Engine.projectionMode.equals("Gprocessing")) { 
-			// bottom left origin
-			projectionMatrix.ortho(0, 32 * 40, 0, 32 * 21, 0, 100);
-		} else if (Engine.projectionMode.equals("processing")) { 
-			// Top Left origin
-			projectionMatrix.ortho(0, 32 * 40, 32 * 21, 0, 0, 100);
-//			projectionMatrix.ortho(left, right, bottom, top, zNear, zFar)
-		} else {
-			Engine.println("[WARNING] Specify a projectionMode of either \"Gprocessing\" or \"processing\".");
-		}
-	}
-	
-	public void changeProjectionMode (String mode) {
-		Engine.projectionMode = mode;
-		this.adjustProjection();
+		// Top Left origin
+		projectionMatrix.ortho(0, Window.getWidth(), Window.getHeight(), 0, 0, 100);
+		Engine.println("Resizing: width = " + Window.getWidth());
 	}
 	
 	public Matrix4f getViewMatrix () {

@@ -2,6 +2,7 @@ package Gprocessing.breakout;
 
 import Gprocessing.graphics.Camera;
 import Gprocessing.graphics.Color;
+import Gprocessing.graphics.Window;
 import Gprocessing.physics.Transform;
 import Gprocessing.util.Engine;
 import Gprocessing.util.Scene;
@@ -33,7 +34,7 @@ public class Breakout extends Scene {
 		}
 
 		ball = new Ball(new Transform(300, 300, 20, 20), new Color(0, 0, 0, 255));
-		paddle = new Paddle(new Transform(1280 / 2 - 75, 600, 150, 10), Color.BLACK);
+		paddle = new Paddle(new Transform(Window.getWidth() / 2 - 75, Window.getHeight() - 40, 150, 10), Color.BLACK);
 	}
 
 	public void update() {

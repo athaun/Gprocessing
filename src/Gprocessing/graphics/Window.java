@@ -1,6 +1,5 @@
 package Gprocessing.graphics;
 
-import static Gprocessing.util.Engine.millis;
 import static org.lwjgl.glfw.GLFW.GLFW_FALSE;
 import static org.lwjgl.glfw.GLFW.GLFW_RESIZABLE;
 import static org.lwjgl.glfw.GLFW.GLFW_TRUE;
@@ -37,13 +36,19 @@ import org.lwjgl.opengl.GL;
 import Gprocessing.Main;
 import Gprocessing.ImGui.ImGuiLayer;
 import Gprocessing.breakout.Breakout;
-import Gprocessing.civSim.Cells;
 import Gprocessing.input.Mouse;
 import Gprocessing.util.Engine;
 import Gprocessing.util.Scene;
 
 public class Window {
+	
+	// Define and set the current scene
+	public static Main main = new Main();
+	public static Breakout bScene = new Breakout();
+	
+	public static Scene currentScene = main;
 
+	// Window Variables	
 	public long frameCount = 0;
 
 	String title;
@@ -55,15 +60,9 @@ public class Window {
 	public static int width;
 	public static int height;
 
-	public double dt = 0; // deltaTime
+	private double dt = 0; // deltaTime (accessible from Engine.deltaTime)
 	
-	static Shader defaultShader;
-	
-	public static Main main = new Main();
-	public static Breakout bScene = new Breakout();
-	public static Cells cellsScene = new Cells();
-	
-	public static Scene currentScene = cellsScene;
+	static Shader defaultShader;	
 
 	public Window(int pwidth, int pheight, String ptitle) {
 		
@@ -94,13 +93,14 @@ public class Window {
 		// Enable V-Sync
 		glfwSwapInterval(1);
 		
+		// Center the window
 		glfwSetWindowPos(window, (videoMode.width() - width) / 2, (videoMode.height() - height) / 2);
 		
 	}
 
 	void getFPS() {
 		frameCount++;
-		glfwSetWindowTitle(window, "GProcessing @ " + Math.round((frameCount / (Engine.millis() / 1000))) + " FPS, " + Engine.deltaTime + " DeltaTime");
+		glfwSetWindowTitle(window, title + " @ " + Math.round((frameCount / (Engine.millis() / 1000))) + " FPS");
 	}
 
 	public void setTitle(String title) {
@@ -118,12 +118,12 @@ public class Window {
 		glEnable(GL_BLEND);
 		glBlendFunc(GL_ONE, GL_ONE_MINUS_SRC_ALPHA);
 		
-		imguiLayer = new ImGuiLayer(window);
-		imguiLayer.initImGui();
-
 		double frameBeginTime = (float)glfwGetTime();
 		double frameEndTime = (float)glfwGetTime();
 		
+		imguiLayer = new ImGuiLayer(window);
+		imguiLayer.initImGui();
+
 		currentScene.loadEngineResources();
 		
 		currentScene.awake();
@@ -143,7 +143,7 @@ public class Window {
 			imguiLayer.update((float) dt, currentScene);
 			
 			glfwSwapBuffers(window);
-//			getFPS();
+			getFPS();
 
 			frameEndTime = (float)glfwGetTime();
 			dt = frameEndTime - frameBeginTime;
@@ -157,11 +157,11 @@ public class Window {
 	};
 	
 	private static void setHeight(int newHeight) {
-		Window.height = newHeight;		
+		height = newHeight;		
 	}
 
 	private static void setWidth(int newWidth) {
-		Window.width = newWidth;
+		width = newWidth;
 	}
 	
 	public static int getWidth () {

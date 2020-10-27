@@ -26,13 +26,13 @@ public class GameObject {
 	}	
 	
 	public GameObject (Transform transform, int zIndex) {
-		init("I really don't remember why I added names, they don't do anything useful", new ArrayList<>(), transform);
+		init("Default Object Name", new ArrayList<>(), transform);
 		Main.addGameObjectToScene(this);
 		this.zIndex = zIndex;
 	}
 	
 	public GameObject (Transform transform) {
-		init("I really don't remember why I added names, they don't do anything useful", new ArrayList<>(), transform);
+		init("Default Object Name", new ArrayList<>(), transform);
 		Main.addGameObjectToScene(this);
 		this.zIndex = 0;
 	}
