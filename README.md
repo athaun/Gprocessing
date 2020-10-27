@@ -1,10 +1,19 @@
-## Gprocessing is a lightweight 2D java game engine
+<h2>Gprocessing is a lightweight 2D java game engine</h2>
+<p>
+    <br />
+    <img src="https://img.shields.io/badge/Made%20using-NVidia%20Cuda-brightgreen">
+    <img src="https://img.shields.io/badge/Made%20Using-Python%203-yellow">
+    <img src="https://img.shields.io/badge/Version-2.0-blue">
+    <br />
+    <br />
+</p>
 Originally inspired by the Processing 3 graphics library, Gprocessing is easy to use, but also fast.
 * Modern OpenGL through the LWJGL 3 library for fast GPU rendering.
 * Entity Component System
 * Dear ImGui bindings created by [SpaiR/imgui-java](https://github.com/SpaiR/imgui-java)
 
-This project's development is slower during school, because I have alot of it.
+
+> This project's development is slower during school, because I have alot of it.
 
 ## Breakout clone
 This is the first game built using Gprocessing, it is a fully functional breakout clone, which I wrote in only three hours.
