@@ -4,8 +4,6 @@
     <img src="https://img.shields.io/badge/Made%20Using-Open%20GL%20-yellow">
     <img src="https://img.shields.io/badge/Version-0.4-blue">
     <img src="https://img.shields.io/badge/Platforms-Windows, Linux-lightgrey">
-    <br />
-    <br />
 </p>
 <h2>Gprocessing is a lightweight 2D java game engine</h2>
 
