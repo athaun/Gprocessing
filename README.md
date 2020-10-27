@@ -4,7 +4,7 @@ Originally inspired by the Processing 3 graphics library, Gprocessing is easy to
 * Entity Component System
 * Dear ImGui bindings created by [SpaiR/imgui-java](https://github.com/SpaiR/imgui-java)
 
-This project is temporarily on hold during school, because I have alot of it.
+This project's development is slower during school, because I have alot of it.
 
 ## Breakout clone
 This is the first game built using Gprocessing, it is a fully functional breakout clone, which I wrote in only three hours.
@@ -64,7 +64,8 @@ public class Main extends Scene {
 }
 ```
   
-## Installation
+## Installation ([Wiki](https://github.com/athaun/Gprocessing/wiki/Setting-up-a-new-project.))
+
 Clone:
 `git clone https://github.com/athaun/Gprocessing.git`
 open Eclipse, and select import project.
@@ -76,13 +77,11 @@ open Eclipse, and select import project.
   `-Dimgui.library.path=libary/LibImGuiBinaries`
 
 ## Documentation
-Not yet created.
-
-## Credits
-
+Work in progress: [Github Wiki](https://github.com/athaun/Gprocessing/wiki)
+### Credits
 Massive shoutout to Game With Gabe on Youtube for his [amazing tutorial series](https://www.youtube.com/channel/UCQP4qSCj1eHMHisDDR4iPzw/videos) on building a java game engine! 
 
-## License
+### License
 Copyright (c) 2020 Asher Haun MIT License
 See [LICENSE](https://github.com/athaun/Gprocessing/blob/master/LICENSE.md) for more information.
 
@@ -94,4 +93,11 @@ See [LICENSE](https://github.com/athaun/Gprocessing/blob/master/LICENSE.md) for 
 + 8.14.2020 Added ImGui
 + 9.21.2020 Fixed imGui input callbacks
 ! 9.21.2020 Created First game using the Engine!
+```
+
+### Known Issues
+```
++ Viewport width and height not in pixels
++ Dynamic window resizing doesn't work correctly
++ Transperancy issues on windows
 ```
