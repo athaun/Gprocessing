@@ -76,8 +76,7 @@ open Eclipse, and select import project.
   `-Dimgui.library.path=libary/LibImGuiBinaries`
 
 ## Documentation
-Not yet created.
-
+Work in progress: [Github Wiki](https://github.com/athaun/Gprocessing/wiki)
 ### Credits
 Massive shoutout to Game With Gabe on Youtube for his [amazing tutorial series](https://www.youtube.com/channel/UCQP4qSCj1eHMHisDDR4iPzw/videos) on building a java game engine! 
 
