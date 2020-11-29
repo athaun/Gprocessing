@@ -58,7 +58,7 @@ This is the first game built using Gprocessing, it is a fully functional breakou
 * [LWJGL 3](https://www.lwjgl.org/)
 
 
-### Code Samples
+## Code Samples
 #### BoilerPlate Code:
 ```java
 public class Main extends Scene {
