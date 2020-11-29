@@ -5,23 +5,61 @@
     <img src="https://img.shields.io/badge/Version-0.4-blue">
     <img src="https://img.shields.io/badge/Platforms-Windows, Linux-lightgrey">
 </p>
-<h2>Gprocessing is a lightweight 2D java game engine</h2>
+
+<br />
+<p align="center">
+  <h2 align="center">Gprocessing</h2>
+
+  <p align="center">
+    Lightweight 2D java game engine
+    <br />
+    <a href="https://github.com/athaun/Gprocessing/wiki"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="https://github.com/othneildrew/Best-README-Template">Features</a>
+    ·
+    <a href="https://github.com/othneildrew/Gprocessing/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/othneildrew/Gprocessing/issues">Request Feature</a>
+  </p>
+</p>
+
+
+<!-- TABLE OF CONTENTS -->
+## Table of Contents
+
+* [About the Project](#about-the-project)
+  * [Built With](#built-with)
+  * [Code samples](#code-samples)
+* [Getting Started](#getting-started)
+  * [Prerequisites](#prerequisites)
+  * [Installation](#installation)
+  * [Documentation](#documentation)
+* [Milestones](#Milestones)
+* [Known issues](#known-issues)
+* [License](#license)
+* [Contact](#contact)
+* [Acknowledgements](#acknowledgements)
+
+<!-- ABOUT THE PROJECT -->
+## About The Project
 
 Originally inspired by the Processing 3 graphics library, Gprocessing is easy to use, but also fast.
 
 * Modern OpenGL through the LWJGL 3 library for fast GPU rendering.
 * Entity Component System
-* Dear ImGui bindings created by [SpaiR/imgui-java](https://github.com/SpaiR/imgui-java)
+* Dear ImGui bindings
 
-> This project's development is slower during school, because I have alot of it.
-
-## Breakout clone
 This is the first game built using Gprocessing, it is a fully functional breakout clone, which I wrote in only three hours.
 ![screenshot](breakout.png)
 <br>
 
-## Code Examples
-### BoilerPlate Code:
+### Built With
+* [LWJGL 3](https://www.lwjgl.org/)
+
+
+### Code Samples
+#### BoilerPlate Code:
 ```java
 public class Main extends Scene {
 	
@@ -35,7 +73,7 @@ public class Main extends Scene {
 }
 ```
 
-### Simple example with sprites
+#### Simple example with sprites
 ```java
 public class Main extends Scene {
 	
@@ -54,7 +92,7 @@ public class Main extends Scene {
 	}
 }
 ```
-### Simple example with Dear ImGui
+#### Simple example with Dear ImGui
 ```java
 public class Main extends Scene {
 	public void awake() {		
@@ -72,8 +110,15 @@ public class Main extends Scene {
 	}
 }
 ```
+
+## Prerequisites
+* OpenGL capable graphics card (minimum `core 330`)
+* OpenGL capable graphics driver
+  * Linux nouveau drivers for nvidia cards do not currently work, you will have to install proprietary drivers.
+  * FOSS AMD Drivers for linux do work.
   
-## Installation ([Wiki](https://github.com/athaun/Gprocessing/wiki/Setting-up-a-new-project.))
+## Installation
+You can find additional instructions in the [Wiki](https://github.com/athaun/Gprocessing/wiki/Setting-up-a-new-project.).
 
 Clone:
 `git clone https://github.com/athaun/Gprocessing.git`
@@ -86,13 +131,8 @@ open Eclipse, and select import project.
   `-Dimgui.library.path=libary/LibImGuiBinaries`
 
 ## Documentation
-Work in progress: [Github Wiki](https://github.com/athaun/Gprocessing/wiki)
-### Credits
-Massive shoutout to Game With Gabe on Youtube for his [amazing tutorial series](https://www.youtube.com/channel/UCQP4qSCj1eHMHisDDR4iPzw/videos) on building a java game engine! 
-
-### License
-Copyright (c) 2020 Asher Haun MIT License
-See [LICENSE](https://github.com/athaun/Gprocessing/blob/master/LICENSE.md) for more information.
+* [Github Wiki](https://github.com/athaun/Gprocessing/wiki) (Work in progress)
+* [Javadocs]() (Coming soon)
 
 ### Milestones:
 ```
@@ -109,3 +149,14 @@ See [LICENSE](https://github.com/athaun/Gprocessing/blob/master/LICENSE.md) for 
 + Dynamic window resizing doesn't work correctly
 + Transperancy issues on windows
 ```
+
+### License
+Copyright (c) 2020 Asher Haun MIT License
+See [LICENSE](https://github.com/athaun/Gprocessing/blob/master/LICENSE.md) for more information.
+
+### Contact
+Discord: `Asher#6411`
+
+### Credits
+* Games With Gabe on Youtube for his [amazing tutorial series](https://www.youtube.com/channel/UCQP4qSCj1eHMHisDDR4iPzw/videos) on building a java game engine! 
+* Java ImGui bindings from [SpaiR/imgui-java](https://github.com/SpaiR/imgui-java)
