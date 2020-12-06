@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="28e1e06f-16dd-433e-bc93-57b18faa5c74" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Gprocessing.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Gprocessing/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Gprocessing/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Gprocessing/ecs/Component.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Gprocessing/ecs/Component.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Gprocessing/ecs/FontRenderer.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Gprocessing/ecs/FontRenderer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Gprocessing/ecs/GameObject.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Gprocessing/ecs/GameObject.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Gprocessing/ecs/Rectangle.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Gprocessing/ecs/Rectangle.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Gprocessing/ecs/Sprite.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Gprocessing/ecs/Sprite.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Gprocessing/ecs/SpriteRenderer.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Gprocessing/ecs/SpriteRenderer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Gprocessing/ecs/Spritesheet.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Gprocessing/ecs/Spritesheet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Gprocessing/graphics/Camera.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Gprocessing/graphics/Camera.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Gprocessing/graphics/Color.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Gprocessing/graphics/Color.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Gprocessing/graphics/Graphics.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Gprocessing/graphics/Graphics.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Gprocessing/graphics/Shader.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Gprocessing/graphics/Shader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Gprocessing/graphics/Texture.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Gprocessing/graphics/Texture.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Gprocessing/graphics/Window.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Gprocessing/graphics/Window.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Gprocessing/graphics/renderer/RenderBatch.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Gprocessing/graphics/renderer/RenderBatch.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Gprocessing/graphics/renderer/Renderer.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Gprocessing/graphics/renderer/Renderer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Gprocessing/input/Keyboard$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Gprocessing/input/Keyboard$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Gprocessing/input/Keyboard.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Gprocessing/input/Keyboard.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Gprocessing/input/Mouse.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Gprocessing/input/Mouse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Gprocessing/noise/OpenSimplexNoise.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Gprocessing/noise/OpenSimplexNoise.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Gprocessing/pathfinding/Node.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Gprocessing/pathfinding/Node.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Gprocessing/pathfinding/Pathfinder.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Gprocessing/pathfinding/Pathfinder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Gprocessing/physics/RectangleBounds.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Gprocessing/physics/Transform.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Gprocessing/physics/Transform.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Gprocessing/physics/Vector2.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Gprocessing/physics/Vector2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Gprocessing/physics/Vector3.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Gprocessing/physics/Vector3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Gprocessing/physics/testMain.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Gprocessing/threads/TMExecutor.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Gprocessing/threads/TMExecutor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Gprocessing/threads/ThreadMaster.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Gprocessing/threads/ThreadMaster.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Gprocessing/util/Assets.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Gprocessing/util/Assets.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Gprocessing/util/Engine.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Gprocessing/util/Engine.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Gprocessing/util/Scene.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Gprocessing/util/Scene.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Gprocessing/breakout/Paddle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gprocessing/breakout/Paddle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Gprocessing/util/Engine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gprocessing/util/Engine.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="$APPLICATION_HOME_DIR$/plugins/maven/lib/maven3" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1lGDBVaX5l0tnbpHFLtxNZaQYAo" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/library/LibImGuiBinaries/imgui-java.dll" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Breakout" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Gprocessing.breakout.Breakout" />
+      <module name="Gprocessing" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="28e1e06f-16dd-433e-bc93-57b18faa5c74" name="Default Changelist" comment="" />
+      <created>1607214411659</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1607214411659</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="3304" y="698" width="1071" height="718" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607215199713">
+      <screen x="1920" y="0" width="3840" height="2160" />
+    </state>
+    <state x="3304" y="698" width="1071" height="718" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.3840.2160/0.0.1920.1080@1920.0.3840.2160" timestamp="1607215199713" />
+    <state x="3577" y="845" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1607214551577">
+      <screen x="1920" y="0" width="3840" height="2160" />
+    </state>
+    <state x="3577" y="845" key="#com.intellij.ide.util.TreeClassChooserDialog/1920.0.3840.2160/0.0.1920.1080@1920.0.3840.2160" timestamp="1607214551577" />
+    <state x="2350" y="779" key="FileChooserDialogImpl" timestamp="1607215171482">
+      <screen x="1920" y="0" width="3840" height="2160" />
+    </state>
+    <state x="2350" y="779" key="FileChooserDialogImpl/1920.0.3840.2160/0.0.1920.1080@1920.0.3840.2160" timestamp="1607215171482" />
+    <state width="3798" height="618" key="GridCell.Tab.0.bottom" timestamp="1607215182868">
+      <screen x="1920" y="0" width="3840" height="2160" />
+    </state>
+    <state width="3798" height="618" key="GridCell.Tab.0.bottom/1920.0.3840.2160/0.0.1920.1080@1920.0.3840.2160" timestamp="1607215182868" />
+    <state width="3798" height="618" key="GridCell.Tab.0.center" timestamp="1607215182868">
+      <screen x="1920" y="0" width="3840" height="2160" />
+    </state>
+    <state width="3798" height="618" key="GridCell.Tab.0.center/1920.0.3840.2160/0.0.1920.1080@1920.0.3840.2160" timestamp="1607215182868" />
+    <state width="3798" height="618" key="GridCell.Tab.0.left" timestamp="1607215182868">
+      <screen x="1920" y="0" width="3840" height="2160" />
+    </state>
+    <state width="3798" height="618" key="GridCell.Tab.0.left/1920.0.3840.2160/0.0.1920.1080@1920.0.3840.2160" timestamp="1607215182868" />
+    <state width="3798" height="618" key="GridCell.Tab.0.right" timestamp="1607215182868">
+      <screen x="1920" y="0" width="3840" height="2160" />
+    </state>
+    <state width="3798" height="618" key="GridCell.Tab.0.right/1920.0.3840.2160/0.0.1920.1080@1920.0.3840.2160" timestamp="1607215182868" />
+    <state x="2157" y="612" key="SettingsEditor" timestamp="1607215179435">
+      <screen x="1920" y="0" width="3840" height="2160" />
+    </state>
+    <state x="2157" y="612" key="SettingsEditor/1920.0.3840.2160/0.0.1920.1080@1920.0.3840.2160" timestamp="1607215179435" />
+  </component>
+</project>

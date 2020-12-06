@@ -5,7 +5,6 @@ import static org.lwjgl.glfw.GLFW.glfwInit;
 import org.lwjgl.glfw.GLFWErrorCallback;
 
 import Gprocessing.graphics.Window;
-import Gprocessing.physics.RectangleBounds;
 import Gprocessing.physics.Transform;
 import Gprocessing.physics.Vector2;
 
@@ -82,16 +81,8 @@ public class Engine {
 		return inX >= rectX && inX <= (rectY + rectWidth) && inY >= rectY && inY <= (rectY + rectHeight);
 	}
 
-	public static boolean inRect(float inX, float inY, RectangleBounds r) {
-		return inX >= r.x && inX <= (r.y + r.width) && inY >= r.y && inY <= (r.y + r.height);
-	}
-
 	public static boolean inRect(Vector2 in, float rectX, float rectY, float rectWidth, float rectHeight) {
 		return in.x >= rectX && in.x <= (rectY + rectWidth) && in.y >= rectY && in.y <= (rectY + rectHeight);
-	}
-
-	public static boolean inRect(Vector2 in, RectangleBounds r) {
-		return in.x >= r.x && in.x <= (r.y + r.width) && in.y >= r.y && in.y <= (r.y + r.height);
 	}
 
 	public static boolean rectInRect(Transform t1, Transform t2) {
