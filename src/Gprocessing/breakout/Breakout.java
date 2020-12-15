@@ -13,7 +13,7 @@ import static Gprocessing.graphics.Graphics.*;
 
 public class Breakout extends Scene {
 	public static void main(String[] args) {
-		Engine.init(1600, 900, "Breakout");
+		Engine.init(1280, 670, "Breakout");
 	}
 
 	Brick[][] bricks = new Brick[30][8];

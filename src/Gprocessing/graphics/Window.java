@@ -30,6 +30,7 @@ import static org.lwjgl.opengl.GL11.glBlendFunc;
 import static org.lwjgl.opengl.GL11.glClear;
 import static org.lwjgl.opengl.GL11.glEnable;
 
+import Gprocessing.editor.EditorGui;
 import org.lwjgl.glfw.GLFWVidMode;
 import org.lwjgl.opengl.GL;
 
@@ -40,11 +41,16 @@ import Gprocessing.input.Mouse;
 import Gprocessing.util.Engine;
 import Gprocessing.util.Scene;
 
+import java.util.ArrayList;
+
+
 public class Window {
 	
 	// Define and set the current scene
 	public static Main main = new Main();
 	public static Breakout bScene = new Breakout();
+
+	// public static ArrayList<Scene> scenes = new ArrayList<Scene>();
 	
 	public static Scene currentScene = main;
 
@@ -62,7 +68,9 @@ public class Window {
 
 	private double dt = 0; // deltaTime (accessible from Engine.deltaTime)
 	
-	static Shader defaultShader;	
+	static Shader defaultShader;
+
+	public static EditorGui editor;
 
 	public Window(int pwidth, int pheight, String ptitle) {
 		
@@ -95,7 +103,11 @@ public class Window {
 		
 		// Center the window
 		glfwSetWindowPos(window, (videoMode.width() - width) / 2, (videoMode.height() - height) / 2);
-		
+
+		if (Engine.showEditor) {
+			editor = new EditorGui();
+		}
+
 	}
 
 	void getFPS() {

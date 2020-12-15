@@ -92,6 +92,14 @@ public class Texture {
 		return this.height;
 	}
 
+	public int getTextureID () {
+		return textureID;
+	}
+
+	public String getFilePath () {
+		return filepath;
+	}
+
 	public void setFilepath(String filepath) {
 		this.filepath = filepath;
 	}

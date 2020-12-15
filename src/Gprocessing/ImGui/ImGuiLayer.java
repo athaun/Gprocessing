@@ -1,5 +1,6 @@
 package Gprocessing.ImGui;
 
+import Gprocessing.util.Engine;
 import imgui.*;
 import imgui.flag.*;
 import imgui.gl3.ImGuiImplGl3;
@@ -241,7 +242,9 @@ public class ImGuiLayer {
 
 		// Any Dear ImGui code SHOULD go between ImGui.newFrame()/ImGui.render() methods
 		ImGui.newFrame();
-		currentScene.sceneImgui();
+		if (Engine.showEditor) {
+			Window.editor.drawGui();
+		}
 		currentScene.imgui();
 //		ImGui.showDemoWindow();
 		ImGui.render();

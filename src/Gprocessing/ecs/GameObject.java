@@ -8,7 +8,7 @@ import Gprocessing.physics.Transform;
 
 public class GameObject {
 	
-	private String name;
+	public String name;
 	private List<Component> components;
 	private Transform transform;
 	private int zIndex;
@@ -95,6 +95,10 @@ public class GameObject {
 		this.components.add(c);
 		c.gameObject = this;
 	}
+
+	public List<Component> getComponents () {
+		return components;
+	}
 	
 	public void update (float dt) {
 		for (int i = 0; i < components.size(); i ++) {
@@ -108,13 +112,15 @@ public class GameObject {
 		}
 	}
 	
-	public void imgui () {
-		for (Component c : components) {
-			c.imgui();
-		}
-	}
-	
 	public int zIndex () {
 		return zIndex;
+	}
+
+	public void setZindex (int z) {
+		zIndex = z;
+	}
+
+	public String getName () {
+		return name;
 	}
 }

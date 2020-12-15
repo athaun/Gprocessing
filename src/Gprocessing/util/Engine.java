@@ -23,6 +23,22 @@ public class Engine {
 
 	public static double deltaTime = 0;
 
+	public static boolean showEditor = false;
+
+	public static void init(int windowWidth, int windowHeight, String windowTitle, boolean se) {
+
+		showEditor = se;
+
+		GLFWErrorCallback.createPrint(System.err).set();
+
+		if (!glfwInit())
+			throw new IllegalStateException("[FATAL] Failed to initialize GLFW.");
+
+		w = new Window(windowWidth, windowHeight, windowTitle);
+
+		w.showWindow();
+	}
+
 	public static void init(int windowWidth, int windowHeight, String windowTitle) {
 
 		GLFWErrorCallback.createPrint(System.err).set();

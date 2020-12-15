@@ -17,7 +17,7 @@ public abstract class Scene {
 	private Renderer renderer = new Renderer();
 	public Camera camera;
 	private boolean isRunning = false;
-	static protected List<GameObject> gameObjects = new ArrayList<>();
+	static protected ArrayList<GameObject> gameObjects = new ArrayList<>();
 	protected GameObject activeGameObject = null;
 	
 	public static void main(String[] args) {
@@ -40,6 +40,10 @@ public abstract class Scene {
 		}
 		isRunning = true;
 	}
+
+	public ArrayList getGameObjects () {
+		return gameObjects;
+	}
 	
 	public static void addGameObjectToScene (GameObject gameObject) {
 		gameObjects.add(gameObject);
@@ -61,15 +65,7 @@ public abstract class Scene {
 	public void loadEngineResources () {
 		Assets.getShader("src/assets/shaders/default.glsl");
 	}
-	
-	public void sceneImgui () {
-		if (activeGameObject != null) {
-			ImGui.begin("Inspector");
-			activeGameObject.imgui();
-			ImGui.end();
-		}
-	}
-	
+
 	public void imgui () {
 		
 	}

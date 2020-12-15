@@ -44,14 +44,25 @@ public class SpriteRenderer extends Component {
 		this.isDirty = true;
 	}
 
-	// Override the imgui component method used in the inspector for scene's
-	// activeGameObject
 	@Override
-	public void imgui() {
-		float[] imColor = { color.x, color.y, color.z, color.w };
-		if (ImGui.colorPicker4("Color Picker", imColor)) {
-			this.color.set(imColor[0], imColor[1], imColor[2], imColor[3]);
-			this.isDirty = true;
+	public void ImGuiEditorWidget() {
+		if (ImGui.collapsingHeader("SpriteRenderer")) {
+			ImGui.text("Color");
+			ImGui.beginChild("##cp", 0, 300);
+			float[] imColor = { color.x, color.y, color.z, color.w };
+			if (ImGui.colorPicker4("Color Picker", imColor)) {
+				this.color.set(imColor[0], imColor[1], imColor[2], imColor[3]);
+				this.isDirty = true;
+			}
+			ImGui.endChild();
+			ImGui.newLine();
+			if (this.sprite.getTexture() != null) {
+				ImGui.text("Texture");
+				ImGui.imageButton(this.sprite.getTexture().getTextureID(), 100, 100, 1, 1, 0, 0);
+				ImGui.text("Path: " + this.sprite.getTexture().getFilePath());
+			} else {
+				ImGui.text("Texture not assigned.");
+			}
 		}
 	}
 
