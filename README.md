@@ -127,7 +127,7 @@ open Eclipse, and select import project.
   Select the run icon > Run As > 1 java application
   
 * Intellj:
-  you will have to provide a VM option in the build configuration
+  you might have to provide a VM option in the build configuration
   `-Dimgui.library.path=libary/LibImGuiBinaries`
 
 ## Documentation
