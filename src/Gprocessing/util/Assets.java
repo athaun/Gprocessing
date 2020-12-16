@@ -3,7 +3,7 @@ package Gprocessing.util;
 import java.io.File;
 import java.util.HashMap;
 
-import Gprocessing.ecs.Spritesheet;
+import Gprocessing.graphics.Spritesheet;
 import Gprocessing.graphics.Shader;
 import Gprocessing.graphics.Texture;
 

@@ -28,6 +28,7 @@ public class SpriteRenderer extends Component {
 
 	public SpriteRenderer(Color color) {
 		this.setColor(color.toVec4f());
+		// ^ Check .toNormalizedVec4f ^
 		this.sprite = new Sprite(null);
 		this.isDirty = true;
 	}

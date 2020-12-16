@@ -220,10 +220,10 @@ public class RenderBatch implements Comparable<RenderBatch>{
 			vertices[offset + 1] = spr.position.y + (yAdd * spr.scale.y);
 
 			// Load color
-			vertices[offset + 2] = color.x;
-			vertices[offset + 3] = color.y;
-			vertices[offset + 4] = color.z;
-			vertices[offset + 5] = color.w;
+			vertices[offset + 2] = color.x; // Red
+			vertices[offset + 3] = color.y; // Green
+			vertices[offset + 4] = color.z; // Blue
+			vertices[offset + 5] = color.w; // Alpha
 
 			// Load texture coordinates
 			vertices[offset + 6] = textureCoordinates[i].x;

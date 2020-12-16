@@ -65,6 +65,7 @@ public class EditorGui {
         ImGui.beginChild("rightCol", 0, ImGui.getWindowContentRegionMaxY() - 40);
 
             if (selectedId != -1) {
+                // Game Object is selected
                 GameObject g = getGameObject(selectedId);
                 if (setTempProperties) {
                     xyz[0] = g.getTransform().getX();

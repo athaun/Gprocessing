@@ -16,41 +16,41 @@
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
-    <select />
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="28e1e06f-16dd-433e-bc93-57b18faa5c74" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/discord.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Gprocessing/editor/EditorGui.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Gprocessing/input/Gamepad.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Gprocessing/ImGui/ImGuiLayer$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Gprocessing/ImGui/ImGuiLayer$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Gprocessing/ImGui/ImGuiLayer$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Gprocessing/ImGui/ImGuiLayer$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Gprocessing/ImGui/ImGuiLayer.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Gprocessing/ImGui/ImGuiLayer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Gprocessing/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Gprocessing/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Gprocessing/breakout/Breakout.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Gprocessing/breakout/Breakout.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Gprocessing/breakout/Paddle.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Gprocessing/breakout/Paddle.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Gprocessing/ecs/Component.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Gprocessing/ecs/Component.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Gprocessing/ecs/GameObject.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Gprocessing/ecs/GameObject.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Gprocessing/ecs/Rectangle.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Gprocessing/ecs/Rectangle.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Gprocessing/ecs/SpriteRenderer.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Gprocessing/ecs/SpriteRenderer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Gprocessing/graphics/Texture.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Gprocessing/graphics/Texture.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Gprocessing/ecs/Spritesheet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Gprocessing/editor/EditorGui.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Gprocessing/editor/EditorGui.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Gprocessing/graphics/Window.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Gprocessing/graphics/Window.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Gprocessing/util/Engine.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Gprocessing/util/Engine.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Gprocessing/util/Scene.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Gprocessing/util/Scene.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Gprocessing/pathfinding/Node.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Gprocessing/pathfinding/Pathfinder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Gprocessing/pathfinding/README.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Gprocessing/util/Assets.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Gprocessing/util/Assets.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/assets/shaders/default.glsl" beforeDir="false" afterPath="$PROJECT_DIR$/bin/assets/shaders/default.glsl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/imgui.ini" beforeDir="false" afterPath="$PROJECT_DIR$/imgui.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Gprocessing/ImGui/ImGuiLayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gprocessing/ImGui/ImGuiLayer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Gprocessing/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gprocessing/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Gprocessing/breakout/Breakout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gprocessing/breakout/Breakout.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Gprocessing/breakout/Paddle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gprocessing/breakout/Paddle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Gprocessing/ecs/Component.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gprocessing/ecs/Component.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Gprocessing/ecs/GameObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gprocessing/ecs/GameObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Gprocessing/ecs/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gprocessing/ecs/Rectangle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Gprocessing/ecs/SpriteRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gprocessing/ecs/SpriteRenderer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Gprocessing/graphics/Texture.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gprocessing/graphics/Texture.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Gprocessing/ecs/Spritesheet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gprocessing/graphics/Spritesheet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Gprocessing/editor/EditorGui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gprocessing/editor/EditorGui.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Gprocessing/graphics/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gprocessing/graphics/Window.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Gprocessing/input/Keyboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gprocessing/input/Keyboard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Gprocessing/util/Engine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gprocessing/util/Engine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Gprocessing/util/Scene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gprocessing/util/Scene.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Gprocessing/graphics/renderer/RenderBatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gprocessing/graphics/renderer/RenderBatch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Gprocessing/pathfinding/Node.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Gprocessing/pathfinding/Pathfinder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Gprocessing/pathfinding/README.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Gprocessing/util/Assets.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gprocessing/util/Assets.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/shaders/default.glsl" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/shaders/default.glsl" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +87,7 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Code with Me" />
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
@@ -112,11 +112,50 @@
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
-        <entry key="MAIN">
+        <entry key="1">
           <value>
-            <State />
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="true" />
+                </map>
+              </option>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="1" value="TOOL_WINDOW" />
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
@@ -143,25 +182,25 @@
     </state>
     <state x="430" y="757" key="FileChooserDialogImpl/0.0.3840.2100@0.0.3840.2100" timestamp="1607989521947" />
     <state x="2350" y="779" key="FileChooserDialogImpl/1920.0.3840.2160/0.0.1920.1080@1920.0.3840.2160" timestamp="1607215171482" />
-    <state width="3778" height="356" key="GridCell.Tab.0.bottom" timestamp="1607989548569">
+    <state width="3778" height="305" key="GridCell.Tab.0.bottom" timestamp="1608091039005">
       <screen x="0" y="0" width="3840" height="2100" />
     </state>
-    <state width="3778" height="356" key="GridCell.Tab.0.bottom/0.0.3840.2100@0.0.3840.2100" timestamp="1607989548569" />
+    <state width="3778" height="305" key="GridCell.Tab.0.bottom/0.0.3840.2100@0.0.3840.2100" timestamp="1608091039005" />
     <state width="3778" height="272" key="GridCell.Tab.0.bottom/1920.0.3840.2160/0.0.1920.1080@1920.0.3840.2160" timestamp="1607659334094" />
-    <state width="3778" height="356" key="GridCell.Tab.0.center" timestamp="1607989548568">
+    <state width="3778" height="305" key="GridCell.Tab.0.center" timestamp="1608091039005">
       <screen x="0" y="0" width="3840" height="2100" />
     </state>
-    <state width="3778" height="356" key="GridCell.Tab.0.center/0.0.3840.2100@0.0.3840.2100" timestamp="1607989548568" />
+    <state width="3778" height="305" key="GridCell.Tab.0.center/0.0.3840.2100@0.0.3840.2100" timestamp="1608091039005" />
     <state width="3778" height="272" key="GridCell.Tab.0.center/1920.0.3840.2160/0.0.1920.1080@1920.0.3840.2160" timestamp="1607659334094" />
-    <state width="3778" height="356" key="GridCell.Tab.0.left" timestamp="1607989548567">
+    <state width="3778" height="305" key="GridCell.Tab.0.left" timestamp="1608091039005">
       <screen x="0" y="0" width="3840" height="2100" />
     </state>
-    <state width="3778" height="356" key="GridCell.Tab.0.left/0.0.3840.2100@0.0.3840.2100" timestamp="1607989548567" />
+    <state width="3778" height="305" key="GridCell.Tab.0.left/0.0.3840.2100@0.0.3840.2100" timestamp="1608091039005" />
     <state width="3778" height="272" key="GridCell.Tab.0.left/1920.0.3840.2160/0.0.1920.1080@1920.0.3840.2160" timestamp="1607659334094" />
-    <state width="3778" height="356" key="GridCell.Tab.0.right" timestamp="1607989548569">
+    <state width="3778" height="305" key="GridCell.Tab.0.right" timestamp="1608091039005">
       <screen x="0" y="0" width="3840" height="2100" />
     </state>
-    <state width="3778" height="356" key="GridCell.Tab.0.right/0.0.3840.2100@0.0.3840.2100" timestamp="1607989548569" />
+    <state width="3778" height="305" key="GridCell.Tab.0.right/0.0.3840.2100@0.0.3840.2100" timestamp="1608091039005" />
     <state width="3778" height="272" key="GridCell.Tab.0.right/1920.0.3840.2160/0.0.1920.1080@1920.0.3840.2160" timestamp="1607659334094" />
     <state width="3778" height="356" key="GridCell.Tab.1.bottom" timestamp="1607989548573">
       <screen x="0" y="0" width="3840" height="2100" />
@@ -183,13 +222,18 @@
     </state>
     <state width="3778" height="356" key="GridCell.Tab.1.right/0.0.3840.2100@0.0.3840.2100" timestamp="1607989548572" />
     <state width="3778" height="727" key="GridCell.Tab.1.right/1920.0.3840.2160/0.0.1920.1080@1920.0.3840.2160" timestamp="1607648085732" />
+    <state x="1302" y="670" key="IDE.errors.dialog" timestamp="1607990595850">
+      <screen x="0" y="0" width="3840" height="2100" />
+    </state>
+    <state x="1302" y="670" key="IDE.errors.dialog/0.0.3840.2100@0.0.3840.2100" timestamp="1607990595850" />
     <state x="1373" y="683" key="NewModule_or_Project.wizard" timestamp="1607989547894">
       <screen x="0" y="0" width="3840" height="2100" />
     </state>
     <state x="1373" y="683" key="NewModule_or_Project.wizard/0.0.3840.2100@0.0.3840.2100" timestamp="1607989547894" />
-    <state x="2157" y="612" key="SettingsEditor" timestamp="1607649429725">
-      <screen x="1920" y="0" width="3840" height="2160" />
+    <state x="237" y="595" key="SettingsEditor" timestamp="1608061637528">
+      <screen x="0" y="0" width="3840" height="2100" />
     </state>
+    <state x="237" y="595" key="SettingsEditor/0.0.3840.2100@0.0.3840.2100" timestamp="1608061637528" />
     <state x="2157" y="612" key="SettingsEditor/1920.0.3840.2160/0.0.1920.1080@1920.0.3840.2160" timestamp="1607649429725" />
     <state width="746" height="596" key="SwitcherDM" timestamp="1607640388124">
       <screen x="1920" y="0" width="3840" height="2160" />

@@ -43,7 +43,6 @@ import Gprocessing.util.Scene;
 
 import java.util.ArrayList;
 
-
 public class Window {
 	
 	// Define and set the current scene
@@ -121,7 +120,7 @@ public class Window {
 
 	public void showWindow() {
 		
-		/** 
+		/*
 		 * Main game loop
 		 */
 		glfwShowWindow(window);
@@ -141,7 +140,7 @@ public class Window {
 		currentScene.awake();
 		
 		currentScene.startGameObjects();
-		
+
 		while (!glfwWindowShouldClose(window)) {
 			// poll GLFW for input events
 			Mouse.update();

@@ -3,23 +3,23 @@
  * Copyright (C) 2020, Asher Haun
  * Released under the MIT license.
  * 
- * 
  * TODO:
- * - mouse input
- * - textures/images
+ * - Change transform to component
+ * - game controllers
+ * - dynamic Z-indexing
+ *
  * - basic physics (gravity collisions)
  * - fonts
  * - native scene management
  * - networking library
  * - headless mode
- * - GUI library
  * - primitives
  * - vertex shapes
  * - push/pop matrices
  * - primitives
- * - constrain
  * - lerp
  * - animation?
+ * - Scene Saving
  * 
  * 	Note when adding a new scene, remember to set it in Window.java
  */
@@ -27,6 +27,8 @@
 package Gprocessing;
 
 import static Gprocessing.graphics.Graphics.background;
+import static org.lwjgl.glfw.GLFW.GLFW_JOYSTICK_1;
+import static org.lwjgl.glfw.GLFW.glfwGetJoystickButtons;
 
 import Gprocessing.ecs.GameObject;
 import Gprocessing.ecs.Rectangle;
@@ -35,12 +37,13 @@ import Gprocessing.ecs.SpriteRenderer;
 import Gprocessing.graphics.Camera;
 import Gprocessing.graphics.Color;
 import Gprocessing.graphics.Window;
+import Gprocessing.input.Gamepad;
 import Gprocessing.physics.Transform;
 import Gprocessing.util.Engine;
 import Gprocessing.util.Scene;
+import imgui.ImGui;
 
 import java.util.ArrayList;
-
 
 public class Main extends Scene {
 		
@@ -64,6 +67,9 @@ public class Main extends Scene {
 
 	public void update() {
 		background(50, 50, 50);
+	}
 
+	public void imgui () {
+		Gamepad.gui();
 	}
 }
