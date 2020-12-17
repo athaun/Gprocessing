@@ -1,12 +1,12 @@
 package Gprocessing.graphics.renderer;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-
 import Gprocessing.ecs.GameObject;
 import Gprocessing.ecs.SpriteRenderer;
 import Gprocessing.graphics.Texture;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 public class Renderer {
 	private final int MAX_BATCH_SIZE = 1000;

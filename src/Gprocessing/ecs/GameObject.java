@@ -1,10 +1,10 @@
 package Gprocessing.ecs;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import Gprocessing.Main;
 import Gprocessing.physics.Transform;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class GameObject {
 	

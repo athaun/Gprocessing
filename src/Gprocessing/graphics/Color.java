@@ -1,8 +1,8 @@
 package Gprocessing.graphics;
 
-import org.joml.Vector4f;
-
 import Gprocessing.util.Engine;
+import Gprocessing.util.Utils;
+import org.joml.Vector4f;
 
 public class Color {
 
@@ -43,7 +43,7 @@ public class Color {
 
 	private float m(float p) {
 		// I am too lazy to type this three times...
-		return Engine.map(p, 0, 255, 0, 1);
+		return Utils.map(p, 0, 255, 0, 1);
 	}
 
 	public Vector4f toNormalizedVec4f() {
@@ -51,8 +51,8 @@ public class Color {
 	}
 
 	public Color fromNormalized() {
-		return new Color(Engine.map(r, 0, 1, 0, 255), Engine.map(g, 0, 1, 0, 255), Engine.map(b, 0, 1, 0, 255),
-				Engine.map(a, 0, 1, 0, 255));
+		return new Color(Utils.map(r, 0, 1, 0, 255), Utils.map(g, 0, 1, 0, 255), Utils.map(b, 0, 1, 0, 255),
+				Utils.map(a, 0, 1, 0, 255));
 	}
 
 	public void setValue(String type, float value) {

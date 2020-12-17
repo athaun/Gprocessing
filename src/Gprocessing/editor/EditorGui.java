@@ -3,12 +3,7 @@ package Gprocessing.editor;
 import Gprocessing.ecs.Component;
 import Gprocessing.ecs.GameObject;
 import Gprocessing.graphics.Window;
-import Gprocessing.physics.Transform;
-import Gprocessing.util.Engine;
-import Gprocessing.util.Scene;
 import imgui.ImGui;
-import imgui.type.ImInt;
-import imgui.type.ImString;
 
 public class EditorGui {
 

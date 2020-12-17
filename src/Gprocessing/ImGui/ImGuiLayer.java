@@ -1,14 +1,15 @@
 package Gprocessing.ImGui;
 
+import Gprocessing.graphics.Window;
 import Gprocessing.util.Engine;
+import Gprocessing.util.Scene;
 import imgui.*;
-import imgui.flag.*;
-import imgui.gl3.ImGuiImplGl3;
 import imgui.callback.ImStrConsumer;
 import imgui.callback.ImStrSupplier;
+import imgui.flag.*;
+import imgui.gl3.ImGuiImplGl3;
+
 import static org.lwjgl.glfw.GLFW.*;
-import Gprocessing.graphics.Window;
-import Gprocessing.util.Scene;
 
 public class ImGuiLayer {
 

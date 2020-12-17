@@ -4,8 +4,9 @@ import Gprocessing.ecs.GameObject;
 import Gprocessing.ecs.Rectangle;
 import Gprocessing.graphics.Color;
 import Gprocessing.input.Keyboard;
+import Gprocessing.physics.Collisions;
 import Gprocessing.physics.Transform;
-import Gprocessing.util.Engine;
+import Gprocessing.util.Utils;
 
 import static Gprocessing.breakout.Breakout.ball;
 
@@ -38,7 +39,7 @@ private GameObject paddleGo;
 		}
 		
 		setTransform(new Transform(
-				 Engine.constrain(getTransform().position.x + xVelocity, 0, 1280 - getTransform().scale.x),
+				 Utils.constrain(getTransform().position.x + xVelocity, 0, 1280 - getTransform().scale.x),
 			 	 getTransform().position.y,
 			 	 getTransform().scale.x,
 			 	 getTransform().scale.y));
@@ -62,6 +63,6 @@ private GameObject paddleGo;
 	}
 	
 	public boolean isColliding (Transform t) {
-		return Engine.rectInRect(t, this.getTransform());
+		return Collisions.rectInRect(t, this.getTransform());
 	}
 }

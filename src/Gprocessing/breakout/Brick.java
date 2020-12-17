@@ -3,8 +3,9 @@ package Gprocessing.breakout;
 import Gprocessing.ecs.GameObject;
 import Gprocessing.ecs.Rectangle;
 import Gprocessing.graphics.Color;
+import Gprocessing.physics.Collisions;
 import Gprocessing.physics.Transform;
-import Gprocessing.util.Engine;
+import Gprocessing.util.Utils;
 
 public class Brick {
 	
@@ -21,8 +22,8 @@ public class Brick {
 	
 	public void update () {
 		if (!isAlive) {
-			setColor(new Color(Engine.map(getColor().r, 0, 1, 0, 255), Engine.map(getColor().g, 0, 1, 0, 255), Engine.map(getColor().b, 0, 1, 0, 255), alpha));			
-			alpha = Engine.constrain(alpha -= 14, 0, 255);
+			setColor(new Color(Utils.map(getColor().r, 0, 1, 0, 255), Utils.map(getColor().g, 0, 1, 0, 255), Utils.map(getColor().b, 0, 1, 0, 255), alpha));
+			alpha = Utils.constrain(alpha -= 14, 0, 255);
 		} else {
 			
 		}
@@ -45,6 +46,6 @@ public class Brick {
 	}
 	
 	public boolean isColliding (Transform t) {
-		return Engine.rectInRect(t, this.getTransform());
+		return Collisions.rectInRect(t, this.getTransform());
 	}
 }

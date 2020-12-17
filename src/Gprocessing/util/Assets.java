@@ -1,11 +1,11 @@
 package Gprocessing.util;
 
+import Gprocessing.graphics.Shader;
+import Gprocessing.graphics.Spritesheet;
+import Gprocessing.graphics.Texture;
+
 import java.io.File;
 import java.util.HashMap;
-
-import Gprocessing.graphics.Spritesheet;
-import Gprocessing.graphics.Shader;
-import Gprocessing.graphics.Texture;
 
 public class Assets {
 	private static HashMap<String, Shader> shaders = new HashMap<>();

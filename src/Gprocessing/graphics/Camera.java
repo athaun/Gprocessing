@@ -1,9 +1,9 @@
 package Gprocessing.graphics;
+
+import Gprocessing.util.Engine;
 import org.joml.Matrix4f;
 import org.joml.Vector2f;
 import org.joml.Vector3f;
-
-import Gprocessing.util.Engine;
 
 public class Camera {
 	

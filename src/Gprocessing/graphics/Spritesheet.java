@@ -1,12 +1,10 @@
 package Gprocessing.graphics;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import Gprocessing.ecs.Sprite;
 import org.joml.Vector2f;
 
-import Gprocessing.graphics.Texture;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Spritesheet {
 
@@ -26,10 +24,10 @@ public class Spritesheet {
             float bottomY = currentY / (float)texture.getHeight();
 
             Vector2f[] texCoords = {
-                new Vector2f(rightX, topY),
-                new Vector2f(rightX, bottomY),
                 new Vector2f(leftX, bottomY),
-                new Vector2f(leftX, topY)
+                new Vector2f(leftX, topY),
+                new Vector2f(rightX, topY),
+                new Vector2f(rightX, bottomY)
             };
             Sprite sprite = new Sprite(this.texture, texCoords);
             this.sprites.add(sprite);
@@ -46,3 +44,10 @@ public class Spritesheet {
         return this.sprites.get(index);
     }
 }
+
+
+
+
+
+
+

@@ -1,41 +1,28 @@
 package Gprocessing.graphics.renderer;
 
-import static org.lwjgl.opengl.GL11.GL_FLOAT;
-import static org.lwjgl.opengl.GL11.GL_TRIANGLES;
-import static org.lwjgl.opengl.GL11.GL_UNSIGNED_INT;
-import static org.lwjgl.opengl.GL11.glDrawElements;
-import static org.lwjgl.opengl.GL13.GL_TEXTURE0;
-import static org.lwjgl.opengl.GL13.glActiveTexture;
-import static org.lwjgl.opengl.GL15.GL_ARRAY_BUFFER;
-import static org.lwjgl.opengl.GL15.GL_DYNAMIC_DRAW;
-import static org.lwjgl.opengl.GL15.GL_ELEMENT_ARRAY_BUFFER;
-import static org.lwjgl.opengl.GL15.GL_STATIC_DRAW;
-import static org.lwjgl.opengl.GL15.glBindBuffer;
-import static org.lwjgl.opengl.GL15.glBufferData;
-import static org.lwjgl.opengl.GL15.glBufferSubData;
-import static org.lwjgl.opengl.GL15.glGenBuffers;
-import static org.lwjgl.opengl.GL20.glDisableVertexAttribArray;
-import static org.lwjgl.opengl.GL20.glEnableVertexAttribArray;
-import static org.lwjgl.opengl.GL20.glVertexAttribPointer;
-import static org.lwjgl.opengl.GL30.glBindVertexArray;
-import static org.lwjgl.opengl.GL30.glGenVertexArrays;
-
-import java.util.ArrayList;
-
-import org.joml.Vector2f;
-import org.joml.Vector4f;
-
 import Gprocessing.ecs.SpriteRenderer;
 import Gprocessing.graphics.Shader;
 import Gprocessing.graphics.Texture;
 import Gprocessing.graphics.Window;
 import Gprocessing.physics.Transform;
 import Gprocessing.util.Assets;
+import org.joml.Vector2f;
+import org.joml.Vector4f;
+
+import java.util.ArrayList;
+
+import static org.lwjgl.opengl.GL11.*;
+import static org.lwjgl.opengl.GL13.GL_TEXTURE0;
+import static org.lwjgl.opengl.GL13.glActiveTexture;
+import static org.lwjgl.opengl.GL15.*;
+import static org.lwjgl.opengl.GL20.*;
+import static org.lwjgl.opengl.GL30.glBindVertexArray;
+import static org.lwjgl.opengl.GL30.glGenVertexArrays;
 
 public class RenderBatch implements Comparable<RenderBatch>{
 	/**
 	 * Vertex layout
-	 * 
+	 *
 	 * position color UV tex ID float, float, float, float, float, float, float,
 	 * float, float
 	 */
@@ -64,7 +51,7 @@ public class RenderBatch implements Comparable<RenderBatch>{
 	private int vaoID, vboID;
 	private int maxBatchSize;
 	private Shader shader;
-	
+
 	private int zIndex;
 
 	RenderBatch(int maxBatchSize, int zIndex) {
@@ -150,7 +137,7 @@ public class RenderBatch implements Comparable<RenderBatch>{
 		shader.use();
 		shader.uploadMat4f("uProjection", Window.currentScene.camera().getProjectionMatrix());
 		shader.uploadMat4f("uView", Window.currentScene.camera().getViewMatrix());
-		
+
 		for (int i = 0; i < textures.size(); i ++) {
 			glActiveTexture(GL_TEXTURE0 + i + 1);
 			textures.get(i).bind();
@@ -170,11 +157,11 @@ public class RenderBatch implements Comparable<RenderBatch>{
 		glDisableVertexAttribArray(0);
 		glDisableVertexAttribArray(1);
 		glBindVertexArray(0);
-		
+
 		for (int i = 0; i < textures.size(); i ++) {
 			textures.get(i).unbind();
 		}
-		
+
 		shader.detach();
 	}
 
@@ -199,18 +186,18 @@ public class RenderBatch implements Comparable<RenderBatch>{
 		}
 
 		// Add vertex with the appropriate properties
-		float xAdd = 1;
-		float yAdd = 1;
+		float xAdd = 1.0f;
+		float yAdd = 1.0f;
 		for (int i = 0; i < 4; i++) {
 			switch (i) {
 			case 1:
-				yAdd = 0;
+				yAdd = 0.0f;
 				break;
 			case 2:
-				xAdd = 0;
+				xAdd = 0.0f;
 				break;
 			case 3:
-				yAdd = 1;
+				yAdd = 1.0f;
 				break;
 			}
 
@@ -271,11 +258,11 @@ public class RenderBatch implements Comparable<RenderBatch>{
 	public boolean hasTextureRoom() {
 		return this.textures.size() < 8;
 	}
-	
+
 	public boolean hasTexture (Texture tex) {
 		return this.textures.contains(tex);
 	}
-	
+
 	public int zIndex () {
 		return zIndex;
 	}

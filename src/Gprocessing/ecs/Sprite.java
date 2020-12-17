@@ -1,8 +1,7 @@
 package Gprocessing.ecs;
 
-import org.joml.Vector2f;
-
 import Gprocessing.graphics.Texture;
+import org.joml.Vector2f;
 
 public class Sprite {
 	

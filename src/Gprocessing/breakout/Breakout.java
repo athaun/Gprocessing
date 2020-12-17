@@ -7,9 +7,8 @@ import Gprocessing.physics.Transform;
 import Gprocessing.util.Engine;
 import Gprocessing.util.Scene;
 import imgui.ImGui;
-import imgui.ImGuiIO;
 
-import static Gprocessing.graphics.Graphics.*;
+import static Gprocessing.graphics.Graphics.background;
 
 public class Breakout extends Scene {
 	public static void main(String[] args) {

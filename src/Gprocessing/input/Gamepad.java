@@ -1,8 +1,9 @@
 package Gprocessing.input;
 
-import static org.lwjgl.glfw.GLFW.*;
-
+import Gprocessing.util.Engine;
 import imgui.ImGui;
+
+import static org.lwjgl.glfw.GLFW.*;
 
 // https://github.com/LWJGL/lwjgl3-wiki/wiki/2.6.3-Input-handling-with-GLFW#joystick-input
 
@@ -11,8 +12,7 @@ public class Gamepad {
     public static int LEFT_STICK_HORIZONTAL = 0;
     public static int LEFT_STICK_VERTICAL = 1;
     public static int LEFT_TRIGGER = 2;
-    // Right trigger doesn't workkk? why is there no index for left trigger
-     public static int RIGHT_TRIGGER = 5;
+    public static int RIGHT_TRIGGER = 5;
     public static int RIGHT_STICK_HORIZONTAL = 3;
     public static int RIGHT_STICK_VERITCAL = 4;
 
@@ -24,6 +24,7 @@ public class Gamepad {
     public static int RIGHT_SHOULDER = 5;
     public static int BACK = 6;
     public static int START = 7;
+    public static int XBOX = 8;
     public static int LEFT_STICK = 9;
     public static int RIGHT_STICK = 10;
     public static int D_UP = 11;
@@ -31,22 +32,64 @@ public class Gamepad {
     public static int D_DOWN = 13;
     public static int D_LEFT = 14;
 
-    public static boolean buttonPressed (int b) {
-        return glfwGetJoystickButtons(GLFW_JOYSTICK_1).get(b) == 1;
+    /**
+     * @return Returns an int with the number of connected controllers.
+     */
+    public static int controllersAvailable () {
+        int total = 0;
+        for (int i = 0; i < 10; i ++) {
+            if (glfwJoystickPresent(i)) {
+                total ++;
+            }
+        }
+        return total;
     }
 
-    public static float axis (int a) {
-        return glfwGetJoystickAxes(GLFW_JOYSTICK_1).get(a);
+    /**
+     * @param controllerId An int representing the ID of a gamepad or controller
+     * @param button An int representing the button to be checked.
+     * @return Returns a boolean true if the button is pressed, otherwise, it returns false.
+     */
+    public static boolean buttonPressed (int controllerId, int button) {
+        try {
+            return glfwGetJoystickButtons(controllerId).get(button) == 1;
+        } catch (NullPointerException e) {
+            Engine.println("[ERROR] No Controller Attached on " + controllerId + ".");
+            return false;
+        }
     }
 
+    /**
+     * @param controllerId An int representing the ID of a gamepad or controller
+     * @param axis An int representing the axis to be checked.
+     * @return Returns a float representing the directional state of the axis.
+     */
+    public static float axis (int controllerId, int axis) {
+        try {
+            return glfwGetJoystickAxes(controllerId).get(axis);
+        } catch (NullPointerException e) {
+            Engine.println("[ERROR] No Controller Attached on " + controllerId + ".");
+            return 0;
+        }
+    }
+
+    /**
+     * @param i ID of button to be tested.
+     */
     private static void testBtn(int i) {
-        ImGui.text("Button " + i + " = " + buttonPressed(i));
+        ImGui.text("Button " + i + " = " + buttonPressed(0, i));
     }
 
+    /**
+     * @param i ID of axis to be tested
+     */
     private static void testAxis(int i) {
-        ImGui.text("Axis " + i + " = " + axis(i));
+        ImGui.text("Axis " + i + " = " + axis(0, i));
     }
 
+    /**
+     * Lists the state of every button according to default xbox controller map on controller 0.
+     */
     public static void gui() {
         ImGui.text(GLFW_GAMEPAD_AXIS_LAST + " Indices");
         testAxis(LEFT_STICK_HORIZONTAL);

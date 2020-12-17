@@ -1,22 +1,10 @@
 package Gprocessing.input;
 
-import static org.lwjgl.glfw.GLFW.GLFW_KEY_LEFT_ALT;
-import static org.lwjgl.glfw.GLFW.GLFW_KEY_LEFT_CONTROL;
-import static org.lwjgl.glfw.GLFW.GLFW_KEY_LEFT_SHIFT;
-import static org.lwjgl.glfw.GLFW.GLFW_KEY_LEFT_SUPER;
-import static org.lwjgl.glfw.GLFW.GLFW_KEY_RIGHT_ALT;
-import static org.lwjgl.glfw.GLFW.GLFW_KEY_RIGHT_CONTROL;
-import static org.lwjgl.glfw.GLFW.GLFW_KEY_RIGHT_SHIFT;
-import static org.lwjgl.glfw.GLFW.GLFW_KEY_RIGHT_SUPER;
-import static org.lwjgl.glfw.GLFW.GLFW_PRESS;
-import static org.lwjgl.glfw.GLFW.GLFW_RELEASE;
-import static org.lwjgl.glfw.GLFW.glfwGetKey;
-import static org.lwjgl.glfw.GLFW.glfwSetKeyCallback;
-
-import org.lwjgl.glfw.GLFWKeyCallback;
-
 import Gprocessing.graphics.Window;
 import imgui.ImGuiIO;
+import org.lwjgl.glfw.GLFWKeyCallback;
+
+import static org.lwjgl.glfw.GLFW.*;
 
 public class Keyboard {
 
@@ -27,19 +15,28 @@ public class Keyboard {
 	public static int S_KEY = 83;
 	public static int D_KEY = 68;
 	
-	public static int UP_ARROW = 38; // should work
+	public static int UP_ARROW = 38;
 	public static int LEFT_ARROW = 37;
 	public static int DOWN_ARROW = 40;
 	public static int RIGHT_ARROW = 39;
 	
 	static ImGuiIO io = Gprocessing.ImGui.ImGuiLayer.io;
 
-	public static boolean keyIsPressed(int keyName) {
-		return glfwGetKey(Window.window, keyName) == GLFW_PRESS;
+	/**
+	 * @param keyCode key-code representing the key to be checked.
+	 * @return Returns true if the key is being pressed, otherwise returns false.
+	 */
+	public static boolean keyIsPressed(int keyCode) {
+		return glfwGetKey(Window.window, keyCode) == GLFW_PRESS;
 	}
 
 	private static boolean returnBoolPressed;
-	public static boolean keyPressed(int keyName) {
+	/**
+	 * Returns true if a key is was just pressed, then returns false until the key is released and pressed again.
+	 * @param keyCode key-code representing the key to be checked.
+	 * @return Returns true if the key was just pressed, otherwise returns false.
+	 */
+	public static boolean keyPressed(int keyCode) {
 		glfwSetKeyCallback(Window.window, (w, key, scancode, action, mods) -> {
 			if (action == GLFW_PRESS) {
 				io.setKeysDown(key, true);
@@ -52,7 +49,7 @@ public class Keyboard {
 			io.setKeyAlt(io.getKeysDown(GLFW_KEY_LEFT_ALT) || io.getKeysDown(GLFW_KEY_RIGHT_ALT));
 			io.setKeySuper(io.getKeysDown(GLFW_KEY_LEFT_SUPER) || io.getKeysDown(GLFW_KEY_RIGHT_SUPER));
 
-			if (key == keyName && action == GLFW_PRESS) returnBoolPressed = true;
+			if (key == keyCode && action == GLFW_PRESS) returnBoolPressed = true;
 		});
 
 		if (returnBoolPressed) {
@@ -63,11 +60,16 @@ public class Keyboard {
 	}
 
 	private static boolean returnBoolReleased;
-	public static boolean keyReleased(int keyName) {
+	/**
+	 * Returns true if a key was just released.
+	 * @param keyCode key-code representing the key to be checked.
+	 * @return Returns true if the key was just released, otherwise returns false.
+	 */
+	public static boolean keyReleased(int keyCode) {
 		glfwSetKeyCallback(Window.window, new GLFWKeyCallback() {
 			@Override
 			public void invoke(long window, int key, int scancode, int action, int mods) {
-				if (key == keyName && action == GLFW_RELEASE) returnBoolReleased = true;
+				if (key == keyCode && action == GLFW_RELEASE) returnBoolReleased = true;
 			}
 		});
 

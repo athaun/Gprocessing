@@ -1,16 +1,14 @@
 package Gprocessing.ecs;
 
-import static Gprocessing.graphics.Color.WHITE;
-
-import org.joml.Vector2f;
-import org.joml.Vector4f;
-
 import Gprocessing.graphics.Color;
 import Gprocessing.graphics.Texture;
 import Gprocessing.physics.Transform;
 import Gprocessing.util.Assets;
-import Gprocessing.util.Engine;
 import imgui.ImGui;
+import org.joml.Vector2f;
+import org.joml.Vector4f;
+
+import static Gprocessing.graphics.Color.WHITE;
 
 public class SpriteRenderer extends Component {
 

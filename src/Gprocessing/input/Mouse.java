@@ -1,26 +1,14 @@
 package Gprocessing.input;
 
-import static org.lwjgl.glfw.GLFW.GLFW_MOUSE_BUTTON_1;
-import static org.lwjgl.glfw.GLFW.GLFW_MOUSE_BUTTON_2;
-import static org.lwjgl.glfw.GLFW.GLFW_MOUSE_BUTTON_3;
-import static org.lwjgl.glfw.GLFW.GLFW_MOUSE_BUTTON_4;
-import static org.lwjgl.glfw.GLFW.GLFW_MOUSE_BUTTON_5;
-import static org.lwjgl.glfw.GLFW.GLFW_PRESS;
-import static org.lwjgl.glfw.GLFW.GLFW_RELEASE;
-import static org.lwjgl.glfw.GLFW.glfwGetCursorPos;
-import static org.lwjgl.glfw.GLFW.glfwSetMouseButtonCallback;
-import static org.lwjgl.glfw.GLFW.glfwSetScrollCallback;
-
-import java.nio.DoubleBuffer;
-
-import org.lwjgl.BufferUtils;
-//import org.lwjgl.glfw.GLFWMouseButtonCallback;
-//import org.lwjgl.glfw.GLFWScrollCallback;
-
 import Gprocessing.graphics.Window;
 import Gprocessing.physics.Vector2;
 import imgui.ImGui;
 import imgui.ImGuiIO;
+import org.lwjgl.BufferUtils;
+
+import java.nio.DoubleBuffer;
+
+import static org.lwjgl.glfw.GLFW.*;
 
 public class Mouse {
 

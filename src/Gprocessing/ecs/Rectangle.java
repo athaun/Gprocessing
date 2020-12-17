@@ -1,11 +1,8 @@
 package Gprocessing.ecs;
 
-import imgui.ImGui;
-import org.joml.Vector4f;
-
 import Gprocessing.graphics.Color;
 import Gprocessing.physics.Transform;
-import Gprocessing.util.Engine;
+import org.joml.Vector4f;
 
 public class Rectangle extends Component  {
 

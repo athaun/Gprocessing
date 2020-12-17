@@ -1,14 +1,12 @@
 package Gprocessing.breakout;
 
 import Gprocessing.ecs.GameObject;
-import Gprocessing.ecs.Sprite;
 import Gprocessing.ecs.SpriteRenderer;
 import Gprocessing.graphics.Color;
-import Gprocessing.graphics.Window;
 import Gprocessing.physics.Transform;
 import Gprocessing.physics.Vector2;
-import Gprocessing.util.Assets;
-import Gprocessing.util.Engine;
+import Gprocessing.util.Utils;
+
 import static Gprocessing.breakout.Breakout.paddle;
 
 public class Ball {
@@ -16,7 +14,7 @@ public class Ball {
 	private GameObject ballGo;
 	
 	boolean isAlive = true;
-	private Vector2 velocity = new Vector2(Engine.random(-3, 3), -3);
+	private Vector2 velocity = new Vector2(Utils.random(-3, 3), -3);
 	private boolean firstLoop = true;
 	
 	public Ball (Transform t, Color c) {
