@@ -59,8 +59,10 @@ void main () {
             texColor = fColor * texture(uTextures[7], fTexCoords);
             break;
     }
-    if(texColor.a < 0.1) {
+
+    if (texColor.a < 0.1) {
         discard;
     }
+
     color = texColor;
 }

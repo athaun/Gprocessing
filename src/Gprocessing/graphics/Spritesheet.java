@@ -40,8 +40,16 @@ public class Spritesheet {
         }
     }
 
+    public int getSize () {
+        return sprites.size();
+    }
+
     public Sprite getSprite(int index) {
         return this.sprites.get(index);
+    }
+
+    public List<Sprite> getSprites () {
+        return sprites;
     }
 }
 

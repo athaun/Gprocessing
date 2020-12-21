@@ -66,7 +66,11 @@ public class Gamepad {
      */
     public static float axis (int controllerId, int axis) {
         try {
-            return glfwGetJoystickAxes(controllerId).get(axis);
+            float x = glfwGetJoystickAxes(controllerId).get(axis);
+            if (Math.abs(x) < 0.1) {
+                x = 0;
+            }
+            return x;
         } catch (NullPointerException e) {
             Engine.println("[ERROR] No Controller Attached on " + controllerId + ".");
             return 0;

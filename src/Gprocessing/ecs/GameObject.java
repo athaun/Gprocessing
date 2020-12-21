@@ -36,8 +36,8 @@ public class GameObject {
 		Main.addGameObjectToScene(this);
 		this.zIndex = 0;
 	}
-	
-	private void init (String name, List<Component> components, Transform transform) {
+
+    private void init (String name, List<Component> components, Transform transform) {
 		this.name = name;
 		this.components = components;
 		this.transform = transform;

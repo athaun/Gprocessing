@@ -3,11 +3,12 @@ package Gprocessing.graphics;
 import Gprocessing.ImGui.ImGuiLayer;
 import Gprocessing.Main;
 import Gprocessing.breakout.Breakout;
+import Gprocessing.chickenCoup.Chicken;
 import Gprocessing.editor.EditorGui;
 import Gprocessing.input.Mouse;
 import Gprocessing.util.Engine;
 import Gprocessing.util.Scene;
-import chickenCoup.ChickenCoup;
+import Gprocessing.chickenCoup.ChickenCoup;
 import org.lwjgl.glfw.GLFWVidMode;
 import org.lwjgl.opengl.GL;
 
@@ -37,7 +38,7 @@ public class Window {
 	public static int width;
 	public static int height;
 
-	private double dt = 0; // deltaTime (accessible from Engine.deltaTime)
+	private float dt = 0; // deltaTime (accessible from Engine.deltaTime)
 	
 	static Shader defaultShader;
 
@@ -101,8 +102,8 @@ public class Window {
 		glEnable(GL_BLEND);
 		glBlendFunc(GL_ONE, GL_ONE_MINUS_SRC_ALPHA);
 
-		double frameBeginTime = (float)glfwGetTime();
-		double frameEndTime = (float)glfwGetTime();
+		float frameBeginTime = (float)glfwGetTime();
+		float frameEndTime = (float)glfwGetTime();
 		
 		imguiLayer = new ImGuiLayer(window);
 		imguiLayer.initImGui();
@@ -114,6 +115,7 @@ public class Window {
 		currentScene.startGameObjects();
 
 		while (!glfwWindowShouldClose(window)) {
+			Engine.deltaTime = dt;
 			// poll GLFW for input events
 			Mouse.update();
 			glfwPollEvents();

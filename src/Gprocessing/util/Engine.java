@@ -18,7 +18,7 @@ public class Engine {
 
 	public static boolean running = true;
 
-	public static double deltaTime = 0;
+	public static float deltaTime = 0;
 
 	public static boolean showEditor = false;
 

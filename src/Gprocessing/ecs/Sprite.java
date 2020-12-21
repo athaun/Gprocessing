@@ -6,6 +6,7 @@ import org.joml.Vector2f;
 public class Sprite {
 	
 	private Texture texture;
+
 	private Vector2f[] textureCoordinates;
 	
 	// This contains the default coordinates for an entire image UV
@@ -32,5 +33,17 @@ public class Sprite {
 	
 	public Vector2f[] getTextureCoordinates () {
 		return this.textureCoordinates;
+	}
+
+	public int getTextureID () {
+		return texture.getTextureID();
+	}
+
+	public float getWidth () {
+		return texture.getWidth();
+	}
+
+	public float getHeight () {
+		return texture.getHeight();
 	}
 }

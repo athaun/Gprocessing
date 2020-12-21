@@ -1,6 +1,7 @@
 package Gprocessing.util;
 
 import Gprocessing.physics.Vector2;
+import org.joml.Vector2f;
 
 public class Utils {
 
@@ -64,7 +65,7 @@ public class Utils {
      * @param pos2 Second Vector2 position
      * @return Returns the distance as a float.
      */
-    public static float dist(Vector2 pos1, Vector2 pos2) {
+    public static float dist(Vector2f pos1, Vector2f pos2) {
         return (float) Math.hypot(pos1.x - pos2.x, pos1.y - pos2.y);
     }
 
@@ -88,5 +89,16 @@ public class Utils {
      */
     public static float constrain (float value, float min, float max) {
         return (value > max) ? max : (value < min ? min: value);
+    }
+
+    public static float lerp (float start, float end, float amt) {
+
+        return (1-amt)*start+amt*end;
+        //        float difference = goal - current;
+//        if (difference > dt)
+//            return current + dt;
+//        if (difference < -dt)
+//            return current - dt;
+//        return goal;
     }
 }
