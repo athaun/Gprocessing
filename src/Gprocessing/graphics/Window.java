@@ -3,7 +3,7 @@ package Gprocessing.graphics;
 import Gprocessing.ImGui.ImGuiLayer;
 import Gprocessing.Main;
 import Gprocessing.breakout.Breakout;
-import Gprocessing.chickenCoup.Chicken;
+import Gprocessing.civ.CivScene;
 import Gprocessing.editor.EditorGui;
 import Gprocessing.input.Mouse;
 import Gprocessing.util.Engine;
@@ -21,10 +21,11 @@ public class Window {
 	public static Scene main = new Main();
 	public static Scene bScene = new Breakout();
 	public static Scene cc = new ChickenCoup();
+	public static Scene civ = new CivScene();
 
 	// public static ArrayList<Scene> scenes = new ArrayList<Scene>();
 	
-	public static Scene currentScene = cc;
+	public static Scene currentScene = civ;
 
 	// Window Variables	
 	public long frameCount = 0;
