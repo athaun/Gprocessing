@@ -7,17 +7,23 @@ import Gprocessing.util.Utils;
 import imgui.ImGui;
 
 import java.util.ArrayList;
+import java.util.ListIterator;
 
 public class Civ {
 
     private ArrayList<Cell> _cells;
     private Cell _origin;
     private Color _color;
+    private int _index;
 
-    public Civ (Cell[][] cells, Civ[] civs, Cell origin, Color color) {
+    private ArrayList<Cell> _queue;
+
+    public Civ (int index, Cell[][] cells, Civ[] civs, Cell origin, Color color) {
+        _index = index;
         _origin = origin;
         _color = color;
         _cells = new ArrayList<Cell>();
+        _queue = new ArrayList<Cell>();
 
         for (int i = 0; i < civs.length; i ++) {
             if (civs[i] != null) {
@@ -26,16 +32,19 @@ public class Civ {
 
                 // While origin is equal to another civilization's origin, find a new random position.
                 while (otherOrigin.getX() == selfOrigin.getX() && otherOrigin.getY() == selfOrigin.getY()) {
-                    Engine.printInfo("New cell origin because of overlap.");
+                    Engine.printInfo("New cell origin because of overlap.\nX: " + selfOrigin.getX() + " | Y: " + selfOrigin.getY());
                     _origin = cells[Utils.randomInt(0, cells.length - 1)][Utils.randomInt(0, cells[0].length - 1)];
                 }
+            }
+        }
 
-                _origin.setCiv(this);
-                _cells.add(_origin);
+        _origin.setCiv(this);
+        _cells.add(_origin);
 
+        for (int i = 0; i < civs.length; i ++) {
+            if (civs[i] != null) {
                 // While origin is equal to another civilization's origin, find a new random position.
                 while (civs[i].getColor().equals(getColor())) {
-                    Engine.printInfo("Pulled new color from hat because color is already in use.");
                     _color = Color.randomColor();
                 }
             }
@@ -46,10 +55,22 @@ public class Civ {
         for (Cell c : _cells) {
             c.update();
         }
+
+        if (_queue.size() > 0) {
+            for (Cell c : _queue) {
+                _cells.add(c);
+            }
+            _queue = new ArrayList<Cell>();
+        }
+
     }
 
     public ArrayList<Cell> getCells () {
         return _cells;
+    }
+
+    public void addCell (Cell newCell) {
+        _queue.add(newCell);
     }
 
     public Cell getOrigin () {
@@ -65,7 +86,7 @@ public class Civ {
     }
 
     public void imgui () {
-        ImGui.text("Civ Position - X: " + _origin.getGameObject().getTransform().getX() + " | Y: " + _origin.getGameObject().getTransform().getY());
+        ImGui.text("Civ " + _index + ": " + _cells.size());
     }
 
 }

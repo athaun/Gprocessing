@@ -16,9 +16,9 @@ public class CivScene extends Scene {
         Engine.init(1600, 1600, "Civ");
     }
 
-    Cell[][] cells;
+    public static Cell[][] cells;
     int civCount = 10;
-    Civ[] civs;
+    public static Civ[] civs;
 
     public void awake () {
         camera = new Camera();
@@ -27,7 +27,7 @@ public class CivScene extends Scene {
         cells = new Cell[Window.getWidth()/Cell.cellSize][Window.getHeight()/Cell.cellSize];
         for (int x = 0; x < cells.length; x ++) {
             for (int y = 0; y < cells[0].length; y ++) {
-                cells[x][y] = new Cell(new Vector2(x * Cell.cellSize, y * Cell.cellSize), 6, 5);
+                cells[x][y] = new Cell(new Vector2(x * Cell.cellSize, y * Cell.cellSize), x, y, 2, 5);
             }
         }
 
@@ -35,7 +35,7 @@ public class CivScene extends Scene {
         civs = new Civ[civCount];
 
         for (int i = 0; i < civs.length; i ++) {
-            civs[i] = new Civ(cells, civs, cells[Utils.randomInt(0, cells.length - 1)][Utils.randomInt(0, cells[0].length - 1)], Color.randomColor());
+            civs[i] = new Civ(i, cells, civs, cells[Utils.randomInt(0, cells.length - 1)][Utils.randomInt(0, cells[0].length - 1)], Color.randomColor());
         }
     }
 

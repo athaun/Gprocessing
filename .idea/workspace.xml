@@ -35,17 +35,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="28e1e06f-16dd-433e-bc93-57b18faa5c74" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Gprocessing/civ/Cell.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Gprocessing/civ/CivScene.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Gprocessing/graphics/Window.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Gprocessing/graphics/Window.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Gprocessing/civ/Cell.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Gprocessing/civ/Cell.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Gprocessing/civ/CivScene.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Gprocessing/civ/CivScene.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/imgui.ini" beforeDir="false" afterPath="$PROJECT_DIR$/imgui.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Gprocessing/civ/Civ.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Gprocessing/graphics/Color.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gprocessing/graphics/Color.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Gprocessing/graphics/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gprocessing/graphics/Window.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Gprocessing/civ/Cell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gprocessing/civ/Cell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Gprocessing/civ/Civ.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gprocessing/civ/Civ.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Gprocessing/civ/CivScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gprocessing/civ/CivScene.java" afterDir="false" />
     </list>
     <list id="68c1cf8c-d7fe-4d29-8d43-d456b7d2d178" name="Changes by ethan" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Gprocessing/graphics/Color.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gprocessing/graphics/Color.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Gprocessing/civ/Cell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gprocessing/civ/Cell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Gprocessing/civ/Civ.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gprocessing/civ/Civ.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,6 +63,32 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/src/Gprocessing/civ/Cell.java">
+      <ranges>
+        <range start1="8" end1="8" start2="8" end2="9" changelist="28e1e06f-16dd-433e-bc93-57b18faa5c74" />
+        <range start1="19" end1="20" start2="20" end2="20" changelist="28e1e06f-16dd-433e-bc93-57b18faa5c74" />
+        <range start1="26" end1="28" start2="26" end2="30" changelist="28e1e06f-16dd-433e-bc93-57b18faa5c74" />
+        <range start1="29" end1="30" start2="31" end2="35" changelist="28e1e06f-16dd-433e-bc93-57b18faa5c74" />
+        <range start1="39" end1="39" start2="44" end2="46" changelist="68c1cf8c-d7fe-4d29-8d43-d456b7d2d178" />
+        <range start1="40" end1="40" start2="47" end2="60" changelist="28e1e06f-16dd-433e-bc93-57b18faa5c74" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/Gprocessing/civ/Civ.java">
+      <ranges>
+        <range start1="9" end1="9" start2="9" end2="10" changelist="28e1e06f-16dd-433e-bc93-57b18faa5c74" />
+        <range start1="15" end1="15" start2="16" end2="17" changelist="28e1e06f-16dd-433e-bc93-57b18faa5c74" />
+        <range start1="16" end1="17" start2="18" end2="22" changelist="28e1e06f-16dd-433e-bc93-57b18faa5c74" />
+        <range start1="20" end1="20" start2="25" end2="26" changelist="28e1e06f-16dd-433e-bc93-57b18faa5c74" />
+        <range start1="28" end1="29" start2="34" end2="35" changelist="68c1cf8c-d7fe-4d29-8d43-d456b7d2d178" />
+        <range start1="31" end1="31" start2="37" end2="39" changelist="28e1e06f-16dd-433e-bc93-57b18faa5c74" />
+        <range start1="32" end1="34" start2="40" end2="42" changelist="28e1e06f-16dd-433e-bc93-57b18faa5c74" />
+        <range start1="35" end1="35" start2="43" end2="45" changelist="28e1e06f-16dd-433e-bc93-57b18faa5c74" />
+        <range start1="37" end1="38" start2="47" end2="47" changelist="28e1e06f-16dd-433e-bc93-57b18faa5c74" />
+        <range start1="48" end1="48" start2="57" end2="65" changelist="28e1e06f-16dd-433e-bc93-57b18faa5c74" />
+        <range start1="54" end1="54" start2="71" end2="75" changelist="28e1e06f-16dd-433e-bc93-57b18faa5c74" />
+        <range start1="67" end1="68" start2="88" end2="89" changelist="28e1e06f-16dd-433e-bc93-57b18faa5c74" />
+      </ranges>
+    </file>
     <file path="$PROJECT_DIR$/src/Gprocessing/graphics/Color.java">
       <ranges>
         <range start1="2" end1="2" start2="2" end2="3" changelist="28e1e06f-16dd-433e-bc93-57b18faa5c74" />
