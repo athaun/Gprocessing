@@ -36,16 +36,12 @@
   <component name="ChangeListManager">
     <list default="true" id="28e1e06f-16dd-433e-bc93-57b18faa5c74" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Gprocessing/civ/Cell.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Gprocessing/civ/Cell.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Gprocessing/civ/CivScene.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Gprocessing/civ/CivScene.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/imgui.ini" beforeDir="false" afterPath="$PROJECT_DIR$/imgui.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Gprocessing/civ/Cell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gprocessing/civ/Cell.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Gprocessing/civ/Civ.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gprocessing/civ/Civ.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Gprocessing/civ/CivScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gprocessing/civ/CivScene.java" afterDir="false" />
     </list>
     <list id="68c1cf8c-d7fe-4d29-8d43-d456b7d2d178" name="Changes by ethan" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Gprocessing/civ/Cell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gprocessing/civ/Cell.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Gprocessing/civ/Civ.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gprocessing/civ/Civ.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Gprocessing/civ/CivScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gprocessing/civ/CivScene.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,28 +71,10 @@
     </file>
     <file path="$PROJECT_DIR$/src/Gprocessing/civ/Civ.java">
       <ranges>
-        <range start1="9" end1="9" start2="9" end2="10" changelist="28e1e06f-16dd-433e-bc93-57b18faa5c74" />
-        <range start1="15" end1="15" start2="16" end2="17" changelist="28e1e06f-16dd-433e-bc93-57b18faa5c74" />
-        <range start1="16" end1="17" start2="18" end2="22" changelist="28e1e06f-16dd-433e-bc93-57b18faa5c74" />
-        <range start1="20" end1="20" start2="25" end2="26" changelist="28e1e06f-16dd-433e-bc93-57b18faa5c74" />
-        <range start1="28" end1="29" start2="34" end2="35" changelist="68c1cf8c-d7fe-4d29-8d43-d456b7d2d178" />
-        <range start1="31" end1="31" start2="37" end2="39" changelist="28e1e06f-16dd-433e-bc93-57b18faa5c74" />
-        <range start1="32" end1="34" start2="40" end2="42" changelist="28e1e06f-16dd-433e-bc93-57b18faa5c74" />
-        <range start1="35" end1="35" start2="43" end2="45" changelist="28e1e06f-16dd-433e-bc93-57b18faa5c74" />
-        <range start1="37" end1="38" start2="47" end2="47" changelist="28e1e06f-16dd-433e-bc93-57b18faa5c74" />
-        <range start1="48" end1="48" start2="57" end2="65" changelist="28e1e06f-16dd-433e-bc93-57b18faa5c74" />
-        <range start1="54" end1="54" start2="71" end2="75" changelist="28e1e06f-16dd-433e-bc93-57b18faa5c74" />
-        <range start1="67" end1="68" start2="88" end2="89" changelist="28e1e06f-16dd-433e-bc93-57b18faa5c74" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/Gprocessing/graphics/Color.java">
-      <ranges>
-        <range start1="2" end1="2" start2="2" end2="3" changelist="28e1e06f-16dd-433e-bc93-57b18faa5c74" />
-        <range start1="8" end1="8" start2="9" end2="11" changelist="28e1e06f-16dd-433e-bc93-57b18faa5c74" />
-        <range start1="9" end1="9" start2="12" end2="13" changelist="28e1e06f-16dd-433e-bc93-57b18faa5c74" />
-        <range start1="11" end1="13" start2="15" end2="23" changelist="28e1e06f-16dd-433e-bc93-57b18faa5c74" />
-        <range start1="25" end1="25" start2="35" end2="39" changelist="68c1cf8c-d7fe-4d29-8d43-d456b7d2d178" />
-        <range start1="57" end1="57" start2="71" end2="82" changelist="28e1e06f-16dd-433e-bc93-57b18faa5c74" />
+        <range start1="19" end1="19" start2="19" end2="21" changelist="28e1e06f-16dd-433e-bc93-57b18faa5c74" />
+        <range start1="43" end1="51" start2="45" end2="56" changelist="28e1e06f-16dd-433e-bc93-57b18faa5c74" />
+        <range start1="78" end1="82" start2="83" end2="83" changelist="68c1cf8c-d7fe-4d29-8d43-d456b7d2d178" />
+        <range start1="88" end1="89" start2="89" end2="90" changelist="28e1e06f-16dd-433e-bc93-57b18faa5c74" />
       </ranges>
     </file>
   </component>

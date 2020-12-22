@@ -17,7 +17,7 @@ public class CivScene extends Scene {
     }
 
     public static Cell[][] cells;
-    int civCount = 10;
+    int civCount = 10; // Check Color.LIST for safe values
     public static Civ[] civs;
 
     public void awake () {

@@ -18,6 +18,8 @@ public class Civ {
 
     private ArrayList<Cell> _queue;
 
+    public static ArrayList<Color> reservedColors = new ArrayList<>();
+
     public Civ (int index, Cell[][] cells, Civ[] civs, Cell origin, Color color) {
         _index = index;
         _origin = origin;
@@ -41,14 +43,17 @@ public class Civ {
         _origin.setCiv(this);
         _cells.add(_origin);
 
-        for (int i = 0; i < civs.length; i ++) {
-            if (civs[i] != null) {
-                // While origin is equal to another civilization's origin, find a new random position.
-                while (civs[i].getColor().equals(getColor())) {
-                    _color = Color.randomColor();
-                }
+        _color = Color.randomColor();
+
+        while (reservedColors.contains(_color)) {
+            for (Color c : reservedColors) {
+//                Engine.println("" + reservedColors);
+                _color = Color.randomColor();
             }
         }
+
+        reservedColors.add(_color);
+
     }
 
     public void update () {
@@ -77,16 +82,12 @@ public class Civ {
         return _origin;
     }
 
-    public int getOriginRadius () {
-        return 123;
-    }
-
     public Color getColor() {
         return _color;
     }
 
     public void imgui () {
-        ImGui.text("Civ " + _index + ": " + _cells.size());
+        ImGui.textColored(_color.r, _color.g, _color.b, _color.a, "Civ " + _index + ": " + _cells.size());
     }
 
 }
