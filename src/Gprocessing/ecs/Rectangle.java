@@ -57,6 +57,10 @@ public class Rectangle extends Component  {
 //		}
 //	}
 //
+	public void setAlpha (float a) {
+		gameObject.getComponent(SpriteRenderer.class).setAlpha(a);
+	}
+
 	public void setColor(Color c) {
 		gameObject.getComponent(SpriteRenderer.class).setColor(c);
 	}

@@ -1,15 +1,10 @@
 package Gprocessing.chickenCoup;
 
 import Gprocessing.ecs.GameObject;
-import Gprocessing.ecs.MousePicker;
-import Gprocessing.ecs.Rectangle;
 import Gprocessing.ecs.SpriteRenderer;
-import Gprocessing.graphics.Color;
 import Gprocessing.graphics.Spritesheet;
-import Gprocessing.graphics.Window;
-import Gprocessing.physics.SquareCollision;
+import Gprocessing.physics.TransformCollision;
 import Gprocessing.physics.Transform;
-import Gprocessing.util.Engine;
 import Gprocessing.util.Utils;
 
 public class Tilesystem {
@@ -33,7 +28,7 @@ public class Tilesystem {
                 gameObjects[x][y] = new GameObject("Tile " + i, new Transform(x * width, y * height, width, height), 0);
 
                 if (m.getMap()[x][y] == 1) {
-                    gameObjects[x][y].addComponent(new SquareCollision(c.getGameObject().getTransform()));
+                    gameObjects[x][y].addComponent(new TransformCollision(c.getGameObject().getTransform()));
                     gameObjects[x][y].addComponent(new SpriteRenderer(s.getSprite(
                             Utils.randomInt(0, 6)==0?11:Utils.randomInt(1, 5)
                     )));

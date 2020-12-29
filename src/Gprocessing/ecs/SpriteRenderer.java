@@ -4,6 +4,7 @@ import Gprocessing.graphics.Color;
 import Gprocessing.graphics.Texture;
 import Gprocessing.physics.Transform;
 import Gprocessing.util.Assets;
+import Gprocessing.util.Utils;
 import imgui.ImGui;
 import org.joml.Vector2f;
 import org.joml.Vector4f;
@@ -115,6 +116,10 @@ public class SpriteRenderer extends Component {
 	public void setSprite(Sprite sprite) {
 		this.sprite = sprite;
 		isDirty = true;
+	}
+
+	public void setAlpha (float a) {
+		color.w = Utils.map(a, 0, 255, 0, 1);
 	}
 
 	public boolean isDirty() {

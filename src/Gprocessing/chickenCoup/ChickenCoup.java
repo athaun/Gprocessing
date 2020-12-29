@@ -1,13 +1,16 @@
 package Gprocessing.chickenCoup;
 
 import Gprocessing.ecs.GameObject;
+import Gprocessing.ecs.Rectangle;
 import Gprocessing.ecs.Sprite;
 import Gprocessing.ecs.SpriteRenderer;
 import Gprocessing.graphics.Camera;
+import Gprocessing.graphics.Color;
 import Gprocessing.graphics.Spritesheet;
 import Gprocessing.graphics.Window;
 import Gprocessing.input.Gamepad;
 import Gprocessing.physics.Transform;
+import Gprocessing.physics.TransformCollision;
 import Gprocessing.physics.Vector2;
 import Gprocessing.util.Assets;
 import Gprocessing.util.Engine;
@@ -36,7 +39,7 @@ public class ChickenCoup extends Scene {
     public void awake() {
         camera = new Camera();
 
-        chicken = new Chicken(new Transform(1000, 40, Window.getWidth()/16, Window.getHeight()/9));
+        chicken = new Chicken(new Transform(1400, 500, Window.getWidth()/16, Window.getHeight()/9));
 
         s = new Spritesheet(Assets.getTexture("src/assets/images/platformer.png"), 8, 8, 26, 0);
         t = new Tilesystem(s, 90, 10, Window.getWidth()/16, Window.getHeight()/9, chicken);
@@ -53,7 +56,7 @@ public class ChickenCoup extends Scene {
         Transform c = chicken.getGameObject().getTransform();
 
         float smoothing = 0.045f;
-        Vector2f desiredPosition = new Vector2f(c.getX() - Window.getWidth()/2,c.getY() - Window.getHeight()/2);
+        Vector2f desiredPosition = new Vector2f(c.getX() - Window.getWidth()/2,c.getY() - Window.getHeight()/3*2);
         Vector2f smoothedPosition = new Vector2f(Utils.lerp(camera().position.x, desiredPosition.x, smoothing), Utils.lerp(camera().position.y, desiredPosition.y, smoothing));
         if (Utils.dist(desiredPosition, camera().position) < 15) {
             camera().position = desiredPosition;

@@ -23,14 +23,21 @@ public class CivScene extends Scene {
     public void awake () {
         camera = new Camera();
 
+        initializeCells();
+        initializeCivs();
+    }
+
+    private void initializeCells () {
         // Initialize the cells array with new cells
         cells = new Cell[Window.getWidth()/Cell.cellSize][Window.getHeight()/Cell.cellSize];
         for (int x = 0; x < cells.length; x ++) {
             for (int y = 0; y < cells[0].length; y ++) {
-                cells[x][y] = new Cell(new Vector2(x * Cell.cellSize, y * Cell.cellSize), x, y, 2, 5);
+                cells[x][y] = new Cell(new Vector2(x * Cell.cellSize, y * Cell.cellSize), x, y, 4, 5);
             }
         }
+    }
 
+    private void initializeCivs () {
         // Add an origin cell to each civilization
         civs = new Civ[civCount];
 
@@ -39,24 +46,20 @@ public class CivScene extends Scene {
         }
     }
 
-    public int days = 0;
-    int tickTimer = 0;
+    public static int ticks = 0;
 
     public void update () {
         background(Color.BLACK);
-        if ((tickTimer % 2) == 0) {
-            days ++;
-        }
-        tickTimer ++;
 
         for (Civ c : civs) {
             c.update();
         }
+        ticks ++;
     }
 
     public void imgui () {
-        for (int i = 0; i < civs.length; i ++) {
-            civs[i].imgui();
+        for (Civ c : civs) {
+            c.imgui();
         }
     }
 }

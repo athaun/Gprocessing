@@ -23,6 +23,10 @@ public class Cell {
     GameObject sprite;
     public static int cellSize = 4;
     Civ parentCiv;
+    boolean allowedSpread = true;
+    int populationDensity = 1;
+    int populationDensityMax = 20;
+    float populationAlpha = 50;
 
     int _x;
     int _y;
@@ -35,15 +39,35 @@ public class Cell {
         _y = y;
 
         sprite = new GameObject(new Transform(p.x, p.y, cellSize, cellSize));
-        sprite.addComponent(new Rectangle(Color.BLACK));
+        sprite.addComponent(new Rectangle(new Color(0, 0, 0, 0)));
     }
 
     public void update () {
         if (parentCiv != null) {
-            sprite.getComponent(Rectangle.class).setColor(parentCiv.getColor());
-        }
 
-        reproduceWithinRadius();
+            sprite.getComponent(Rectangle.class).setColor(parentCiv.getColor());
+            sprite.getComponent(Rectangle.class).setAlpha(populationAlpha);
+
+//            reproduceWithinRadius();
+
+            if (allowedSpread) {
+                // If the cell is allowed to spread its civilization to other tiles
+                if (CivScene.ticks % 2 == 0) {
+                    // Check surroundings
+                    // if surrounded disable spreading
+                } else {
+                    // Spread
+                    reproduceWithinRadius();
+                }
+            } else {
+                // If the cell is not allowed to spread, then add to populationDensity
+                if (CivScene.ticks % 1 == 0 && populationDensity < populationDensityMax) {
+                    populationDensity ++;
+                    populationAlpha = populationDensity * 25.5f/2;
+                }
+            }
+
+        }
     }
 
     public void reproduceWithinRadius () {

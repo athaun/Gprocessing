@@ -7,20 +7,20 @@ import org.joml.Vector4f;
 
 public class Color {
 
-	public static Color WHITE = new Color(255, 255, 255, 255);
-	public static Color BLACK = new Color(0, 0, 0, 255);
-	public static Color RED = new Color(255, 0, 0, 255);
-	public static Color DARK_RED = new Color(127, 0, 0);
-	public static Color GREEN = new Color(0, 255, 0, 255);
-	public static Color BLUE = new Color(0, 0, 255, 255);
-	public static Color DARK_BLUE = new Color(0, 0, 127);
-	public static Color DIRTY_BLUE = new Color(0, 127, 127);
-	public static Color PINK = new Color(255, 0, 255);
-	public static Color CYAN = new Color(0, 255, 255);
-	public static Color YELLOW = new Color(255, 255, 0);
-	public static Color PURPLE = new Color(127, 0, 127);
+	public static Color WHITE = 	 new Color(255, 255, 255, 255);
+	public static Color BLACK = 	 new Color(0, 0, 0, 255);
+	public static Color RED = 		 new Color(255, 0, 0, 255);
+	public static Color DARK_RED = 	 new Color(127, 0, 0, 255);
+	public static Color GREEN = 	 new Color(0, 255, 0, 255);
+	public static Color BLUE = 		 new Color(0, 0, 255, 255);
+	public static Color DARK_BLUE =  new Color(0, 0, 127, 255);
+	public static Color DIRTY_BLUE = new Color(0, 127, 127, 255);
+	public static Color PINK = 		 new Color(255, 0, 255, 255);
+	public static Color CYAN = 		 new Color(0, 255, 255, 255);
+	public static Color YELLOW = 	 new Color(255, 255, 0, 255);
+	public static Color PURPLE = 	 new Color(127, 0, 127, 255);
 
-	public static Color[] LIST = {WHITE, BLACK, RED, GREEN, BLUE, PINK, CYAN, YELLOW, DARK_RED, PURPLE, DARK_BLUE, DIRTY_BLUE};
+	public static Color[] LIST = {RED, GREEN, BLUE, PINK, CYAN, YELLOW, DARK_RED, PURPLE, DARK_BLUE, DIRTY_BLUE};
 
 	public float r;
 	public float g;
@@ -80,6 +80,10 @@ public class Color {
 		return otherColor.r == this.r && otherColor.g == this.g && otherColor.b == this.b && otherColor.a == this.a;
 	}
 
+	public void setAlpha (float value) {
+		a = value;
+	}
+
 	public void setValue(String type, float value) {
 		switch (type) {
 		case "r":
@@ -95,6 +99,5 @@ public class Color {
 			a = value;
 			break;
 		}
-		Engine.println("Called " + value);
 	}
 }

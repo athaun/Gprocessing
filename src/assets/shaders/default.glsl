@@ -60,9 +60,9 @@ void main () {
             break;
     }
 
-    if (texColor.a < 0.1) {
-        discard;
-    }
+//    if (texColor.a < 0.1) {
+//        discard;
+//    }
 
     color = texColor;
 }

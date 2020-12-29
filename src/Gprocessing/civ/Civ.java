@@ -19,6 +19,7 @@ public class Civ {
     private ArrayList<Cell> _queue;
 
     public static ArrayList<Color> reservedColors = new ArrayList<>();
+    public ArrayList<Color> availableColors = new ArrayList<>();
 
     public Civ (int index, Cell[][] cells, Civ[] civs, Cell origin, Color color) {
         _index = index;
@@ -26,6 +27,7 @@ public class Civ {
         _color = color;
         _cells = new ArrayList<Cell>();
         _queue = new ArrayList<Cell>();
+
 
         for (int i = 0; i < civs.length; i ++) {
             if (civs[i] != null) {
@@ -43,16 +45,20 @@ public class Civ {
         _origin.setCiv(this);
         _cells.add(_origin);
 
-        _color = Color.randomColor();
+        if (index == 0) {
+            _color = new Color(100);
+            reservedColors.add(_color);
+        } else {
 
-        while (reservedColors.contains(_color)) {
-            for (Color c : reservedColors) {
-//                Engine.println("" + reservedColors);
-                _color = Color.randomColor();
+            for (int i = 0; i < Color.LIST.length; i++) {
+                if (!reservedColors.contains(Color.LIST[i])) {
+                    availableColors.add(Color.LIST[i]);
+                }
             }
-        }
 
-        reservedColors.add(_color);
+            _color = availableColors.get(Utils.randomInt(0, availableColors.size() - 1));
+            reservedColors.add(_color);
+        }
 
     }
 
