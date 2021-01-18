@@ -36,7 +36,7 @@
   * [Installation](#installation)
   * [Documentation](#documentation)
 * [Milestones](#Milestones)
-* [Known issues](#known-issues)
+* [Issues](https://github.com/athaun/Gprocessing/issues)
 * [License](#license)
 * [Contact](#contact)
 * [Acknowledgements](#acknowledgements)
@@ -142,12 +142,6 @@ open Eclipse, and select import project.
 + 8.14.2020 Added ImGui
 + 9.21.2020 Fixed imGui input callbacks
 ! 9.21.2020 Created First game using the Engine!
-```
-
-### Known Issues
-```
-+ Dynamic window resizing doesn't work correctly
-+ Transperancy issues on windows
 ```
 
 ### License
