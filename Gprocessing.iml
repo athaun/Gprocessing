@@ -2049,6 +2049,15 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="library" name="library" level="project" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES />
+        <JAVADOC />
+        <NATIVE>
+          <root url="file://$MODULE_DIR$/library/LibImGuiBinaries" />
+        </NATIVE>
+        <SOURCES />
+      </library>
+    </orderEntry>
   </component>
 </module>

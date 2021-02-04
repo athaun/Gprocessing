@@ -25,7 +25,7 @@ public class Window {
 
 	// public static ArrayList<Scene> scenes = new ArrayList<Scene>();
 	
-	public static Scene currentScene = civ;
+	public static Scene currentScene = cc;
 
 	// Window Variables	
 	public long frameCount = 0;

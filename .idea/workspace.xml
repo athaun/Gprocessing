@@ -2,19 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a9c80946-ffec-45b7-a317-75fbc5e6a921" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Gprocessing_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/discord.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/LibImGuiBinaries.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gprocessing.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Gprocessing.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Gprocessing/chickenCoup/Chicken.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Gprocessing/chickenCoup/Chicken.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Gprocessing/graphics/Window.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Gprocessing/graphics/Window.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/imgui.ini" beforeDir="false" afterPath="$PROJECT_DIR$/imgui.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Gprocessing/civ/Cell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gprocessing/civ/Cell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Gprocessing/chickenCoup/Chicken.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gprocessing/chickenCoup/Chicken.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Gprocessing/graphics/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gprocessing/graphics/Window.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -38,10 +29,12 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RunManager">
     <configuration name="CivScene" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Gprocessing.civ.CivScene" />
+      <option name="MAIN_CLASS_NAME" value="Gprocessing.chickenCoup.ChickenCoup" />
       <module name="Gprocessing" />
       <extension name="coverage">
         <pattern>
@@ -85,41 +78,45 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="961" y="1000" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1612377862833">
+    <state x="961" y="1000" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1612382864746">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state x="961" y="1000" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.3840.2120@0.0.3840.2120" timestamp="1612377862833" />
-    <state x="1236" y="1129" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1612377861273">
+    <state x="961" y="1000" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.3840.2120@0.0.3840.2120" timestamp="1612382864746" />
+    <state x="655" y="895" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog" timestamp="1612380347671">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state x="1236" y="1129" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.3840.2120@0.0.3840.2120" timestamp="1612377861273" />
-    <state x="1206" y="1093" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog" timestamp="1612377739604">
+    <state x="655" y="895" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/0.0.3840.2120@0.0.3840.2120" timestamp="1612380347671" />
+    <state x="1236" y="1129" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1612382863267">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state x="1206" y="1093" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog/0.0.3840.2120@0.0.3840.2120" timestamp="1612377739604" />
-    <state x="956" y="387" key="FileChooserDialogImpl" timestamp="1612377722783">
+    <state x="1236" y="1129" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.3840.2120@0.0.3840.2120" timestamp="1612382863267" />
+    <state x="1206" y="1093" width="801" height="728" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog" timestamp="1612382848107">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state x="956" y="387" key="FileChooserDialogImpl/0.0.3840.2120@0.0.3840.2120" timestamp="1612377722783" />
-    <state width="1874" height="300" key="GridCell.Tab.0.bottom" timestamp="1612378311443">
+    <state x="1206" y="1093" width="801" height="728" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog/0.0.3840.2120@0.0.3840.2120" timestamp="1612382848107" />
+    <state x="1016" y="488" key="FileChooserDialogImpl" timestamp="1612382814780">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state width="1874" height="300" key="GridCell.Tab.0.bottom/0.0.3840.2120@0.0.3840.2120" timestamp="1612378311443" />
-    <state width="1874" height="300" key="GridCell.Tab.0.center" timestamp="1612378311443">
+    <state x="1016" y="488" key="FileChooserDialogImpl/0.0.3840.2120@0.0.3840.2120" timestamp="1612382814780" />
+    <state width="3785" height="290" key="GridCell.Tab.0.bottom" timestamp="1612399891000">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state width="1874" height="300" key="GridCell.Tab.0.center/0.0.3840.2120@0.0.3840.2120" timestamp="1612378311443" />
-    <state width="1874" height="300" key="GridCell.Tab.0.left" timestamp="1612378311443">
+    <state width="3785" height="290" key="GridCell.Tab.0.bottom/0.0.3840.2120@0.0.3840.2120" timestamp="1612399891000" />
+    <state width="3785" height="290" key="GridCell.Tab.0.center" timestamp="1612399890999">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state width="1874" height="300" key="GridCell.Tab.0.left/0.0.3840.2120@0.0.3840.2120" timestamp="1612378311443" />
-    <state width="1874" height="300" key="GridCell.Tab.0.right" timestamp="1612378311443">
+    <state width="3785" height="290" key="GridCell.Tab.0.center/0.0.3840.2120@0.0.3840.2120" timestamp="1612399890999" />
+    <state width="3785" height="290" key="GridCell.Tab.0.left" timestamp="1612399890999">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state width="1874" height="300" key="GridCell.Tab.0.right/0.0.3840.2120@0.0.3840.2120" timestamp="1612378311443" />
-    <state x="856" y="957" width="1285" height="852" key="SettingsEditor" timestamp="1612377742321">
+    <state width="3785" height="290" key="GridCell.Tab.0.left/0.0.3840.2120@0.0.3840.2120" timestamp="1612399890999" />
+    <state width="3785" height="290" key="GridCell.Tab.0.right" timestamp="1612399890999">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state x="856" y="957" width="1285" height="852" key="SettingsEditor/0.0.3840.2120@0.0.3840.2120" timestamp="1612377742321" />
+    <state width="3785" height="290" key="GridCell.Tab.0.right/0.0.3840.2120@0.0.3840.2120" timestamp="1612399890999" />
+    <state x="1267" y="526" width="1285" height="883" key="SettingsEditor" timestamp="1612398345690">
+      <screen x="0" y="0" width="3840" height="2120" />
+    </state>
+    <state x="1267" y="526" width="1285" height="883" key="SettingsEditor/0.0.3840.2120@0.0.3840.2120" timestamp="1612398345690" />
   </component>
 </project>
