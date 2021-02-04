@@ -65,7 +65,7 @@ public class Window {
 		glfwSetWindowSizeCallback(window, (w, newWidth, newHeight) -> {
 			Window.setWidth(newWidth);
 			Window.setHeight(newHeight);
-			currentScene.camera.adjustProjection();
+//			currentScene.camera.adjustProjection();
 		});
 		
 		// Make the OpenGL context current

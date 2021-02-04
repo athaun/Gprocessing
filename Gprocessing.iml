@@ -2049,6 +2049,6 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="library" name="LibImGuiBinaries" level="project" />
+    <orderEntry type="library" name="library" level="project" />
   </component>
 </module>

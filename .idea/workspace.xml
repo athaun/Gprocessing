@@ -1,199 +1,125 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AnalysisUIOptions">
-    <option name="SCOPE_TYPE" value="8" />
-    <option name="CUSTOM_SCOPE_NAME" value="Current File" />
-  </component>
-  <component name="ArtifactsWorkspaceSettings">
-    <artifacts-to-build>
-      <artifact name="Gprocessing:jar" />
-    </artifacts-to-build>
-  </component>
-  <component name="BranchesTreeState">
-    <expand>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </expand>
-    <select>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </select>
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="28e1e06f-16dd-433e-bc93-57b18faa5c74" name="Default Changelist" comment="">
+    <list default="true" id="a9c80946-ffec-45b7-a317-75fbc5e6a921" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Gprocessing_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/discord.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/LibImGuiBinaries.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gprocessing.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Gprocessing.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Gprocessing/chickenCoup/Chicken.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Gprocessing/chickenCoup/Chicken.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Gprocessing/chickenCoup/ChickenCoup.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Gprocessing/chickenCoup/ChickenCoup.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Gprocessing/chickenCoup/Tilesystem.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Gprocessing/chickenCoup/Tilesystem.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Gprocessing/civ/Cell.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Gprocessing/civ/Cell.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Gprocessing/civ/Civ.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Gprocessing/civ/Civ.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Gprocessing/civ/CivScene.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Gprocessing/civ/CivScene.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Gprocessing/ecs/Rectangle.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Gprocessing/ecs/Rectangle.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Gprocessing/ecs/SpriteRenderer.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Gprocessing/ecs/SpriteRenderer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Gprocessing/graphics/Color.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Gprocessing/graphics/Color.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Gprocessing/graphics/Window.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Gprocessing/graphics/Window.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Gprocessing/physics/SquareCollision.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/assets/shaders/default.glsl" beforeDir="false" afterPath="$PROJECT_DIR$/bin/assets/shaders/default.glsl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/imgui.ini" beforeDir="false" afterPath="$PROJECT_DIR$/imgui.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Gprocessing/chickenCoup/Chicken.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gprocessing/chickenCoup/Chicken.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Gprocessing/chickenCoup/ChickenCoup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gprocessing/chickenCoup/ChickenCoup.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Gprocessing/chickenCoup/Tilesystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gprocessing/chickenCoup/Tilesystem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Gprocessing/civ/Cell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gprocessing/civ/Cell.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Gprocessing/civ/Civ.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gprocessing/civ/Civ.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Gprocessing/civ/CivScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gprocessing/civ/CivScene.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Gprocessing/ecs/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gprocessing/ecs/Rectangle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Gprocessing/ecs/SpriteRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gprocessing/ecs/SpriteRenderer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Gprocessing/graphics/Color.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gprocessing/graphics/Color.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Gprocessing/graphics/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gprocessing/graphics/Window.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Gprocessing/physics/SquareCollision.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gprocessing/physics/TransformCollision.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/shaders/default.glsl" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/shaders/default.glsl" afterDir="false" />
-    </list>
-    <list id="68c1cf8c-d7fe-4d29-8d43-d456b7d2d178" name="Changes by ethan" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Gprocessing/civ/Cell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gprocessing/civ/Cell.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/Gprocessing/civ/Cell.java">
-      <ranges>
-        <range start1="25" end1="25" start2="25" end2="29" changelist="68c1cf8c-d7fe-4d29-8d43-d456b7d2d178" />
-        <range start1="37" end1="38" start2="41" end2="42" changelist="28e1e06f-16dd-433e-bc93-57b18faa5c74" />
-        <range start1="42" end1="42" start2="46" end2="47" changelist="28e1e06f-16dd-433e-bc93-57b18faa5c74" />
-        <range start1="43" end1="44" start2="48" end2="49" changelist="28e1e06f-16dd-433e-bc93-57b18faa5c74" />
-        <range start1="45" end1="51" start2="50" end2="68" changelist="28e1e06f-16dd-433e-bc93-57b18faa5c74" />
-        <range start1="52" end1="58" start2="69" end2="69" changelist="28e1e06f-16dd-433e-bc93-57b18faa5c74" />
-        <range start1="60" end1="60" start2="71" end2="84" changelist="28e1e06f-16dd-433e-bc93-57b18faa5c74" />
-      </ranges>
-    </file>
-  </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="mavenHome" value="$APPLICATION_HOME_DIR$/plugins/maven/lib/maven3" />
-      </MavenGeneralSettings>
-    </option>
-  </component>
-  <component name="ProjectId" id="1lGDBVaX5l0tnbpHFLtxNZaQYAo" />
+  <component name="ProjectId" id="1nyyuCb3WHZ9dA1W0mU9oqdjsif" />
   <component name="ProjectViewState">
-    <option name="autoscrollFromSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="/mnt" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/library/LibImGuiBinaries" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Code with Me" />
   </component>
   <component name="RunManager">
-    <configuration name="CivScene" type="Application" factoryName="Application" nameIsGenerated="true">
+    <configuration name="CivScene" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Gprocessing.civ.CivScene" />
       <module name="Gprocessing" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Gprocessing.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.CivScene" />
+      </list>
+    </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="28e1e06f-16dd-433e-bc93-57b18faa5c74" name="Default Changelist" comment="" />
-      <created>1607214411659</created>
+      <changelist id="a9c80946-ffec-45b7-a317-75fbc5e6a921" name="Default Changelist" comment="" />
+      <created>1612376846007</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1607214411659</updated>
+      <updated>1612376846007</updated>
     </task>
     <servers />
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="1">
-          <value>
-            <State>
-              <option name="CUSTOM_BOOLEAN_PROPERTIES">
-                <map>
-                  <entry key="Show.Git.Branches" value="true" />
-                </map>
-              </option>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="master" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
-          </value>
-        </entry>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="master" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
-    <option name="OPEN_GENERIC_TABS">
-      <map>
-        <entry key="1" value="TOOL_WINDOW" />
-      </map>
-    </option>
-    <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <breakpoint enabled="true" type="java-exception">
-          <properties class="java.lang.NullPointerException" package="java.lang" />
-          <option name="timeStamp" value="2" />
-        </breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+  <component name="WindowStateProjectService">
+    <state x="961" y="1000" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1612377862833">
+      <screen x="0" y="0" width="3840" height="2120" />
+    </state>
+    <state x="961" y="1000" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.3840.2120@0.0.3840.2120" timestamp="1612377862833" />
+    <state x="1236" y="1129" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1612377861273">
+      <screen x="0" y="0" width="3840" height="2120" />
+    </state>
+    <state x="1236" y="1129" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.3840.2120@0.0.3840.2120" timestamp="1612377861273" />
+    <state x="1206" y="1093" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog" timestamp="1612377739604">
+      <screen x="0" y="0" width="3840" height="2120" />
+    </state>
+    <state x="1206" y="1093" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog/0.0.3840.2120@0.0.3840.2120" timestamp="1612377739604" />
+    <state x="956" y="387" key="FileChooserDialogImpl" timestamp="1612377722783">
+      <screen x="0" y="0" width="3840" height="2120" />
+    </state>
+    <state x="956" y="387" key="FileChooserDialogImpl/0.0.3840.2120@0.0.3840.2120" timestamp="1612377722783" />
+    <state width="1874" height="300" key="GridCell.Tab.0.bottom" timestamp="1612378311443">
+      <screen x="0" y="0" width="3840" height="2120" />
+    </state>
+    <state width="1874" height="300" key="GridCell.Tab.0.bottom/0.0.3840.2120@0.0.3840.2120" timestamp="1612378311443" />
+    <state width="1874" height="300" key="GridCell.Tab.0.center" timestamp="1612378311443">
+      <screen x="0" y="0" width="3840" height="2120" />
+    </state>
+    <state width="1874" height="300" key="GridCell.Tab.0.center/0.0.3840.2120@0.0.3840.2120" timestamp="1612378311443" />
+    <state width="1874" height="300" key="GridCell.Tab.0.left" timestamp="1612378311443">
+      <screen x="0" y="0" width="3840" height="2120" />
+    </state>
+    <state width="1874" height="300" key="GridCell.Tab.0.left/0.0.3840.2120@0.0.3840.2120" timestamp="1612378311443" />
+    <state width="1874" height="300" key="GridCell.Tab.0.right" timestamp="1612378311443">
+      <screen x="0" y="0" width="3840" height="2120" />
+    </state>
+    <state width="1874" height="300" key="GridCell.Tab.0.right/0.0.3840.2120@0.0.3840.2120" timestamp="1612378311443" />
+    <state x="856" y="957" width="1285" height="852" key="SettingsEditor" timestamp="1612377742321">
+      <screen x="0" y="0" width="3840" height="2120" />
+    </state>
+    <state x="856" y="957" width="1285" height="852" key="SettingsEditor/0.0.3840.2120@0.0.3840.2120" timestamp="1612377742321" />
   </component>
 </project>

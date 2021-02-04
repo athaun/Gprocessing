@@ -48,7 +48,7 @@ public class Cell {
             sprite.getComponent(Rectangle.class).setColor(parentCiv.getColor());
             sprite.getComponent(Rectangle.class).setAlpha(populationAlpha);
 
-//            reproduceWithinRadius();
+            reproduceWithinRadius();
 
             if (allowedSpread) {
                 // If the cell is allowed to spread its civilization to other tiles
@@ -61,10 +61,12 @@ public class Cell {
                 }
             } else {
                 // If the cell is not allowed to spread, then add to populationDensity
-                if (CivScene.ticks % 1 == 0 && populationDensity < populationDensityMax) {
-                    populationDensity ++;
-                    populationAlpha = populationDensity * 25.5f/2;
-                }
+                // ww
+            }
+
+            if (CivScene.ticks % 1 == 0 && populationDensity < populationDensityMax) {
+                populationDensity ++;
+                populationAlpha = populationDensity * 25.5f/3;
             }
 
         }
