@@ -14,90 +14,90 @@ import Gprocessing.util.Engine;
 
 public class Chicken {
     GameObject chicken;
-    Vector2 lastPosition;
     Vector2 velocity = new Vector2(0, 100);
     Spritesheet s = new Spritesheet(Assets.getTexture("src/assets/images/chickens.png"), 24, 24, 8, 0);
 
-    float gravity = 6;
-    boolean grounded = false;
-    boolean collidingX = false;
+    float gravity = 9;
+    private boolean grounded = false;
+    private Vector2 collisionIndex;
+    private Vector2 lastPosition;
+    private Tilesystem _ts;
 
     Chicken (Transform tr) {
         chicken = new GameObject(tr);
-//        chicken.addComponent(new SpriteRenderer(s.getSprite(2)));
-        chicken.addComponent(new SpriteRenderer("src/assets/images/blendImage1.png"));
+        chicken.addComponent(new SpriteRenderer(s.getSprite(2)));
+//        chicken.addComponent(new SpriteRenderer("src/assets/images/blendImage1.png"));
+        lastPosition = new Vector2(chicken.getTransform().getX(), chicken.getTransform().getY());
     }
 
-    float lastDelta = 0;
-
     public void update (Tilesystem ts) {
+        if (_ts == null) _ts = ts;
 
-        float cX = chicken.getTransform().getX();
-        float cY = chicken.getTransform().getY();
+        moveX();
+        collideX();
 
-        lastPosition = new Vector2(cX, cY);
+        moveY();
+        collideY();
+    }
 
-        // ---------------------------------
+    private void moveX () {
+        lastPosition.x = chicken.getTransform().getX();
+        chicken.getTransform().addX(velocity.x * Engine.deltaTime);
+        velocity.x = Gamepad.axis(0, Gamepad.LEFT_STICK_HORIZONTAL) * 200;
+    }
 
-        if (!grounded) velocity.y += gravity;
-
-        chicken.getTransform().addY(velocity.y * Engine.deltaTime);
-
-        // Collide on Y axis
-        for (int x = 0; x < ts.gameObjects.length; x ++) {
-            for (int y = 0; y < ts.gameObjects[0].length; y ++) {
-                TransformCollision tile = ts.gameObjects[x][y].getComponent(TransformCollision.class);
-                if (tile != null) {
-                    if (tile.topEdge()) {
-                        chicken.getTransform().setY(ts.gameObjects[x][y].getTransform().getY() - chicken.getTransform().getHeight());
-                        velocity.y = 0;
-                        grounded = true; // allow jumping
-                        Engine.println("top edge");
-                    }
-
-                    if (tile.bottomEdge()) {
-                        chicken.getTransform().setY(ts.gameObjects[x][y].getTransform().getY() + ts.gameObjects[x][y].getTransform().getHeight());
-                        velocity.y = 0;
-                        Engine.println("bottom edge");
-                    }
-                }
-            }
-        }
-
-        // Jumping
+    private void moveY () {
+        lastPosition.y = chicken.getTransform().getY();
         if (Gamepad.buttonPressed(0, Gamepad.A) && grounded) {
-            velocity.y = -500;
+            chicken.getTransform().addY(-1);
+            velocity.y = -560;
             grounded = false;
             Engine.println("Jump");
         }
+        velocity.y += gravity;
+        chicken.getTransform().addY(velocity.y * Engine.deltaTime);
+    }
 
+    private void collideX () {
+        if (this.checkCollision()) {
+            Transform currentTile = _ts.gameObjects[(int)collisionIndex.x][(int)collisionIndex.y].getTransform();
+            if (lastPosition.x < currentTile.getX()) {
+                chicken.setTransformX(currentTile.getX() - chicken.getTransform().getWidth());
+            } else {
+                chicken.setTransformX(currentTile.getX() + currentTile.getWidth());
+            }
+        }
+    }
 
-        chicken.getTransform().addX(velocity.x * Engine.deltaTime);
-        velocity.x = Gamepad.axis(0, Gamepad.LEFT_STICK_HORIZONTAL) * 200;
+    private void collideY () {
+        this.grounded = false;
+        if (this.checkCollision()) {
+            Transform currentTile = _ts.gameObjects[(int) collisionIndex.x][(int) collisionIndex.y].getTransform();
+            if (lastPosition.y < currentTile.getY()) {
+                chicken.setTransformY(currentTile.getY() - chicken.getTransform().getHeight());
+                velocity.y = 0;
+                this.grounded = true;
+            } else {
+                chicken.setTransformY(currentTile.getY() + currentTile.getHeight());
+                velocity.y = -velocity.y/4;
+            }
+        }
+    }
 
-        // Collide on Y axis
-        for (int x = 0; x < ts.gameObjects.length; x ++) {
-            for (int y = 0; y < ts.gameObjects[0].length; y ++) {
-                TransformCollision tile = ts.gameObjects[x][y].getComponent(TransformCollision.class);
+    private boolean checkCollision () {
+        for (int x = 0; x < _ts.gameObjects.length; x ++) {
+            for (int y = 0; y < _ts.gameObjects[0].length; y++) {
+                TransformCollision tile = _ts.gameObjects[x][y].getComponent(TransformCollision.class);
                 if (tile != null) {
-                    if (tile.rightEdge()) {
-                        chicken.getTransform().setX(ts.gameObjects[x][y].getTransform().getX() + ts.gameObjects[x][y].getTransform().getWidth());
-                        Engine.println("right edge");
-                    }
-
-                    if (tile.leftEdge()) {
-                        chicken.getTransform().setX(ts.gameObjects[x][y].getTransform().getX() - chicken.getTransform().getWidth());
-                        Engine.println("left edge");
+                    if (tile.collide()) {
+                        // not passing chicken to .collide because chicken passed in constructor of each tile
+                        collisionIndex = new Vector2(x, y);
+                        return true;
                     }
                 }
             }
         }
-
-        grounded = false;
-
-
-
-        lastDelta = Engine.deltaTime;
+        return false;
     }
 
     public GameObject getGameObject () {
