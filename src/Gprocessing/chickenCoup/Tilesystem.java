@@ -33,9 +33,14 @@ public class Tilesystem {
                             Utils.randomInt(0, 6)==0?11:Utils.randomInt(1, 5)
                     )));
                 } else {
-                    gameObjects[x][y].addComponent(new SpriteRenderer(s.getSprite(7)));
+                    if (m.getMap()[x][y] != 1 && m.getMap()[x][y - 1] == 1) {
+                        if (Utils.randomInt(0, 5) == 1) {
+                            gameObjects[x][y].addComponent(new SpriteRenderer(s.getSprite(19))); // hanging vines
+                        } else if (Utils.randomInt(0, 5) == 1) {
+                            gameObjects[x][y].addComponent(new SpriteRenderer(s.getSprite(25)));
+                        }
+                    }
                 }
-
                 i ++;
             }
         }

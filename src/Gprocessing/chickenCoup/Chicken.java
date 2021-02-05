@@ -6,6 +6,7 @@ import Gprocessing.ecs.SpriteRenderer;
 import Gprocessing.graphics.Color;
 import Gprocessing.graphics.Spritesheet;
 import Gprocessing.input.Gamepad;
+import Gprocessing.input.Keyboard;
 import Gprocessing.physics.TransformCollision;
 import Gprocessing.physics.Transform;
 import Gprocessing.physics.Vector2;
@@ -40,15 +41,31 @@ public class Chicken {
         collideY();
     }
 
+    float sprintSpeed = 0;
     private void moveX () {
         lastPosition.x = chicken.getTransform().getX();
         chicken.getTransform().addX(velocity.x * Engine.deltaTime);
-        velocity.x = Gamepad.axis(0, Gamepad.LEFT_STICK_HORIZONTAL) * 200;
+
+        if (Gamepad.buttonPressed(0, Gamepad.B) || Keyboard.keyIsPressed(Keyboard.SPACE)) {
+            sprintSpeed = 200;
+        } else {
+            sprintSpeed = 0;
+        }
+        if (Keyboard.keyIsPressed(Keyboard.A_KEY) || Keyboard.keyIsPressed(Keyboard.LEFT_ARROW) || Keyboard.keyIsPressed(Keyboard.D_KEY) || Keyboard.keyIsPressed(Keyboard.RIGHT_ARROW)) {
+            if (Keyboard.keyIsPressed(Keyboard.A_KEY) || Keyboard.keyIsPressed(Keyboard.LEFT_ARROW)) {
+                velocity.x = -200 + sprintSpeed;
+            }
+            if (Keyboard.keyIsPressed(Keyboard.D_KEY) || Keyboard.keyIsPressed(Keyboard.RIGHT_ARROW)) {
+                velocity.x = 200 + sprintSpeed;
+            }
+        } else {
+            velocity.x = Gamepad.axis(0, Gamepad.LEFT_STICK_HORIZONTAL) * (200 + sprintSpeed);
+        }
     }
 
     private void moveY () {
         lastPosition.y = chicken.getTransform().getY();
-        if (Gamepad.buttonPressed(0, Gamepad.A) && grounded) {
+        if ((Gamepad.buttonPressed(0, Gamepad.A) || Keyboard.keyIsPressed(Keyboard.UP_ARROW) || Keyboard.keyIsPressed(Keyboard.W_KEY)) && grounded) {
             chicken.getTransform().addY(-1);
             velocity.y = -560;
             grounded = false;
