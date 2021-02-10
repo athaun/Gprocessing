@@ -2,16 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a9c80946-ffec-45b7-a317-75fbc5e6a921" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Gprocessing/porfolioManager/PortfolioManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Gprocessing/chickenCoup/Chicken.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Gprocessing/chickenCoup/Chicken.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Gprocessing/chickenCoup/Tilesystem.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Gprocessing/chickenCoup/Tilesystem.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Gprocessing/chickenCoup/Chicken.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gprocessing/chickenCoup/Chicken.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Gprocessing/chickenCoup/Tilesystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gprocessing/chickenCoup/Tilesystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Gprocessing/ImGui/ImGuiLayer$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Gprocessing/ImGui/ImGuiLayer$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Gprocessing/ImGui/ImGuiLayer$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Gprocessing/ImGui/ImGuiLayer$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Gprocessing/ImGui/ImGuiLayer.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Gprocessing/ImGui/ImGuiLayer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Gprocessing/chickenCoup/ChickenCoup.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Gprocessing/chickenCoup/ChickenCoup.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Gprocessing/graphics/Window.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Gprocessing/graphics/Window.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imgui.ini" beforeDir="false" afterPath="$PROJECT_DIR$/imgui.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Gprocessing/ImGui/ImGuiLayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gprocessing/ImGui/ImGuiLayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Gprocessing/chickenCoup/ChickenCoup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gprocessing/chickenCoup/ChickenCoup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Gprocessing/graphics/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gprocessing/graphics/Window.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -33,8 +46,8 @@
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RunManager">
-    <configuration name="CivScene" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Gprocessing.chickenCoup.ChickenCoup" />
+    <configuration name="PortfolioManager" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Gprocessing.porfolioManager.PortfolioManager" />
       <module name="Gprocessing" />
       <extension name="coverage">
         <pattern>
@@ -48,7 +61,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.CivScene" />
+        <item itemvalue="Application.PortfolioManager" />
       </list>
     </recent_temporary>
   </component>
@@ -78,18 +91,18 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="961" y="1000" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1612382864746">
+    <state x="961" y="1000" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1612825032583">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state x="961" y="1000" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.3840.2120@0.0.3840.2120" timestamp="1612382864746" />
+    <state x="961" y="1000" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.3840.2120@0.0.3840.2120" timestamp="1612825032583" />
     <state x="655" y="895" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog" timestamp="1612380347671">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state x="655" y="895" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/0.0.3840.2120@0.0.3840.2120" timestamp="1612380347671" />
-    <state x="1236" y="1129" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1612382863267">
+    <state x="1236" y="1129" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1612825030890">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state x="1236" y="1129" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.3840.2120@0.0.3840.2120" timestamp="1612382863267" />
+    <state x="1236" y="1129" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.3840.2120@0.0.3840.2120" timestamp="1612825030890" />
     <state x="1206" y="1093" width="801" height="728" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog" timestamp="1612382848107">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
@@ -98,22 +111,22 @@
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state x="1016" y="488" key="FileChooserDialogImpl/0.0.3840.2120@0.0.3840.2120" timestamp="1612382814780" />
-    <state width="3785" height="366" key="GridCell.Tab.0.bottom" timestamp="1612497312974">
+    <state width="3785" height="293" key="GridCell.Tab.0.bottom" timestamp="1612899092529">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state width="3785" height="366" key="GridCell.Tab.0.bottom/0.0.3840.2120@0.0.3840.2120" timestamp="1612497312974" />
-    <state width="3785" height="366" key="GridCell.Tab.0.center" timestamp="1612497312974">
+    <state width="3785" height="293" key="GridCell.Tab.0.bottom/0.0.3840.2120@0.0.3840.2120" timestamp="1612899092529" />
+    <state width="3785" height="293" key="GridCell.Tab.0.center" timestamp="1612899092529">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state width="3785" height="366" key="GridCell.Tab.0.center/0.0.3840.2120@0.0.3840.2120" timestamp="1612497312974" />
-    <state width="3785" height="366" key="GridCell.Tab.0.left" timestamp="1612497312974">
+    <state width="3785" height="293" key="GridCell.Tab.0.center/0.0.3840.2120@0.0.3840.2120" timestamp="1612899092529" />
+    <state width="3785" height="293" key="GridCell.Tab.0.left" timestamp="1612899092529">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state width="3785" height="366" key="GridCell.Tab.0.left/0.0.3840.2120@0.0.3840.2120" timestamp="1612497312974" />
-    <state width="3785" height="366" key="GridCell.Tab.0.right" timestamp="1612497312974">
+    <state width="3785" height="293" key="GridCell.Tab.0.left/0.0.3840.2120@0.0.3840.2120" timestamp="1612899092529" />
+    <state width="3785" height="293" key="GridCell.Tab.0.right" timestamp="1612899092529">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state width="3785" height="366" key="GridCell.Tab.0.right/0.0.3840.2120@0.0.3840.2120" timestamp="1612497312974" />
+    <state width="3785" height="293" key="GridCell.Tab.0.right/0.0.3840.2120@0.0.3840.2120" timestamp="1612899092529" />
     <state width="3785" height="278" key="GridCell.Tab.1.bottom" timestamp="1612490697676">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>

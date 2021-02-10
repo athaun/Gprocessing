@@ -18,6 +18,7 @@ import Gprocessing.util.Scene;
 import Gprocessing.util.Utils;
 import imgui.ImGui;
 import imgui.ImVec2;
+import imgui.type.ImString;
 import org.joml.Vector2f;
 
 import java.util.ArrayList;
@@ -27,7 +28,7 @@ import static Gprocessing.graphics.Graphics.background;
 public class ChickenCoup extends Scene {
 
     public static void main (String[] args) {
-        Engine.init(1920, 1080, "Chicken Coup", false);
+        Engine.init(1920, 1080, "Chicken Coup", true);
     }
 
     Spritesheet s;
@@ -68,7 +69,11 @@ public class ChickenCoup extends Scene {
         return chicken.getGameObject();
     }
 
+    ImString test = new ImString("Hello!");
+
     public void imgui () {
+        ImGui.inputTextMultiline("AYYY!", test);
+
         ImVec2 windowPos = new ImVec2();
         ImGui.getWindowPos(windowPos);
         ImVec2 windowSize = new ImVec2();

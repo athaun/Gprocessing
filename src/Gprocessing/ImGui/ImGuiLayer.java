@@ -12,6 +12,8 @@ import imgui.gl3.ImGuiImplGl3;
 import static org.lwjgl.glfw.GLFW.*;
 
 public class ImGuiLayer {
+	// see https://github.com/SpaiR/imgui-java/blob/master/imgui-lwjgl3/src/main/java/imgui/glfw/ImGuiImplGlfw.java#L98-L153
+	// for lwjgl input bindings
 
 	private long glfwWindow;
 
@@ -85,18 +87,18 @@ public class ImGuiLayer {
 		// ------------------------------------------------------------
 		// GLFW callbacks to handle user input
 
-//		glfwSetKeyCallback(glfwWindow, (w, key, scancode, action, mods) -> {
-//			if (action == GLFW_PRESS) {
-//				io.setKeysDown(key, true);
-//			} else if (action == GLFW_RELEASE) {
-//				io.setKeysDown(key, false);
-//			}
-//
-//			io.setKeyCtrl(io.getKeysDown(GLFW_KEY_LEFT_CONTROL) || io.getKeysDown(GLFW_KEY_RIGHT_CONTROL));
-//			io.setKeyShift(io.getKeysDown(GLFW_KEY_LEFT_SHIFT) || io.getKeysDown(GLFW_KEY_RIGHT_SHIFT));
-//			io.setKeyAlt(io.getKeysDown(GLFW_KEY_LEFT_ALT) || io.getKeysDown(GLFW_KEY_RIGHT_ALT));
-//			io.setKeySuper(io.getKeysDown(GLFW_KEY_LEFT_SUPER) || io.getKeysDown(GLFW_KEY_RIGHT_SUPER));
-//		});
+		glfwSetKeyCallback(glfwWindow, (w, key, scancode, action, mods) -> {
+			if (action == GLFW_PRESS) {
+				io.setKeysDown(key, true);
+			} else if (action == GLFW_RELEASE) {
+				io.setKeysDown(key, false);
+			}
+
+			io.setKeyCtrl(io.getKeysDown(GLFW_KEY_LEFT_CONTROL) || io.getKeysDown(GLFW_KEY_RIGHT_CONTROL));
+			io.setKeyShift(io.getKeysDown(GLFW_KEY_LEFT_SHIFT) || io.getKeysDown(GLFW_KEY_RIGHT_SHIFT));
+			io.setKeyAlt(io.getKeysDown(GLFW_KEY_LEFT_ALT) || io.getKeysDown(GLFW_KEY_RIGHT_ALT));
+			io.setKeySuper(io.getKeysDown(GLFW_KEY_LEFT_SUPER) || io.getKeysDown(GLFW_KEY_RIGHT_SUPER));
+		});
 
 		glfwSetCharCallback(glfwWindow, (w, c) -> {
 			if (c != GLFW_KEY_DELETE) {
@@ -236,6 +238,7 @@ public class ImGuiLayer {
 		// configuration (fonts and so on).
 		// ImGui context should be created as well.
 		imGuiGl3.init("#version 330 core");
+		io.addConfigFlags(ImGuiConfigFlags.DockingEnable); // not working?
 	}
 
 	public void update(float dt, Scene currentScene) {

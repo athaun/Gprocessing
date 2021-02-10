@@ -6,6 +6,7 @@ import Gprocessing.breakout.Breakout;
 import Gprocessing.civ.CivScene;
 import Gprocessing.editor.EditorGui;
 import Gprocessing.input.Mouse;
+import Gprocessing.porfolioManager.PortfolioManager;
 import Gprocessing.util.Engine;
 import Gprocessing.util.Scene;
 import Gprocessing.chickenCoup.ChickenCoup;
@@ -22,10 +23,11 @@ public class Window {
 	public static Scene bScene = new Breakout();
 	public static Scene cc = new ChickenCoup();
 	public static Scene civ = new CivScene();
+	public static Scene pf = new PortfolioManager();
 
 	// public static ArrayList<Scene> scenes = new ArrayList<Scene>();
 	
-	public static Scene currentScene = cc;
+	public static Scene currentScene = pf;
 
 	// Window Variables	
 	public long frameCount = 0;
