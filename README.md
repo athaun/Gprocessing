@@ -1,3 +1,5 @@
+### Gprocessing has been merged into the [Azurite game engine](https://github.com/Games-With-Gabe-Community/Azurite)
+
 <p>
     <br />
     <img src="https://img.shields.io/badge/Made%20using-Java-red">
