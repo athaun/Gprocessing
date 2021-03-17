@@ -27,7 +27,7 @@ public class Window {
 
 	// public static ArrayList<Scene> scenes = new ArrayList<Scene>();
 	
-	public static Scene currentScene = pf;
+	public static Scene currentScene = civ;
 
 	// Window Variables	
 	public long frameCount = 0;
@@ -101,9 +101,12 @@ public class Window {
 		 */
 		glfwShowWindow(window);
 		GL.createCapabilities();
-		
+
+
+		// https://www.youtube.com/watch?v=h4u-wrGdx_U
+
 		glEnable(GL_BLEND);
-//		glBlendFunc(GL_ONE, GL_ONE_MINUS_SRC_ALPHA);
+//		glBlendFunc(GL_ONE, GL_SRC_ALPHA);
 		glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
 

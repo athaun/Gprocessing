@@ -4,6 +4,7 @@ import Gprocessing.graphics.Window;
 import Gprocessing.physics.Vector2;
 import imgui.ImGui;
 import imgui.ImGuiIO;
+import org.joml.Vector2f;
 import org.lwjgl.BufferUtils;
 
 import java.nio.DoubleBuffer;
@@ -28,10 +29,10 @@ public class Mouse {
 	private static int _action;
 
 	static ImGuiIO io = Gprocessing.ImGui.ImGuiLayer.io;
-	
+
 	public static void pollMouseButtons() {
 		glfwSetMouseButtonCallback(Window.window, (w, button, action, mods) -> {
-			
+
 			// ImGui Input
 			final boolean[] mouseDown = new boolean[5];
 
@@ -46,7 +47,7 @@ public class Mouse {
 			if (!io.getWantCaptureMouse() && mouseDown[1]) {
 				ImGui.setWindowFocus(null);
 			}
-			
+
 			// Gprocessing input
 			_button = button;
 			_action = action;
@@ -61,24 +62,24 @@ public class Mouse {
 				mouseDragged = false;
 			}
 		}
-	}	
+	}
 
 	public static void pollMouseScroll() {
 		glfwSetScrollCallback(Window.window, (w, xOffset, yOffset) -> {
 			io.setMouseWheelH(io.getMouseWheelH() + (float) xOffset);
 			io.setMouseWheel(io.getMouseWheel() + (float) yOffset);
-			
+
 			scrollX = xOffset;
 			scrollY = yOffset;
 			mouseScroll = new Vector2(scrollX, scrollY);
 		});
 	}
-	
+
 	public static void update() {
-		
+
 		pollMouseButtons();
 		pollMouseScroll();
-		
+
 		DoubleBuffer x = BufferUtils.createDoubleBuffer(1);
 		DoubleBuffer y = BufferUtils.createDoubleBuffer(1);
 
@@ -93,19 +94,33 @@ public class Mouse {
 		mouseX = (long) x.get();
 		mouseY = (long) y.get();
 		mouse = new Vector2(mouseX, mouseY);
-		
+
 		if (mouseX != pmouseX || mouseY != pmouseY) {
-			mouseDragged = mouseButton[0] || mouseButton[1] || mouseButton[2]; 
+			mouseDragged = mouseButton[0] || mouseButton[1] || mouseButton[2];
 		}
 	}
-	
+
 	public static boolean mouseButtonDown (int button) {
 		if (button < mouseButton.length) {
 			return mouseButton[button];
 		}
 		return false;
 	}
-	
+
+	static boolean mouseDown = false;
+	public static boolean mouseButtonClicked (int button) {
+		if (!mouseDown) {
+			if (button < mouseButton.length) {
+				mouseDown = true;
+				return mouseButton[button];
+			}
+			if (mouseButton[button] == false) {
+				mouseDown = false;
+			}
+		}
+		return false;
+	}
+
 	public static void clearMouseInput () {
 		scrollX = 0;
 		scrollY = 0;

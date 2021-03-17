@@ -34,29 +34,6 @@ public class Rectangle extends Component  {
 		
 	}
 
-
-//	boolean initTempProperties = true;
-//
-//	@Override
-//	public void ImGuiEditorWidget() {
-//		if (initTempProperties) {
-//			w = new float[]{gameObject.getTransform().getWidth()};
-//			h = new float[]{gameObject.getTransform().getHeight()};
-//			initTempProperties = false;
-//		}
-//		if (!ImGui.collapsingHeader("Rectangle")) {
-//			ImGui.beginChild("##rectangle", 0, 40);
-//			ImGui.columns(2);
-//			ImGui.dragFloat("Width", w);
-//			ImGui.nextColumn();
-//			ImGui.dragFloat("Height", h);
-//			ImGui.nextColumn();
-//			ImGui.endChild();
-//			gameObject.getTransform().setWidth(w[0]);
-//			gameObject.getTransform().setHeight(h[0]);
-//		}
-//	}
-//
 	public void setAlpha (float a) {
 		gameObject.getComponent(SpriteRenderer.class).setAlpha(a);
 	}

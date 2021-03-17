@@ -1,18 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a9c80946-ffec-45b7-a317-75fbc5e6a921" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Gprocessing/porfolioManager/PortfolioManager.java" afterDir="false" />
+    <list default="true" id="cbf134d1-cfe5-462e-aa00-c978e4e39ccd" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/LibImGuiBinaries.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/javadoc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/library.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Gprocessing/civ/DiseaseGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Gprocessing/civ/example.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Gprocessing/ImGui/ImGuiLayer$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Gprocessing/ImGui/ImGuiLayer$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Gprocessing/ImGui/ImGuiLayer$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Gprocessing/ImGui/ImGuiLayer$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Gprocessing/ImGui/ImGuiLayer.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Gprocessing/ImGui/ImGuiLayer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Gprocessing/chickenCoup/ChickenCoup.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Gprocessing/chickenCoup/ChickenCoup.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Gprocessing/graphics/Window.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Gprocessing/graphics/Window.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gprocessing.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Gprocessing.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/imgui.ini" beforeDir="false" afterPath="$PROJECT_DIR$/imgui.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Gprocessing/ImGui/ImGuiLayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gprocessing/ImGui/ImGuiLayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Gprocessing/chickenCoup/ChickenCoup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gprocessing/chickenCoup/ChickenCoup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Gprocessing/civ/Cell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gprocessing/civ/Cell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Gprocessing/civ/Civ.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gprocessing/civ/Civ.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Gprocessing/civ/CivScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gprocessing/civ/CivScene.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Gprocessing/ecs/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gprocessing/ecs/Rectangle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Gprocessing/graphics/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gprocessing/graphics/Window.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Gprocessing/input/Mouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gprocessing/input/Mouse.java" afterDir="false" />
+    </list>
+    <list id="3402c0d9-3922-4f87-aa4f-dcf17eb7b475" name="Changes by ethan" comment="">
+      <change beforePath="$PROJECT_DIR$/src/Gprocessing/civ/Cell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gprocessing/civ/Cell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Gprocessing/civ/Civ.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gprocessing/civ/Civ.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Gprocessing/noise/OpenSimplexNoise.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gprocessing/noise/OpenSimplexNoise.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,127 +40,114 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1nyyuCb3WHZ9dA1W0mU9oqdjsif" />
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/src/Gprocessing/civ/Civ.java">
+      <ranges>
+        <range start1="10" end1="10" start2="10" end2="24" changelist="3402c0d9-3922-4f87-aa4f-dcf17eb7b475" />
+        <range start1="13" end1="17" start2="27" end2="31" changelist="cbf134d1-cfe5-462e-aa00-c978e4e39ccd" />
+        <range start1="18" end1="19" start2="32" end2="34" changelist="cbf134d1-cfe5-462e-aa00-c978e4e39ccd" />
+        <range start1="23" end1="30" start2="38" end2="45" changelist="cbf134d1-cfe5-462e-aa00-c978e4e39ccd" />
+        <range start1="34" end1="35" start2="49" end2="50" changelist="cbf134d1-cfe5-462e-aa00-c978e4e39ccd" />
+        <range start1="39" end1="62" start2="54" end2="59" changelist="cbf134d1-cfe5-462e-aa00-c978e4e39ccd" />
+        <range start1="63" end1="63" start2="60" end2="80" changelist="cbf134d1-cfe5-462e-aa00-c978e4e39ccd" />
+        <range start1="65" end1="66" start2="82" end2="83" changelist="3402c0d9-3922-4f87-aa4f-dcf17eb7b475" />
+        <range start1="69" end1="72" start2="86" end2="89" changelist="3402c0d9-3922-4f87-aa4f-dcf17eb7b475" />
+        <range start1="73" end1="74" start2="90" end2="91" changelist="3402c0d9-3922-4f87-aa4f-dcf17eb7b475" />
+        <range start1="76" end1="76" start2="93" end2="99" changelist="cbf134d1-cfe5-462e-aa00-c978e4e39ccd" />
+        <range start1="77" end1="77" start2="100" end2="107" changelist="3402c0d9-3922-4f87-aa4f-dcf17eb7b475" />
+        <range start1="79" end1="80" start2="109" end2="110" changelist="3402c0d9-3922-4f87-aa4f-dcf17eb7b475" />
+        <range start1="83" end1="84" start2="113" end2="114" changelist="3402c0d9-3922-4f87-aa4f-dcf17eb7b475" />
+        <range start1="85" end1="85" start2="115" end2="119" changelist="cbf134d1-cfe5-462e-aa00-c978e4e39ccd" />
+        <range start1="87" end1="88" start2="121" end2="122" changelist="cbf134d1-cfe5-462e-aa00-c978e4e39ccd" />
+        <range start1="91" end1="92" start2="125" end2="126" changelist="cbf134d1-cfe5-462e-aa00-c978e4e39ccd" />
+        <range start1="95" end1="96" start2="129" end2="130" changelist="3402c0d9-3922-4f87-aa4f-dcf17eb7b475" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/Gprocessing/civ/Cell.java">
+      <ranges>
+        <range start1="4" end1="4" start2="4" end2="5" changelist="cbf134d1-cfe5-462e-aa00-c978e4e39ccd" />
+        <range start1="14" end1="16" start2="15" end2="17" changelist="3402c0d9-3922-4f87-aa4f-dcf17eb7b475" />
+        <range start1="21" end1="21" start2="22" end2="24" changelist="cbf134d1-cfe5-462e-aa00-c978e4e39ccd" />
+        <range start1="22" end1="22" start2="25" end2="27" changelist="cbf134d1-cfe5-462e-aa00-c978e4e39ccd" />
+        <range start1="23" end1="24" start2="28" end2="29" changelist="cbf134d1-cfe5-462e-aa00-c978e4e39ccd" />
+        <range start1="25" end1="29" start2="30" end2="34" changelist="cbf134d1-cfe5-462e-aa00-c978e4e39ccd" />
+        <range start1="30" end1="32" start2="35" end2="40" changelist="cbf134d1-cfe5-462e-aa00-c978e4e39ccd" />
+        <range start1="37" end1="39" start2="45" end2="47" changelist="cbf134d1-cfe5-462e-aa00-c978e4e39ccd" />
+        <range start1="45" end1="46" start2="53" end2="54" changelist="cbf134d1-cfe5-462e-aa00-c978e4e39ccd" />
+        <range start1="47" end1="49" start2="55" end2="57" changelist="cbf134d1-cfe5-462e-aa00-c978e4e39ccd" />
+        <range start1="51" end1="51" start2="59" end2="64" changelist="cbf134d1-cfe5-462e-aa00-c978e4e39ccd" />
+        <range start1="52" end1="65" start2="65" end2="74" changelist="cbf134d1-cfe5-462e-aa00-c978e4e39ccd" />
+        <range start1="66" end1="71" start2="75" end2="78" changelist="cbf134d1-cfe5-462e-aa00-c978e4e39ccd" />
+        <range start1="73" end1="73" start2="80" end2="107" changelist="cbf134d1-cfe5-462e-aa00-c978e4e39ccd" />
+        <range start1="75" end1="77" start2="109" end2="111" changelist="cbf134d1-cfe5-462e-aa00-c978e4e39ccd" />
+        <range start1="86" end1="86" start2="120" end2="131" changelist="cbf134d1-cfe5-462e-aa00-c978e4e39ccd" />
+      </ranges>
+    </file>
+  </component>
+  <component name="ProjectId" id="1poQ8PY0rTomFcb6n8l4meJ9miQ" />
   <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
+    <option name="autoscrollToSource" value="true" />
+    <option name="showExcludedFiles" value="false" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/library/LibImGuiBinaries" />
+    <property name="codeWithMe.voiceChat.enabledByDefault" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/library/LibImGuiBinaries/libimgui-java64.so" />
     <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="restartRequiresConfirmation" value="false" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="Gprocessing.civ" />
+    </key>
+  </component>
   <component name="RunManager">
-    <configuration name="PortfolioManager" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Gprocessing.porfolioManager.PortfolioManager" />
+    <configuration name="CivScene" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Gprocessing.civ.CivScene" />
       <module name="Gprocessing" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Gprocessing.*" />
+          <option name="PATTERN" value="Gprocessing.civ.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <method v="2">
         <option name="Make" enabled="true" />
+        <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.PortfolioManager" />
+        <item itemvalue="Application.CivScene" />
       </list>
     </recent_temporary>
   </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
-  </component>
-  <component name="SvnConfiguration">
-    <configuration />
-  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="a9c80946-ffec-45b7-a317-75fbc5e6a921" name="Default Changelist" comment="" />
-      <created>1612376846007</created>
+      <changelist id="cbf134d1-cfe5-462e-aa00-c978e4e39ccd" name="Default Changelist" comment="" />
+      <created>1615846802531</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1612376846007</updated>
+      <updated>1615846802531</updated>
     </task>
     <servers />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="961" y="1000" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1612825032583">
-      <screen x="0" y="0" width="3840" height="2120" />
-    </state>
-    <state x="961" y="1000" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.3840.2120@0.0.3840.2120" timestamp="1612825032583" />
-    <state x="655" y="895" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog" timestamp="1612380347671">
-      <screen x="0" y="0" width="3840" height="2120" />
-    </state>
-    <state x="655" y="895" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/0.0.3840.2120@0.0.3840.2120" timestamp="1612380347671" />
-    <state x="1236" y="1129" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1612825030890">
-      <screen x="0" y="0" width="3840" height="2120" />
-    </state>
-    <state x="1236" y="1129" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.3840.2120@0.0.3840.2120" timestamp="1612825030890" />
-    <state x="1206" y="1093" width="801" height="728" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog" timestamp="1612382848107">
-      <screen x="0" y="0" width="3840" height="2120" />
-    </state>
-    <state x="1206" y="1093" width="801" height="728" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog/0.0.3840.2120@0.0.3840.2120" timestamp="1612382848107" />
-    <state x="1016" y="488" key="FileChooserDialogImpl" timestamp="1612382814780">
-      <screen x="0" y="0" width="3840" height="2120" />
-    </state>
-    <state x="1016" y="488" key="FileChooserDialogImpl/0.0.3840.2120@0.0.3840.2120" timestamp="1612382814780" />
-    <state width="3785" height="293" key="GridCell.Tab.0.bottom" timestamp="1612899092529">
-      <screen x="0" y="0" width="3840" height="2120" />
-    </state>
-    <state width="3785" height="293" key="GridCell.Tab.0.bottom/0.0.3840.2120@0.0.3840.2120" timestamp="1612899092529" />
-    <state width="3785" height="293" key="GridCell.Tab.0.center" timestamp="1612899092529">
-      <screen x="0" y="0" width="3840" height="2120" />
-    </state>
-    <state width="3785" height="293" key="GridCell.Tab.0.center/0.0.3840.2120@0.0.3840.2120" timestamp="1612899092529" />
-    <state width="3785" height="293" key="GridCell.Tab.0.left" timestamp="1612899092529">
-      <screen x="0" y="0" width="3840" height="2120" />
-    </state>
-    <state width="3785" height="293" key="GridCell.Tab.0.left/0.0.3840.2120@0.0.3840.2120" timestamp="1612899092529" />
-    <state width="3785" height="293" key="GridCell.Tab.0.right" timestamp="1612899092529">
-      <screen x="0" y="0" width="3840" height="2120" />
-    </state>
-    <state width="3785" height="293" key="GridCell.Tab.0.right/0.0.3840.2120@0.0.3840.2120" timestamp="1612899092529" />
-    <state width="3785" height="278" key="GridCell.Tab.1.bottom" timestamp="1612490697676">
-      <screen x="0" y="0" width="3840" height="2120" />
-    </state>
-    <state width="3785" height="278" key="GridCell.Tab.1.bottom/0.0.3840.2120@0.0.3840.2120" timestamp="1612490697676" />
-    <state width="3785" height="278" key="GridCell.Tab.1.center" timestamp="1612490697676">
-      <screen x="0" y="0" width="3840" height="2120" />
-    </state>
-    <state width="3785" height="278" key="GridCell.Tab.1.center/0.0.3840.2120@0.0.3840.2120" timestamp="1612490697676" />
-    <state width="3785" height="278" key="GridCell.Tab.1.left" timestamp="1612490697668">
-      <screen x="0" y="0" width="3840" height="2120" />
-    </state>
-    <state width="3785" height="278" key="GridCell.Tab.1.left/0.0.3840.2120@0.0.3840.2120" timestamp="1612490697668" />
-    <state width="3785" height="278" key="GridCell.Tab.1.right" timestamp="1612490697676">
-      <screen x="0" y="0" width="3840" height="2120" />
-    </state>
-    <state width="3785" height="278" key="GridCell.Tab.1.right/0.0.3840.2120@0.0.3840.2120" timestamp="1612490697676" />
-    <state x="1267" y="526" width="1285" height="883" key="SettingsEditor" timestamp="1612398345690">
-      <screen x="0" y="0" width="3840" height="2120" />
-    </state>
-    <state x="1267" y="526" width="1285" height="883" key="SettingsEditor/0.0.3840.2120@0.0.3840.2120" timestamp="1612398345690" />
-    <state x="1492" y="507" key="run.anything.popup" timestamp="1612496615953">
-      <screen x="0" y="0" width="3840" height="2120" />
-    </state>
-    <state x="1492" y="507" key="run.anything.popup/0.0.3840.2120@0.0.3840.2120" timestamp="1612496615953" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
