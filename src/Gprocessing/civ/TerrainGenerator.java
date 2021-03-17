@@ -4,7 +4,7 @@ import Gprocessing.util.Engine;
 import Gprocessing.util.Utils;
 import static Gprocessing.civ.CivScene.cells;
 
-public class DiseaseGenerator {
+public class TerrainGenerator {
     static double increment = 0.023; // The fineness of the noise map
     static OpenSimplexNoise noise = new OpenSimplexNoise();
 

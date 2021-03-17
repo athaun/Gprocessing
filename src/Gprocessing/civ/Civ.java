@@ -7,34 +7,35 @@ import Gprocessing.util.Utils;
 import imgui.ImGui;
 
 import java.util.ArrayList;
-import java.util.ListIterator;
 
 /*
 * TODO:
 *
+* Add disease - Add debug info for disease
+* Add disease moderator
+* Add more advanced battle math
 *
-* THEORY:
-* Health
-* Reproduction Rate
+* Add terrain generation
+* Add genetics - Add debug info for genetics
+* More advanced user input
+* Basic random behaviour AI
 *
-* Battles
-*
-*
-*  */
-
+*/
 
 public class Civ {
 
     private ArrayList<Cell> cells;
     private Cell origin;
-    private Color color;
     public int index;
 
+    // Cell queues, used to avoid concurrent modification exception
     private ArrayList<Cell> queue;
     private ArrayList<Cell> removeQueue;
 
+    // Used to pick civ color
     public static ArrayList<Color> reservedColors = new ArrayList<>();
     public ArrayList<Color> availableColors = new ArrayList<>();
+    private Color color;
 
     public Civ (int index, Cell[][] globalCells, Civ[] civs, Cell origin, Color color) {
         this.index = index;
@@ -56,10 +57,10 @@ public class Civ {
                 }
             }
         }
-        test();
+        createOrigin();
     }
 
-    void test () {
+    void createOrigin () {
         origin.setCiv(this);
         cells.add(origin);
 
@@ -67,15 +68,14 @@ public class Civ {
             color = new Color(255);
             reservedColors.add(color);
         } else {
-
+            // Pick a color from color list that isn't reserved
             for (int i = 0; i < Color.LIST.length; i++) {
                 if (!reservedColors.contains(Color.LIST[i])) {
                     availableColors.add(Color.LIST[i]);
                 }
             }
-
             color = availableColors.get(Utils.randomInt(0, availableColors.size() - 1));
-            reservedColors.add(color);
+            reservedColors.add(color); // Reserve this civilizations color
         }
     }
 
@@ -98,26 +98,25 @@ public class Civ {
             removeQueue = new ArrayList<Cell>();
         }
     }
-//Strength
-    public void addStrength (float s) {
+
+    // Adds strength to the all cells in Civ - used in user input
+    public void addStrength (float additiveStrength) {
          for (Cell c : cells) {
-            c.strength +=  s;
+            c.strength +=  additiveStrength;
         }
-
     }
 
-    public ArrayList<Cell> getCells () {
-        return cells;
-    }
-
+    // Add a cell to the queue to be added once the cell updates are done (used to avoid concurrent modification exception)
     public void addCell (Cell newCell) {
         queue.add(newCell);
     }
 
+    // Remove a cell once the cell updates are done (used to avoid concurrent modification exception)
     public void removeCell (Cell cell) {
         removeQueue.add(cell);
     }
 
+    // Returns the original cell of this civilization
     public Cell getOrigin () {
         return origin;
     }

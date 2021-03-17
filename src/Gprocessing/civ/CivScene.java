@@ -1,10 +1,8 @@
 package Gprocessing.civ;
 
-import Gprocessing.ecs.Rectangle;
 import Gprocessing.graphics.Camera;
 import Gprocessing.graphics.Color;
 import Gprocessing.graphics.Window;
-import Gprocessing.input.Keyboard;
 import Gprocessing.input.Mouse;
 import Gprocessing.physics.Vector2;
 import Gprocessing.util.Engine;
@@ -21,8 +19,12 @@ public class CivScene extends Scene {
     }
 
     public static Cell[][] cells;
-    int civCount = 10; // Check Color.LIST for safe values
     public static Civ[] civs;
+    int civCount = 10; // Check Color.LIST for safe values
+
+    public static int ticks = 0;
+
+    Vector2f mouseToGrid = new Vector2f();
 
     public void awake () {
         camera = new Camera();
@@ -53,34 +55,21 @@ public class CivScene extends Scene {
         }
     }
 
-    public static int ticks = 0;
-
-    DiseaseGenerator dg = new DiseaseGenerator();
-
-    Vector2f mouseToGrid = new Vector2f();
-
     public void update () {
         background(Color.BLACK);
 
         for (Civ c : civs) {
             c.update();
         }
-        ticks ++;
 
+        // Gets the mouse coordinates
         mouseToGrid.x = Utils.constrain(Mouse.mouseX / Cell.cellSize, 0, cells.length - 1);
         mouseToGrid.y = Utils.constrain(Mouse.mouseY / Cell.cellSize, 0, cells[0].length - 1);
 
-        hoveredCellCiv = getCellAt(mouseToGrid).getParentCiv();
-        if (Mouse.mouseButtonDown(0)) {
-            if (hoveredCellCiv != null) {
-                hoveredCellCiv.addStrength(100);
-            }
-        }
-
-        hoveredCellHealth = getCellAt(mouseToGrid).health;
-
+        ticks ++;
     }
 
+    // Retrieves the cell at the given coordinates
     public Cell getCellAt (Vector2f v) {
         return cells[(int)v.x][(int)v.y];
     }
@@ -93,6 +82,18 @@ public class CivScene extends Scene {
         ImGui.text("\nHovered Health: " + hoveredCellHealth);
         if (hoveredCellCiv != null) {
             ImGui.text("Hovered Civ: " + hoveredCellCiv.index);
+        } else {
+            ImGui.text("Hovered Civ: " + null);
+        }
+
+        hoveredCellCiv = getCellAt(mouseToGrid).getParentCiv();
+        hoveredCellHealth = getCellAt(mouseToGrid).health;
+
+        // If user presses LEFT mouse button, give that civ a strength bonus
+        if (Mouse.mouseButtonDown(0)) {
+            if (hoveredCellCiv != null) {
+                hoveredCellCiv.addStrength(100);
+            }
         }
     }
 }
