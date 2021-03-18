@@ -3,6 +3,7 @@ package Gprocessing.civ;
 import Gprocessing.graphics.Camera;
 import Gprocessing.graphics.Color;
 import Gprocessing.graphics.Window;
+import Gprocessing.input.Keyboard;
 import Gprocessing.input.Mouse;
 import Gprocessing.physics.Vector2;
 import Gprocessing.util.Engine;
@@ -15,7 +16,8 @@ import static Gprocessing.graphics.Graphics.background;
 
 public class CivScene extends Scene {
     public static void main (String[] args) {
-        Engine.init(3840, 2160, "Civ");
+        // 3840, 2160
+        Engine.init(3840, 2000, "Civ");
     }
 
     public static Cell[][] cells;
@@ -24,7 +26,12 @@ public class CivScene extends Scene {
 
     public static int ticks = 0;
 
+    float hoveredCellHealth = 0;
+    Civ hoveredCellCiv;
+
     Vector2f mouseToGrid = new Vector2f();
+
+    DiseaseModerator dm = new DiseaseModerator();
 
     public void awake () {
         camera = new Camera();
@@ -32,9 +39,6 @@ public class CivScene extends Scene {
         initializeCells();
         initializeCivs();
     }
-
-    float hoveredCellHealth = 0;
-    Civ hoveredCellCiv;
 
     private void initializeCells () {
         // Initialize the cells array with new cells
@@ -66,6 +70,17 @@ public class CivScene extends Scene {
         mouseToGrid.x = Utils.constrain(Mouse.mouseX / Cell.cellSize, 0, cells.length - 1);
         mouseToGrid.y = Utils.constrain(Mouse.mouseY / Cell.cellSize, 0, cells[0].length - 1);
 
+        if (ticks % 80 == 1) {
+            // Pick a random position in the cells array
+            int randomX = Utils.randomInt(0, cells.length - 1);
+            int randomY = Utils.randomInt(0, cells[0].length - 1);
+
+            if (cells[randomX][randomY].getParentCiv() != null && !cells[randomX][randomY].isDiseased()) {
+                dm.addDisease(new Vector2f(randomX, randomY));
+            }
+        }
+
+        dm.update();
         ticks ++;
     }
 
@@ -86,6 +101,12 @@ public class CivScene extends Scene {
             ImGui.text("Hovered Civ: " + null);
         }
 
+        if (hoveredCellCiv != null) {
+            ImGui.text("Hovered diseased: " + getCellAt(mouseToGrid).isDiseased());
+        } else {
+            ImGui.text("Hovered diseased: " + null);
+        }
+
         hoveredCellCiv = getCellAt(mouseToGrid).getParentCiv();
         hoveredCellHealth = getCellAt(mouseToGrid).health;
 
@@ -95,5 +116,19 @@ public class CivScene extends Scene {
                 hoveredCellCiv.addStrength(100);
             }
         }
+
+        if (Keyboard.keyPressed(32)) {
+            dm.addDisease(mouseToGrid);
+        }
+//        if (Keyboard.keyPressed(32)) {
+//            int radius = 5;
+//            for (int x = (int)mouseToGrid.x - radius; x <= mouseToGrid.x + radius; x ++) {
+//                for (int y = (int)mouseToGrid.y - radius; y <= mouseToGrid.y + radius; y ++) {
+//                    x = Utils.constrain(x, 0, CivScene.cells.length - 1);
+//                    y = Utils.constrain(y, 0, CivScene.cells[0].length - 1);
+//                    getCellAt(new Vector2f(x, y)).health -= 9;
+//                }
+//            }
+//        }
     }
 }

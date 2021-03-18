@@ -1,6 +1,7 @@
 package Gprocessing.util;
 
 import Gprocessing.physics.Vector2;
+import org.joml.Random;
 import org.joml.Vector2f;
 
 public class Utils {
